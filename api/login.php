@@ -9,12 +9,12 @@ $response = [
     "message" => ""
 ];
 
-$username = htmlspecialchars($_POST['username'], ENT_QUOTES, 'UTF-8');
-$password = htmlspecialchars($_POST['password'], ENT_QUOTES, 'UTF-8');
+$username = isset($_POST['username']) ? htmlspecialchars($_POST['username'], ENT_QUOTES, 'UTF-8') : '';
+$password = isset($_POST['password']) ? htmlspecialchars($_POST['password'], ENT_QUOTES, 'UTF-8') : '';
 
 // Validate username
 if (empty($username)) {
-    $response["message"] = 'Por favor, insira o seu nome de utilizador.';
+    $response["message"] = 'Por favor, inserir utilizador.';
     echo json_encode($response);
     exit();
 }
@@ -27,7 +27,7 @@ $stmt->execute();
 
 // Check if user exists and password is correct
 if ($stmt->rowCount() != 1) {
-    $response["message"] = 'Nome de utilizador não encontrado.';
+    $response["message"] = 'Utilizador não encontrado.';
 } else {
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
     if (!password_verify($password, $row['password'])) {
