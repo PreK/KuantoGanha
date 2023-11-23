@@ -11,7 +11,7 @@ error_reporting(E_ALL);
  */
 
 
-define('DB_SERVER', getenv('DB_SERVER') ?: 'localhost');
+define('DB_SERVER', getenv('DB_SERVER') ?: '127.0.0.1');
 define('DB_USERNAME', getenv('DB_USERNAME') ?: 'postgres');
 define('DB_PASSWORD', getenv('DB_PASSWORD') ?: '00321000');
 define('DB_DATABASE', getenv('DB_DATABASE') ?: 'postgres');
