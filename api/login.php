@@ -1,5 +1,4 @@
 <?php
-
 header('Content-Type: application/json');
 require_once '../dbconfig.php';
 
@@ -9,8 +8,13 @@ $response = [
     "message" => ""
 ];
 
-$username = isset($_POST['username']) ? htmlspecialchars($_POST['username'], ENT_QUOTES, 'UTF-8') : '';
-$password = isset($_POST['password']) ? htmlspecialchars($_POST['password'], ENT_QUOTES, 'UTF-8') : '';
+// Decode JSON from the request body
+$inputJSON = file_get_contents('php://input');
+$input = json_decode($inputJSON, TRUE); // convert JSON into array
+
+$username = isset($input['username']) ? htmlspecialchars($input['username'], ENT_QUOTES, 'UTF-8') : '';
+$password = isset($input['password']) ? htmlspecialchars($input['password'], ENT_QUOTES, 'UTF-8') : '';
+
 
 // Validate username
 if (empty($username)) {
