@@ -211,6 +211,44 @@
         <span class="text-primary font-weight-bold"><?php echo number_format($menorSalario, 2, ',', '.'); ?> €</span>
       </div>
     </div>
+      <div class="container mt-4">
+          <form action="processa_filtro.php" method="GET">
+              <div class="row mb-3">
+                  <!-- Dropdown de Distrito -->
+                  <div class="col">
+                      <select class="form-select" name="distrito">
+                          <option selected>Escolha o Distrito</option>
+                          <option value="lisboa">Lisboa</option>
+                          <option value="porto">Porto</option>
+                          <!-- Outros distritos aqui -->
+                      </select>
+                  </div>
+
+                  <!-- Dropdown de Área -->
+                  <div class="col">
+                      <select class="form-select" name="area">
+                          <option selected>Escolha a Área</option>
+                          <option value="tecnologia">Tecnologia</option>
+                          <option value="saude">Saúde</option>
+                          <!-- Outras áreas aqui -->
+                      </select>
+                  </div>
+
+                  <!-- Dropdown de Profissão -->
+                  <div class="col">
+                      <select class="form-select" name="profissao">
+                          <option selected>Escolha a Profissão</option>
+                          <option value="devops">DevOps</option>
+                          <option value="medico">Médico</option>
+                          <!-- Outras profissões aqui -->
+                      </select>
+                  </div>
+              </div>
+
+              <!-- Botão de Submissão -->
+              <button type="submit" class="btn btn-primary">Filtrar</button>
+          </form>
+      </div>
       <div class="container mt-5">
           <h2>KuantoGanha.pt</h2>
 
