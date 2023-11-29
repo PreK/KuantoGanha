@@ -76,99 +76,29 @@
     <div class="menu-icon" onclick="openSidebar()">
       <span class="material-icons-outlined text-normal">menu</span>
     </div>
-      <!-- Navbar do Bootstrap -->
-      <!-- Navbar do Bootstrap com Ícones e Dropdown -->
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <div class="container-fluid">
-              <!-- Nome da aplicação ou logo -->
-              <a class="navbar-brand" href="#">KuantoGanha.pt</a>
-
-              <!-- Botão de toggle para dispositivos móveis -->
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-              </button>
-
-              <!-- Itens da navbar -->
-              <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                  <ul class="navbar-nav ms-auto">
-                      <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                              <?php echo $_SESSION['username']; ?> <!-- Substituir pelo nome do usuário logado -->
-                          </a>
-                          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                              <li><a class="dropdown-item" href="profile.php">Editar Perfil</a></li>
-                              <li><a class="dropdown-item" href="logout.php">Sair</a></li>
-                          </ul>
-                      </li>
-                      <!-- Toggle para o modo escuro/claro -->
-                      <li class="nav-item">
-                          <div class="form-check form-switch">
-                              <input class="form-check-input" type="checkbox" id="darkModeToggle">
-                              <label class="form-check-label" for="darkModeToggle">Modo Escuro</label>
-                          </div>
-                      </li>
-                  </ul>
-              </div>
-          </div>
-      </nav>
-
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
-      <script>
-          // Script para alternar entre modos claro e escuro
-          document.getElementById('darkModeToggle').addEventListener('change', function(event){
-              if(event.target.checked) {
-                  document.body.classList.add('dark-mode');
-              } else {
-                  document.body.classList.remove('dark-mode');
-              }
-          });
-      </script>
-    <div class="header-left">
-      <span class="material-icons-outlined text-normal">search</span>
-    </div>
-    <div class="header-right">
-      <span class="material-icons-outlined">notifications</span>
-      <span class="material-icons-outlined">email</span>
-      <span class="material-icons-outlined">account_circle</span>
-    </div>
-    <div class="mode-toggle">
-      <span class="material-icons-outlined">light_mode</span>
-      <label class="switch">
-        <input type="checkbox" id="mode-switch" onclick="toggleDarkMode()">
-        <span class="slider round"></span>
-      </label>
-      <span class="material-icons-outlined">dark_mode</span>
-    </div>
   </header>
   <!-- Fim do Cabeçalho -->
 
   <!-- Barra Lateral -->
-  <aside id="sidebar">
-    <div class="sidebar-title">
-      <div class="sidebar-brand">
-        <span class="material-icons-outlined">savings</span> KuantoGanha
-      </div>
-      <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+    <div class="d-flex">
+        <div class="sidebar">
+            <h3 class="text-center py-3">KuantoGanha.pt</h3>
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" href="dashboard.php">Painel de Controlo</a>
+                </li>
+                <!-- Outros itens da sidebar -->
+            </ul>
+            <div class="form-check form-switch text-center mb-3">
+                <input class="form-check-input" type="checkbox" id="darkModeToggle">
+                <label class="form-check-label" for="darkModeToggle">Modo Escuro</label>
+            </div>
+        </div>
+        <div class="flex-grow-1 p-3">
+            <!-- Conteúdo principal aqui -->
+        </div>
     </div>
 
-    <ul class="sidebar-list">
-      <li class="sidebar-list-item">
-        <a href="dashboard.php">
-          <span class="material-icons-outlined">dashboard</span> Painel de Controlo
-        </a>
-      </li>
-      <li class="sidebar-list-item">
-        <a href="statistics.php">
-          <span class="material-icons-outlined">poll</span> Estatísticas
-        </a>
-      </li>
-      <li class="sidebar-list-item">
-        <a href="settings.php">
-          <span class="material-icons-outlined">settings</span> Definições
-        </a>
-      </li>
-    </ul>
-  </aside>
   <!-- Fim da Barra Lateral -->
 
   <!-- Conteúdo Principal -->

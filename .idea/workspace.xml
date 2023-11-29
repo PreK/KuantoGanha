@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c549277-1796-45c2-b708-1d03a93f7fae" name="Changes" comment="alteração nav bar">
+    <list default="true" id="7c549277-1796-45c2-b708-1d03a93f7fae" name="Changes" comment="Dropdown">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +82,7 @@
       <workItem from="1700766165617" duration="224000" />
       <workItem from="1700766409174" duration="6069000" />
       <workItem from="1701109477943" duration="3204000" />
-      <workItem from="1701284058811" duration="2707000" />
+      <workItem from="1701284058811" duration="4046000" />
     </task>
     <task id="LOCAL-00001" summary="change localhost to 127.0.0.1">
       <option name="closed" value="true" />
@@ -140,7 +140,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701289515185</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Dropdown">
+      <option name="closed" value="true" />
+      <created>1701290222867</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1701290222867</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,7 +160,8 @@
     <MESSAGE value="Change Api do handle Json" />
     <MESSAGE value="Introdução de gráficos com valores para teste" />
     <MESSAGE value="alteração nav bar" />
-    <option name="LAST_COMMIT_MESSAGE" value="alteração nav bar" />
+    <MESSAGE value="Dropdown" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dropdown" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
