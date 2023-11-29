@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c549277-1796-45c2-b708-1d03a93f7fae" name="Changes" comment="Change Api">
+    <list default="true" id="7c549277-1796-45c2-b708-1d03a93f7fae" name="Changes" comment="Change Api do handle Json">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +81,8 @@
       <workItem from="1700245568171" duration="3862000" />
       <workItem from="1700766165617" duration="224000" />
       <workItem from="1700766409174" duration="6069000" />
-      <workItem from="1701109477943" duration="2481000" />
+      <workItem from="1701109477943" duration="3204000" />
+      <workItem from="1701284058811" duration="1172000" />
     </task>
     <task id="LOCAL-00001" summary="change localhost to 127.0.0.1">
       <option name="closed" value="true" />
@@ -115,7 +116,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701109519645</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Change Api do handle Json">
+      <option name="closed" value="true" />
+      <created>1701114078982</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1701114078982</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,7 +133,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="change localhost to 127.0.0.1" />
     <MESSAGE value="Change Api" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change Api" />
+    <MESSAGE value="Change Api do handle Json" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change Api do handle Json" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

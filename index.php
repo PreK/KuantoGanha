@@ -16,9 +16,55 @@
     <!-- Bootstrap Bundle JS (inclui Popper) -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
     <script src="js/scripts.js"></script>
+
+    <script type="text/javascript">
+        google.charts.load('current', {'packages':['corechart']});
+
+        // Desenhar o gráfico de barras
+        google.charts.setOnLoadCallback(drawBarChart);
+
+        function drawBarChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Função', 'Salário (€)'],
+                ['DevOps', 65000],
+                ['Engenheiro de Software', 60000]
+                // Adicione mais dados aqui
+            ]);
+
+            var options = {
+                title: 'Salários por Função',
+                hAxis: {title: 'Função', titleTextStyle: {color: 'black'}},
+                vAxis: {minValue: 0}
+            };
+
+            var chart = new google.visualization.BarChart(document.getElementById('bar_chart'));
+            chart.draw(data, options);
+        }
+
+        // Desenhar o gráfico de linhas
+        google.charts.setOnLoadCallback(drawLineChart);
+
+        function drawLineChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Ano', 'Salário (€)'],
+                ['2019', 55000],
+                ['2020', 57000]
+                // Adicione mais dados aqui
+            ]);
+
+            var options = {
+                title: 'Evolução Salarial (2019-2022)',
+                curveType: 'function',
+                legend: { position: 'bottom' }
+            };
+
+            var chart = new google.visualization.LineChart(document.getElementById('line_chart'));
+            chart.draw(data, options);
+        }
+    </script>
   <!-- CSS Personalizado -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -156,66 +202,19 @@
         <span class="text-primary font-weight-bold"><?php echo number_format($menorSalario, 2, ',', '.'); ?> €</span>
       </div>
     </div>
-      <!-- Gráficos -->
-      <div id="barChartContainer">Bar Chart Carregará Aqui</div>
-      <div id="lineChartContainer">Line Chart Carregará Aqui</div>
+      <div class="container mt-5">
+          <h2>KuantoGanha.pt</h2>
 
-      <!-- Scripts para Gráficos -->
-      <script>
-          // Gráfico de Barras
-          FusionCharts.ready(function () {
-              var barChart = new FusionCharts({
-                  type: 'column2d',
-                  renderAt: 'barChartContainer',
-                  width: '600',
-                  height: '400',
-                  dataFormat: 'json',
-                  dataSource: {
-                      "chart": {
-                          "caption": "Salários por Função",
-                          "xAxisName": "Função",
-                          "yAxisName": "Salário (€)",
-                          "theme": "fusion"
-                      },
-                      "data": [
-                          {"label": "DevOps", "value": "65000"},
-                          {"label": "Engenheiro de Software", "value": "60000"},
-                          // Adicione mais dados aqui
-                      ]
-                  }
-              });
-              barChart.render();
-          });
+          <!-- Gráfico de Barras -->
+          <div id="bar_chart" style="width: 100%; height: 500px;"></div>
 
-          // Gráfico de Linhas
-          FusionCharts.ready(function () {
-              var lineChart = new FusionCharts({
-                  type: 'line',
-                  renderAt: 'lineChartContainer',
-                  width: '600',
-                  height: '400',
-                  dataFormat: 'json',
-                  dataSource: {
-                      "chart": {
-                          "caption": "Evolução Salarial (2019-2022)",
-                          "xAxisName": "Ano",
-                          "yAxisName": "Salário (€)",
-                          "theme": "fusion"
-                      },
-                      "data": [
-                          {"label": "2019", "value": "55000"},
-                          {"label": "2020", "value": "57000"},
-                          // Adicione mais dados aqui
-                      ]
-                  }
-              });
-              lineChart.render();
-          });
-      </script>
+          <!-- Gráfico de Linhas -->
+          <div id="line_chart" style="width: 100%; height: 500px;"></div>
+      </div>
+
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
   </main>
-      <!-- Fim do Conteúdo Principal -->
-          <!-- Gráficos podem ser gerados com ApexCharts ou outra biblioteca -->
-          <!-- ... -->
+
     </div>
 </body>
 </html>
