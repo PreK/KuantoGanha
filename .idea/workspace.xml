@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c549277-1796-45c2-b708-1d03a93f7fae" name="Changes" comment="Change Api do handle Json">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="7c549277-1796-45c2-b708-1d03a93f7fae" name="Changes" comment="Introdução de gráficos com valores para teste">
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -82,7 +81,7 @@
       <workItem from="1700766165617" duration="224000" />
       <workItem from="1700766409174" duration="6069000" />
       <workItem from="1701109477943" duration="3204000" />
-      <workItem from="1701284058811" duration="1172000" />
+      <workItem from="1701284058811" duration="1810000" />
     </task>
     <task id="LOCAL-00001" summary="change localhost to 127.0.0.1">
       <option name="closed" value="true" />
@@ -124,7 +123,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701114078982</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Introdução de gráficos com valores para teste">
+      <option name="closed" value="true" />
+      <created>1701288319813</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1701288319814</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,7 +141,8 @@
     <MESSAGE value="change localhost to 127.0.0.1" />
     <MESSAGE value="Change Api" />
     <MESSAGE value="Change Api do handle Json" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change Api do handle Json" />
+    <MESSAGE value="Introdução de gráficos com valores para teste" />
+    <option name="LAST_COMMIT_MESSAGE" value="Introdução de gráficos com valores para teste" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

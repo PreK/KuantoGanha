@@ -80,40 +80,49 @@
       <!-- Navbar do Bootstrap com Ícones e Dropdown -->
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <div class="container-fluid">
-              <!-- Logo e Toggle Button para dispositivos móveis -->
-              <a class="navbar-brand" href="#">
-                  <span class="material-icons-outlined">savings</span> KuantoGanha
-              </a>
+              <!-- Nome da aplicação ou logo -->
+              <a class="navbar-brand" href="#">KuantoGanha.pt</a>
+
+              <!-- Botão de toggle para dispositivos móveis -->
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
               </button>
 
-              <!-- Itens da Navbar -->
+              <!-- Itens da navbar -->
               <div class="collapse navbar-collapse" id="navbarNavDropdown">
                   <ul class="navbar-nav ms-auto">
-                      <!-- Item Simples -->
-                      <li class="nav-item">
-                          <a class="nav-link active" aria-current="page" href="dashboard.php">
-                              <span class="material-icons-outlined">dashboard</span> Painel de Controlo
-                          </a>
-                      </li>
-
-                      <!-- Dropdown -->
                       <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                              <span class="material-icons-outlined">settings</span> Opções
+                              <?php echo $_SESSION['username']; ?> <!-- Substituir pelo nome do usuário logado -->
                           </a>
                           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                              <li><a class="dropdown-item" href="profile.php">Perfil</a></li>
-                              <li><a class="dropdown-item" href="settings.php">Configurações</a></li>
-                              <li><hr class="dropdown-divider"></li>
+                              <li><a class="dropdown-item" href="profile.php">Editar Perfil</a></li>
                               <li><a class="dropdown-item" href="logout.php">Sair</a></li>
                           </ul>
+                      </li>
+                      <!-- Toggle para o modo escuro/claro -->
+                      <li class="nav-item">
+                          <div class="form-check form-switch">
+                              <input class="form-check-input" type="checkbox" id="darkModeToggle">
+                              <label class="form-check-label" for="darkModeToggle">Modo Escuro</label>
+                          </div>
                       </li>
                   </ul>
               </div>
           </div>
       </nav>
+
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+      <script>
+          // Script para alternar entre modos claro e escuro
+          document.getElementById('darkModeToggle').addEventListener('change', function(event){
+              if(event.target.checked) {
+                  document.body.classList.add('dark-mode');
+              } else {
+                  document.body.classList.remove('dark-mode');
+              }
+          });
+      </script>
     <div class="header-left">
       <span class="material-icons-outlined text-normal">search</span>
     </div>
