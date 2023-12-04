@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c549277-1796-45c2-b708-1d03a93f7fae" name="Changes" comment="Adicionado modulo sidebar.php">
+    <list default="true" id="7c549277-1796-45c2-b708-1d03a93f7fae" name="Changes" comment="add bootstrap to index.php">
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -83,7 +83,7 @@
       <workItem from="1701109477943" duration="3204000" />
       <workItem from="1701284058811" duration="5919000" />
       <workItem from="1701713718874" duration="161000" />
-      <workItem from="1701713921071" duration="1642000" />
+      <workItem from="1701713921071" duration="1955000" />
     </task>
     <task id="LOCAL-00001" summary="change localhost to 127.0.0.1">
       <option name="closed" value="true" />
@@ -181,7 +181,31 @@
       <option name="project" value="LOCAL" />
       <updated>1701715736312</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Adicionado modulo sidebar.php">
+      <option name="closed" value="true" />
+      <created>1701715792465</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1701715792465</updated>
+    </task>
+    <task id="LOCAL-00014" summary="add bootstrap to index.php">
+      <option name="closed" value="true" />
+      <created>1701715992868</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1701715992868</updated>
+    </task>
+    <task id="LOCAL-00015" summary="add bootstrap to index.php">
+      <option name="closed" value="true" />
+      <created>1701716067821</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1701716067821</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,7 +244,8 @@
     <MESSAGE value="Change bootstrap version" />
     <MESSAGE value="novo index.php" />
     <MESSAGE value="Adicionado modulo sidebar.php" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adicionado modulo sidebar.php" />
+    <MESSAGE value="add bootstrap to index.php" />
+    <option name="LAST_COMMIT_MESSAGE" value="add bootstrap to index.php" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
