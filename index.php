@@ -187,35 +187,6 @@
               barChart.render();
           });
 
-          // Gráfico de Linhas
-          FusionCharts.ready(function () {
-              var lineChart = new FusionCharts({
-                  type: 'line',
-                  renderAt: 'lineChartContainer',
-                  width: '600',
-                  height: '400',
-                  dataFormat: 'json',
-                  dataSource: {
-                      "chart": {
-                          "caption": "Evolução Salarial (2019-2022)",
-                          "xAxisName": "Ano",
-                          "yAxisName": "Salário (€)",
-                          "theme": "fusion"
-                      },
-                      "data": [
-                          {"label": "2019", "value": "55000"},
-                          {"label": "2020", "value": "57000"},
-                          // Adicione mais dados aqui
-                      ]
-                  }
-              });
-              lineChart.render();
-          });
-      </script>
-  </main>
-      <!-- Fim do Conteúdo Principal -->
-          <!-- Gráficos podem ser gerados com ApexCharts ou outra biblioteca -->
-          <!-- ... -->
-    </div>
+<script src="js/bootstrap.min.js"></script> <!-- Script do Bootstrap -->
 </body>
 </html>
