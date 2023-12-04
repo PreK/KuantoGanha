@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c549277-1796-45c2-b708-1d03a93f7fae" name="Changes" comment="Sidebar" />
+    <list default="true" id="7c549277-1796-45c2-b708-1d03a93f7fae" name="Changes" comment="Change bootstrap version">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -79,7 +82,9 @@
       <workItem from="1700766165617" duration="224000" />
       <workItem from="1700766409174" duration="6069000" />
       <workItem from="1701109477943" duration="3204000" />
-      <workItem from="1701284058811" duration="4992000" />
+      <workItem from="1701284058811" duration="5919000" />
+      <workItem from="1701713718874" duration="161000" />
+      <workItem from="1701713921071" duration="1419000" />
     </task>
     <task id="LOCAL-00001" summary="change localhost to 127.0.0.1">
       <option name="closed" value="true" />
@@ -153,11 +158,30 @@
       <option name="project" value="LOCAL" />
       <updated>1701292194306</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Change bootstrap version">
+      <option name="closed" value="true" />
+      <created>1701293433373</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1701293433373</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -178,7 +202,8 @@
     <MESSAGE value="alteração nav bar" />
     <MESSAGE value="Dropdown" />
     <MESSAGE value="Sidebar" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sidebar" />
+    <MESSAGE value="Change bootstrap version" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change bootstrap version" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
