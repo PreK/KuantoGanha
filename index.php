@@ -13,10 +13,11 @@
         <?php include 'modules/sidebar.php'; ?>
 
         <div class="col py-3">
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Link para o Chart.js -->
             <!-- Conteúdo principal -->
             <h3>Benvindo ao KuantoGanha.pt</h3>
-            <p>Here you can view various analytics about your team.</p>
-
+            <canvas id="teamChart" width="400" height="400"></canvas>
+        <?php include 'modules/chart.php'; ?>
             <!-- Conteúdo do gráfico será inserido aqui -->
         </div>
     </div>
