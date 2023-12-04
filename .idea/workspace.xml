@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c549277-1796-45c2-b708-1d03a93f7fae" name="Changes" comment="add bootstrap to index.php">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/login.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,36 +36,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "35ba8129",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "//wsl$/Ubuntu-22.04/var/www/html/js",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.stylelint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.stylelint": "\\\\wsl$\\Ubuntu-22.04\\var\\www\\html\\node_modules\\stylelint",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="\\wsl$\Ubuntu-22.04\var\www\html\js" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="\\wsl$\Ubuntu-22.04\var\www\html\css" />
       <recent name="\\wsl$\Ubuntu-22.04\var\www\html\api" />
     </key>
   </component>
@@ -90,10 +68,7 @@
       <workItem from="1700245568171" duration="3862000" />
       <workItem from="1700766165617" duration="224000" />
       <workItem from="1700766409174" duration="6069000" />
-      <workItem from="1701109477943" duration="3204000" />
-      <workItem from="1701284058811" duration="5919000" />
-      <workItem from="1701713718874" duration="161000" />
-      <workItem from="1701713921071" duration="3202000" />
+      <workItem from="1701109477943" duration="2481000" />
     </task>
     <task id="LOCAL-00001" summary="change localhost to 127.0.0.1">
       <option name="closed" value="true" />
@@ -127,151 +102,16 @@
       <option name="project" value="LOCAL" />
       <updated>1701109519645</updated>
     </task>
-    <task id="LOCAL-00005" summary="Change Api do handle Json">
-      <option name="closed" value="true" />
-      <created>1701114078982</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1701114078982</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Introdução de gráficos com valores para teste">
-      <option name="closed" value="true" />
-      <created>1701288319813</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1701288319814</updated>
-    </task>
-    <task id="LOCAL-00007" summary="alteração nav bar">
-      <option name="closed" value="true" />
-      <created>1701289515185</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1701289515185</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Dropdown">
-      <option name="closed" value="true" />
-      <created>1701290222867</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1701290222867</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Sidebar">
-      <option name="closed" value="true" />
-      <created>1701292194306</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1701292194306</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Change bootstrap version">
-      <option name="closed" value="true" />
-      <created>1701293433373</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1701293433373</updated>
-    </task>
-    <task id="LOCAL-00011" summary="novo index.php">
-      <option name="closed" value="true" />
-      <created>1701715597452</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1701715597452</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Adicionado modulo sidebar.php">
-      <option name="closed" value="true" />
-      <created>1701715736312</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1701715736312</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Adicionado modulo sidebar.php">
-      <option name="closed" value="true" />
-      <created>1701715792465</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1701715792465</updated>
-    </task>
-    <task id="LOCAL-00014" summary="add bootstrap to index.php">
-      <option name="closed" value="true" />
-      <created>1701715992868</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1701715992868</updated>
-    </task>
-    <task id="LOCAL-00015" summary="add bootstrap to index.php">
-      <option name="closed" value="true" />
-      <created>1701716067821</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1701716067821</updated>
-    </task>
-    <task id="LOCAL-00016" summary="add bootstrap to index.php">
-      <option name="closed" value="true" />
-      <created>1701716103103</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1701716103103</updated>
-    </task>
-    <task id="LOCAL-00017" summary="add bootstrap to index.php">
-      <option name="closed" value="true" />
-      <created>1701716646813</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1701716646813</updated>
-    </task>
-    <option name="localTasksCounter" value="18" />
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="Vcs.Log.History.Properties">
-    <option name="COLUMN_ID_ORDER">
-      <list>
-        <option value="Default.Root" />
-        <option value="Default.Author" />
-        <option value="Default.Date" />
-        <option value="Default.Subject" />
-        <option value="Space.CommitStatus" />
-      </list>
-    </option>
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="change localhost to 127.0.0.1" />
     <MESSAGE value="Change Api" />
-    <MESSAGE value="Change Api do handle Json" />
-    <MESSAGE value="Introdução de gráficos com valores para teste" />
-    <MESSAGE value="alteração nav bar" />
-    <MESSAGE value="Dropdown" />
-    <MESSAGE value="Sidebar" />
-    <MESSAGE value="Change bootstrap version" />
-    <MESSAGE value="novo index.php" />
-    <MESSAGE value="Adicionado modulo sidebar.php" />
-    <MESSAGE value="add bootstrap to index.php" />
-    <option name="LAST_COMMIT_MESSAGE" value="add bootstrap to index.php" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change Api" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
