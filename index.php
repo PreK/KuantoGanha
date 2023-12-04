@@ -23,6 +23,6 @@
     </div>
 </div>
 
-<script src="js/bootstrap.bundle.min.js"></script> <!-- Script do Bootstrap -->
+<script src="js/bootstrap.min.js"></script> <!-- Script do Bootstrap -->
 </body>
 </html>
