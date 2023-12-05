@@ -4,7 +4,7 @@
             <?php
             session_start();
             // Check if the user is logged in
-            if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){?>
+            if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){?>
                 <!-- If the user is logged in, display the logout link -->
                 <li class="nav-item">
                     <a class="nav-link" href="logout.php">Logout</a>
