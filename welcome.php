@@ -1,13 +1,32 @@
-<?php
-session_start(); // Make sure to start the session
-
-// Check if the user is logged in
-if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
-    // User is logged in, redirect to index.php
-    header('Location: index.php');
-    exit(); // Make sure to terminate the script after the redirection
-} else {
-    // If the user is not logged in, display an appropriate error message or action
-    echo "You are not logged in. <a href='login.php'>Log in</a>";
-}
-?>
+<div class="header">
+    <h1>Bem-vindo ao [Nome do Site]</h1>
+    <p>Descobre e partilha informações sobre ordenados, empresas e muito mais!</p>
+</div>
+<div class="row">
+    <div class="column">
+        <div class="card">
+            <h3>Ordenados</h3>
+            <p>Descobre quanto ganham os teus colegas de trabalho.</p>
+            <p>Partilha o teu ordenado e ajuda a comunidade.</p>
+            <p>Consulta a média salarial por profissão.</p>
+            <p>Consulta a média salarial por empresa.</p>
+        </div>
+    </div>
+    <div class="column">
+        <div class="card">
+            <h3>Empresas</h3>
+            <p>Descobre informações sobre as empresas.</p>
+            <p>Consulta o número de funcionários.</p>
+            <p>Consulta o número de funcionários por profissão.</p>
+            <p>Consulta o número de funcionários por departamento.</p>
+        </div>
+    </div>
+    <div class="column">
+        <div class="card">
+            <h3>Profissões</h3>
+            <p>Descobre informações sobre as profissões.</p>
+            <p>Consulta o número de funcionários.</p>
+            <p>Consulta o número de funcionários por empresa.</p>
+            <p>Consulta o número de funcionários por departamento.</p>
+        </div>
+    </div>

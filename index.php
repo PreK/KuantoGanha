@@ -1,12 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php
-// Start the session (if not already started)
-session_start();
 
-// Check if the user is logged in
-$logged_in = isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true;
-?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,8 +17,16 @@ $logged_in = isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true;
         <!-- Conteúdo principal -->
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
             <!-- Seu conteúdo principal aqui -->
-            <h1>Página Principal</h1>
-            <p>Bem-vindo à página principal da sua aplicação.</p>
+            <?php
+            // Start the session (if not already started)
+            session_start();
+            // Check if the user is logged in
+            if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+                include('dasboard.php');
+            } else {
+                include('welcome.php');
+            }
+            ?>
         </main>
     </div>
 </div>
