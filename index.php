@@ -21,8 +21,9 @@
             // Start the session (if not already started)
             session_start();
             // Check if the user is logged in
+
             if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-                include('dasboard.php');
+                include('dashboard.php');
             } else {
                 include('welcome.php');
             }
