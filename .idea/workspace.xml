@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c549277-1796-45c2-b708-1d03a93f7fae" name="Changes" comment="add css sidebar.css">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/sidebar.php" afterDir="false" />
+    <list default="true" id="7c549277-1796-45c2-b708-1d03a93f7fae" name="Changes" comment="add login and logout">
+      <change beforePath="$PROJECT_DIR$/welcome.php" beforeDir="false" afterPath="$PROJECT_DIR$/welcome.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +81,7 @@
       <workItem from="1700766165617" duration="224000" />
       <workItem from="1700766409174" duration="6069000" />
       <workItem from="1701109477943" duration="2481000" />
-      <workItem from="1701799347675" duration="2225000" />
+      <workItem from="1701799347675" duration="2520000" />
     </task>
     <task id="LOCAL-00001" summary="change localhost to 127.0.0.1">
       <option name="closed" value="true" />
@@ -149,7 +147,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701804509050</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="add login and logout">
+      <option name="closed" value="true" />
+      <created>1701804860863</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1701804860863</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,7 +179,8 @@
     <MESSAGE value="Fix da barra lateral" />
     <MESSAGE value="Fix modules/sidebar.php" />
     <MESSAGE value="add css sidebar.css" />
-    <option name="LAST_COMMIT_MESSAGE" value="add css sidebar.css" />
+    <MESSAGE value="add login and logout" />
+    <option name="LAST_COMMIT_MESSAGE" value="add login and logout" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
