@@ -85,7 +85,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Login</title>
 </head>
 <body>
-<?php include('modules/sidebar.php'); ?>
+<div class="container-fluid">
+
+    <div class="row">
+        <!-- Sidebar -->
+        <?php include('modules/sidebar.php'); ?>
 <div>
     <h2>Login</h2>
     <p>Please fill in your credentials to login.</p>
@@ -110,6 +114,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div>
             <input type="submit" value="Login">
         </div>
+    </div>
     </form>
 </div>
 </body>

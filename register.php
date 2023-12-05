@@ -108,7 +108,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Registar</title>
 </head>
 <body>
-<?php include('modules/sidebar.php'); ?>
+<div class="container-fluid">
+
+    <div class="row">
+        <!-- Sidebar -->
+        <?php include('modules/sidebar.php'); ?>
 <div>
     <h2>Register</h2>
     <p>Please fill this form to create an account.</p>
@@ -137,6 +141,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <input type="submit" value="Submit">
         </div>
     </form>
+    </div>
 </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>

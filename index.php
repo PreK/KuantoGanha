@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<?php
+            // Start the session (if not already started)
+            session_start();
+            ?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,18 +12,17 @@
     <title>KuantoGanha.pt</title>
 </head>
 <body>
-<?php include('modules/sidebar.php'); ?>
+
 <div class="container-fluid">
+
     <div class="row">
         <!-- Sidebar -->
-
+        <?php include('modules/sidebar.php'); ?>
 
         <!-- Conteúdo principal -->
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
             <!-- Main Container  -->
             <?php
-            // Start the session (if not already started)
-            session_start();
             // Check if the user is logged in
 
             if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
