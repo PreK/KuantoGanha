@@ -9,14 +9,15 @@
     <title>KuantoGanha.pt</title>
 </head>
 <body>
+<?php include('modules/sidebar.php'); ?>
 <div class="container-fluid">
     <div class="row">
-        <!-- Barra lateral -->
-        <?php include('modules/sidebar.php'); ?>
+        <!-- Sidebar -->
+
 
         <!-- Conteúdo principal -->
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
-            <!-- Seu conteúdo principal aqui -->
+            <!-- Main Container  -->
             <?php
             // Start the session (if not already started)
             session_start();
