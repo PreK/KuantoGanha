@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c549277-1796-45c2-b708-1d03a93f7fae" name="Changes" comment="updated welcome.php">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
-    </list>
+    <list default="true" id="7c549277-1796-45c2-b708-1d03a93f7fae" name="Changes" comment="dashboard.php" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -84,7 +79,7 @@
       <workItem from="1700766165617" duration="224000" />
       <workItem from="1700766409174" duration="6069000" />
       <workItem from="1701109477943" duration="2481000" />
-      <workItem from="1701799347675" duration="2989000" />
+      <workItem from="1701799347675" duration="3424000" />
     </task>
     <task id="LOCAL-00001" summary="change localhost to 127.0.0.1">
       <option name="closed" value="true" />
@@ -166,7 +161,23 @@
       <option name="project" value="LOCAL" />
       <updated>1701805178788</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="To test login.php">
+      <option name="closed" value="true" />
+      <created>1701805655244</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1701805655244</updated>
+    </task>
+    <task id="LOCAL-00012" summary="dashboard.php">
+      <option name="closed" value="true" />
+      <created>1701806046765</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1701806046765</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,7 +203,9 @@
     <MESSAGE value="add css sidebar.css" />
     <MESSAGE value="add login and logout" />
     <MESSAGE value="updated welcome.php" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated welcome.php" />
+    <MESSAGE value="To test login.php" />
+    <MESSAGE value="dashboard.php" />
+    <option name="LAST_COMMIT_MESSAGE" value="dashboard.php" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
