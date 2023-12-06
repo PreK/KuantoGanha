@@ -1,7 +1,5 @@
 <?php
 session_start(); // Start the session
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
 
 require_once 'dbconfig.php'; // Include database configuration file
 
@@ -53,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             $_SESSION["username"] = $username;
 
                             // Redirect user to the welcome page
-                            header("location: index.php");
+                            header("location: ../index.php");
                         } else {
                             // Display an error message if password is not valid
                             $login_err = "Invalid username or password.";
