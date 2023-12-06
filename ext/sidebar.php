@@ -13,13 +13,13 @@ session_start();
 <!--            Menu with Login and Register if logged out-->
             <?php if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){?>
                 <li class="nav-item">
-                    <a class="nav-link d-flex align-items-center gap-2" href="profile.php">
+                    <a class="nav-link d-flex align-items-center gap-2" href="#" id="profileLink">
                         <i class="bi bi-person"></i>
                         Perfil
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link d-flex align-items-center gap-2" href="logout.php">
+                    <a class="nav-link d-flex align-items-center gap-2" href="modules/logout.php">
                         <i class="bi bi-box-arrow-left"></i>
                         Logout
                     </a>
@@ -46,7 +46,7 @@ session_start();
         <!-- Outras Opções de Menu -->
         <ul class="nav flex-column mb-auto">
             <li class="nav-item">
-                <a class="nav-link d-flex align-items-center gap-2" href="settings.php">
+                <a class="nav-link d-flex align-items-center gap-2" href="#" id="settingsLink">
                     <i class="bi bi-gear"></i>
                     Settings
                 </a>
