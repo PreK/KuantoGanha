@@ -74,31 +74,33 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     unset($pdo);
 }
 ?>
-<div>
-    <h2>Login</h2>
-    <p>Please fill in your credentials to login.</p>
+<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+    <div class="login-form">
+        <h2>Login</h2>
+        <p>Please fill in your credentials to login.</p>
 
-    <?php
-    if(!empty($login_err)){
-        echo '<div>' . $login_err . '</div>';
-    }
-    ?>
+        <?php
+        if(!empty($login_err)){
+            echo '<div class="alert alert-danger">' . $login_err . '</div>';
+        }
+        ?>
 
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-        <div>
-            <label>Username</label>
-            <input type="text" name="username" value="<?php echo $username; ?>">
-            <span><?php echo $username_err; ?></span>
-        </div>
-        <div>
-            <label>Password</label>
-            <input type="password" name="password">
-            <span><?php echo $password_err; ?></span>
-        </div>
-        <div>
-            <input type="submit" value="Login">
-        </div>
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+            <div class="form-group">
+                <label>Username</label>
+                <input type="text" name="username" class="form-control" value="<?php echo $username; ?>">
+                <span class="text-danger"><?php echo $username_err; ?></span>
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" name="password" class="form-control">
+                <span class="text-danger"><?php echo $password_err; ?></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary" value="Login">
+            </div>
+        </form>
     </div>
-    </form>
-</div>
+</main>
+
 
