@@ -1,11 +1,9 @@
-var path= 'modules/';
-
 document.addEventListener('DOMContentLoaded', function() {
     // Carregar formulário de login
     var loginLink = document.getElementById('loginLink');
     if (loginLink) {
         loginLink.addEventListener('click', function() {
-            loadContent(path + 'login.php');
+            loadContent('login.php');
         });
     }
 
@@ -13,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var registerLink = document.getElementById('registerLink');
     if (registerLink) {
         registerLink.addEventListener('click', function() {
-            loadContent(path + 'register.php');
+            loadContent('register.php');
         });
     }
 });
@@ -28,7 +26,7 @@ function loadContent(page) {
             document.getElementById('mainContent').innerHTML = 'Erro ao carregar a página';
         }
     };
-    xhr.open('GET', path + page, true);
+    xhr.open('GET', 'modules/' + page, true);
     xhr.send();
 }
 
