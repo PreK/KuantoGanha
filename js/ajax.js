@@ -1,29 +1,46 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Carregar formulário de login
-    document.getElementById('loginLink').addEventListener('click', function() {
-        loadContent('login.php');
-    });
+    var loginLink = document.getElementById('loginLink');
+    if (loginLink) {
+        loginLink.addEventListener('click', function() {
+            loadContent('login.php');
+        });
+    }
 
     // Carregar formulário de registro
-    document.getElementById('registerLink').addEventListener('click', function() {
-        loadContent('register.php');
-    });
-
-    // Listener para submissão de formulários
-    document.addEventListener('submit', function(event) {
-        // Se for o formulário de login
-        if (event.target.matches('.login-form form')) {
-            event.preventDefault();
-            submitForm(event.target, 'modules/login.php', true); // Adicionado um parâmetro para identificar login
-        }
-
-        // Se for o formulário de registro
-        if (event.target.matches('.register-form form')) {
-            event.preventDefault();
-            submitForm(event.target, 'modules/register.php', false); // Aqui é para registro, então false
-        }
-    });
+    var registerLink = document.getElementById('registerLink');
+    if (registerLink) {
+        registerLink.addEventListener('click', function() {
+            loadContent('register.php');
+        });
+    }
 });
+
+function loadContent(page) {
+    const xhr = new XMLHttpRequest();
+    xhr.onload = function() {
+        if (this.status === 200) {
+            document.getElementById('mainContent').innerHTML = this.responseText;
+            bindFormSubmit();
+        } else {
+            document.getElementById('mainContent').innerHTML = 'Erro ao carregar a página';
+        }
+    };
+    xhr.open('GET', 'modules/' + page, true);
+    xhr.send();
+}
+
+function bindFormSubmit() {
+    // Encontra todos os formulários na página e vincula o evento de submit
+    document.querySelectorAll('form').forEach(function(form) {
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            var formType = form.classList.contains('login-form') ? 'login' : 'register';
+            var actionUrl = formType === 'login' ? 'modules/login.php' : 'modules/register.php';
+            submitForm(form, actionUrl, formType === 'login');
+        });
+    });
+}
 
 function submitForm(form, url, isLogin) {
     const formData = new FormData(form);
@@ -34,11 +51,10 @@ function submitForm(form, url, isLogin) {
         .then(response => response.text())
         .then(html => {
             if (isLogin && html.includes('success')) {
-                // Se for login e a resposta incluir 'success', recarregue a página
                 window.location.reload();
             } else {
-                // Para outros casos (registro ou mensagem de erro de login), atualize o conteúdo principal
                 document.getElementById('mainContent').innerHTML = html;
+                bindFormSubmit(); // Vincular novamente para os novos formulários
             }
         })
         .catch(error => console.error('Error:', error));
