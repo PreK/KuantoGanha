@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="postgres@localhost">
-  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.49">
+  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.51">
     <root id="1">
       <DateStyle>mdy</DateStyle>
       <Grants>1||-9223372036854775808|c|G
@@ -4854,8 +4854,7 @@ true posixrules
       <Comment>standard public schema</Comment>
       <Current>1</Current>
       <IntrospectionStateNumber>746</IntrospectionStateNumber>
-      <IntrospectionTimestamp>2023-10-19.20:46:57.920</IntrospectionTimestamp>
-      <LocalIntrospectionTimestamp>2023-10-19.19:46:58</LocalIntrospectionTimestamp>
+      <LastIntrospectionLocalTimestamp>2023-10-19.19:46:58</LastIntrospectionLocalTimestamp>
       <ObjectId>2200</ObjectId>
       <StateNumber>526</StateNumber>
       <OwnerName>postgres</OwnerName>
@@ -4863,7 +4862,7 @@ true posixrules
     <sequence id="264" parent="263" name="dadossalariais_id_seq">
       <DasType>integer|0s</DasType>
       <ObjectId>16404</ObjectId>
-      <SequenceIdentity>1(1)</SequenceIdentity>
+      <SequenceIdentity>1</SequenceIdentity>
       <StartValue>1</StartValue>
       <StateNumber>742</StateNumber>
       <OwnerName>postgres</OwnerName>
@@ -4871,7 +4870,7 @@ true posixrules
     <sequence id="265" parent="263" name="mediasalarial_id_seq">
       <DasType>integer|0s</DasType>
       <ObjectId>16432</ObjectId>
-      <SequenceIdentity>1(1)</SequenceIdentity>
+      <SequenceIdentity>1</SequenceIdentity>
       <StartValue>1</StartValue>
       <StateNumber>744</StateNumber>
       <OwnerName>postgres</OwnerName>
@@ -4879,7 +4878,7 @@ true posixrules
     <sequence id="266" parent="263" name="notificacoes_id_seq">
       <DasType>integer|0s</DasType>
       <ObjectId>16418</ObjectId>
-      <SequenceIdentity>1(1)</SequenceIdentity>
+      <SequenceIdentity>1</SequenceIdentity>
       <StartValue>1</StartValue>
       <StateNumber>743</StateNumber>
       <OwnerName>postgres</OwnerName>
@@ -4887,7 +4886,7 @@ true posixrules
     <sequence id="267" parent="263" name="utilizadores_id_seq">
       <DasType>integer|0s</DasType>
       <ObjectId>16395</ObjectId>
-      <SequenceIdentity>1(1)</SequenceIdentity>
+      <SequenceIdentity>1</SequenceIdentity>
       <StartValue>1</StartValue>
       <StateNumber>741</StateNumber>
       <OwnerName>postgres</OwnerName>
