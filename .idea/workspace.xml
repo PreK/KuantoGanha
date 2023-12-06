@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c549277-1796-45c2-b708-1d03a93f7fae" name="Changes" comment="Piggy">
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-    </list>
+    <list default="true" id="7c549277-1796-45c2-b708-1d03a93f7fae" name="Changes" comment="session_start();" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -109,7 +107,7 @@
       <workItem from="1700766409174" duration="6069000" />
       <workItem from="1701109477943" duration="2481000" />
       <workItem from="1701799347675" duration="6809000" />
-      <workItem from="1701888922359" duration="7313000" />
+      <workItem from="1701888922359" duration="7671000" />
     </task>
     <task id="LOCAL-00001" summary="change localhost to 127.0.0.1">
       <option name="closed" value="true" />
@@ -423,7 +421,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701897351092</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="session_start();">
+      <option name="closed" value="true" />
+      <created>1701898007918</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1701898007918</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -441,7 +447,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fix grande" />
     <MESSAGE value="Fix da barra lateral" />
     <MESSAGE value="Fix modules/sidebar.php" />
     <MESSAGE value="add css sidebar.css" />
@@ -466,7 +471,8 @@
     <MESSAGE value="login more pretty" />
     <MESSAGE value="Register more pretty" />
     <MESSAGE value="Piggy" />
-    <option name="LAST_COMMIT_MESSAGE" value="Piggy" />
+    <MESSAGE value="session_start();" />
+    <option name="LAST_COMMIT_MESSAGE" value="session_start();" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
