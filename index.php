@@ -236,7 +236,7 @@
         <?php include 'ext/sidebar.php'; ?>
     </div>
 
-    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4" id="mainContent">
         <?php
         // Check if the user is logged in
         if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
@@ -250,5 +250,7 @@
 </div>
 <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.2/dist/chart.umd.js" integrity="sha384-eI7PSr3L1XLISH8JdDII5YN/njoSsxfbrkCTnJrzXt+ENP5MOVBxD+l6sEG4zoLp" crossorigin="anonymous"></script><script src="dashboard.js"></script></body>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.2/dist/chart.umd.js" integrity="sha384-eI7PSr3L1XLISH8JdDII5YN/njoSsxfbrkCTnJrzXt+ENP5MOVBxD+l6sEG4zoLp" crossorigin="anonymous"></script><script src="dashboard.js"></script>
+    <script src="js/ajax.js"></script>
+  </body>
 </html>

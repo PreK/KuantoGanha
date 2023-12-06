@@ -5,7 +5,7 @@
     </div>
     <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto">
         <ul class="nav flex-column">
-            // Menu with Login and Register if logged out
+<!--            Menu with Login and Register if logged out-->
             <?php if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){?>
                 <li class="nav-item">
                     <a class="nav-link d-flex align-items-center gap-2" href="profile.php">
@@ -22,15 +22,15 @@
             <?php } else { ?>
                 <!-- Usuário Não Logado: Mostrar Login e Registro -->
                 <li class="nav-item">
-                    <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="login.php">
+                    <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="#" id="loginLink">
                         <i class="bi bi-box-arrow-in-right"></i>
                         Login
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link d-flex align-items-center gap-2" href="register.php">
+                    <a class="nav-link d-flex align-items-center gap-2" href="#" id="registerLink">
                         <i class="bi bi-pencil"></i>
-                        Registo
+                        Registar
                     </a>
                 </li>
             <?php } ?>
