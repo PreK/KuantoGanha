@@ -1,3 +1,8 @@
+<?php
+// Start the session (if not already started)
+session_start();
+
+?>
 <div class="offcanvas-md offcanvas-end bg-body-tertiary" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel">
     <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="sidebarMenuLabel">KuantoGanha</h5>
