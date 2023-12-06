@@ -14,31 +14,18 @@ document.addEventListener('DOMContentLoaded', function() {
         // Se for o formulário de login
         if (event.target.matches('.login-form form')) {
             event.preventDefault();
-            submitForm(event.target, 'modules/login.php');
+            submitForm(event.target, 'modules/login.php', true); // Adicionado um parâmetro para identificar login
         }
 
         // Se for o formulário de registro
         if (event.target.matches('.register-form form')) {
             event.preventDefault();
-            submitForm(event.target, 'modules/register.php');
+            submitForm(event.target, 'modules/register.php', false); // Aqui é para registro, então false
         }
     });
 });
 
-function loadContent(page) {
-    const xhr = new XMLHttpRequest();
-    xhr.onload = function() {
-        if (this.status === 200) {
-            document.getElementById('mainContent').innerHTML = this.responseText;
-        } else {
-            document.getElementById('mainContent').innerHTML = 'Erro ao carregar a página';
-        }
-    };
-    xhr.open('GET', 'modules/' + page, true);
-    xhr.send();
-}
-
-function submitForm(form, url) {
+function submitForm(form, url, isLogin) {
     const formData = new FormData(form);
     fetch(url, {
         method: 'POST',
@@ -46,7 +33,13 @@ function submitForm(form, url) {
     })
         .then(response => response.text())
         .then(html => {
-            document.getElementById('mainContent').innerHTML = html;
+            if (isLogin && html.includes('success')) {
+                // Se for login e a resposta incluir 'success', recarregue a página
+                window.location.reload();
+            } else {
+                // Para outros casos (registro ou mensagem de erro de login), atualize o conteúdo principal
+                document.getElementById('mainContent').innerHTML = html;
+            }
         })
         .catch(error => console.error('Error:', error));
 }
