@@ -38,12 +38,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 // Check if username exists, if yes then verify password
                 if ($stmt->rowCount() == 1) {
                     if ($row = $stmt->fetch()) {
-                        $id = $row["id"];
+                        if (isset($row["id"])) {
+                            $id = $row["id"];
+                        }
                         $username = $row["username"];
                         $hashed_password = $row["password"];
                         if (password_verify($password, $hashed_password)) {
-                            // Password is correct, start a new session
-                            session_start();
 
                             // Store data in session variables
                             $_SESSION["loggedin"] = true;
