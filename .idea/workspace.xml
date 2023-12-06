@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c549277-1796-45c2-b708-1d03a93f7fae" name="Changes" comment="revert css">
-      <change afterPath="$PROJECT_DIR$/ext/dashboard.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ext/sidebar.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ext/welcome.php" afterDir="false" />
+    <list default="true" id="7c549277-1796-45c2-b708-1d03a93f7fae" name="Changes" comment="Try fix icon login">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backup/welcome.php" beforeDir="false" afterPath="$PROJECT_DIR$/backup/welcome.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ext/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/ext/sidebar.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +101,7 @@
       <workItem from="1700766409174" duration="6069000" />
       <workItem from="1701109477943" duration="2481000" />
       <workItem from="1701799347675" duration="6809000" />
-      <workItem from="1701888922359" duration="3130000" />
+      <workItem from="1701888922359" duration="3686000" />
     </task>
     <task id="LOCAL-00001" summary="change localhost to 127.0.0.1">
       <option name="closed" value="true" />
@@ -315,7 +311,23 @@
       <option name="project" value="LOCAL" />
       <updated>1701890788556</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Test Login">
+      <option name="closed" value="true" />
+      <created>1701892075997</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1701892075997</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Try fix icon login">
+      <option name="closed" value="true" />
+      <created>1701892222132</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1701892222132</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -352,7 +364,9 @@
     <MESSAGE value="Bootstrap enable" />
     <MESSAGE value="Style css" />
     <MESSAGE value="revert css" />
-    <option name="LAST_COMMIT_MESSAGE" value="revert css" />
+    <MESSAGE value="Test Login" />
+    <MESSAGE value="Try fix icon login" />
+    <option name="LAST_COMMIT_MESSAGE" value="Try fix icon login" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
