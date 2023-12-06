@@ -7,7 +7,7 @@
           <ul class="nav flex-column">
             <li class="nav-item">
               <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="#">
-                <svg class="bi"><use xlink:href="#bi-box-arrow-in-right"/></svg>
+                  <i class="bi bi-box-arrow-in-right"></i>
 Login
               </a>
             </li>
