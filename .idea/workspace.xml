@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c549277-1796-45c2-b708-1d03a93f7fae" name="Changes" comment="Bootstrap enable">
-      <change afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+    <list default="true" id="7c549277-1796-45c2-b708-1d03a93f7fae" name="Changes" comment="revert css">
+      <change afterPath="$PROJECT_DIR$/ext/dashboard.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ext/sidebar.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ext/welcome.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/welcome.php" beforeDir="false" afterPath="$PROJECT_DIR$/backup/welcome.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,7 +32,9 @@
   &quot;associatedIndex&quot;: 3
 }</component>
   <component name="ProjectId" id="2Wwk3fjeJa8FaEPr3Dx9HrWHk8V" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -42,7 +48,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/prekp/OneDrive - Universidade de Aveiro/Projecto/KuantoGanha",
+    "last_opened_file_path": "C:/Users/prekp/OneDrive - Universidade de Aveiro/Projecto/KuantoGanha/modules",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.stylelint": "true",
     "node.js.detected.package.tslint": "true",
@@ -61,6 +67,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\prekp\OneDrive - Universidade de Aveiro\Projecto\KuantoGanha\modules" />
       <recent name="C:\Users\prekp\OneDrive - Universidade de Aveiro\Projecto\KuantoGanha" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -98,7 +105,7 @@
       <workItem from="1700766409174" duration="6069000" />
       <workItem from="1701109477943" duration="2481000" />
       <workItem from="1701799347675" duration="6809000" />
-      <workItem from="1701888922359" duration="1685000" />
+      <workItem from="1701888922359" duration="3130000" />
     </task>
     <task id="LOCAL-00001" summary="change localhost to 127.0.0.1">
       <option name="closed" value="true" />
@@ -292,7 +299,23 @@
       <option name="project" value="LOCAL" />
       <updated>1701890414722</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Style css">
+      <option name="closed" value="true" />
+      <created>1701890626319</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1701890626319</updated>
+    </task>
+    <task id="LOCAL-00026" summary="revert css">
+      <option name="closed" value="true" />
+      <created>1701890788556</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1701890788556</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -327,7 +350,9 @@
     <MESSAGE value="Sidebar" />
     <MESSAGE value="logout.php" />
     <MESSAGE value="Bootstrap enable" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bootstrap enable" />
+    <MESSAGE value="Style css" />
+    <MESSAGE value="revert css" />
+    <option name="LAST_COMMIT_MESSAGE" value="revert css" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

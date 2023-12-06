@@ -1,6 +1,5 @@
 <div class="header">
-    <h1>Bem-vindo ao [Nome do Site]</h1>
-    <p>Descobre e partilha informações sobre ordenados, empresas e muito mais!</p>
+
 </div>
 <div class="row">
     <div class="column">
