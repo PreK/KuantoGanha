@@ -16,7 +16,7 @@
     document.getElementById('mainContent').innerHTML = 'Erro ao carregar a página';
 }
 };
-    xhr.open('GET', 'ext/' + page, true);
+    xhr.open('GET', 'modules/' + page, true);
     xhr.send();
 }
 });
