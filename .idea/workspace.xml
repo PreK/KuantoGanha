@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c549277-1796-45c2-b708-1d03a93f7fae" name="Changes" comment="added exit; to php code when success">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="7c549277-1796-45c2-b708-1d03a93f7fae" name="Changes" comment="Debug on ajax" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -110,15 +108,7 @@
       <workItem from="1701109477943" duration="2481000" />
       <workItem from="1701799347675" duration="6809000" />
       <workItem from="1701888922359" duration="10277000" />
-      <workItem from="1702406965832" duration="2768000" />
-    </task>
-    <task id="LOCAL-00004" summary="Change Api">
-      <option name="closed" value="true" />
-      <created>1701109519644</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1701109519645</updated>
+      <workItem from="1702406965832" duration="3095000" />
     </task>
     <task id="LOCAL-00005" summary="Fix grande">
       <option name="closed" value="true" />
@@ -504,7 +494,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702407623200</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="Debug on ajax">
+      <option name="closed" value="true" />
+      <created>1702415439697</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1702415439697</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -522,7 +520,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fix modules/sidebar.php" />
     <MESSAGE value="add css sidebar.css" />
     <MESSAGE value="add login and logout" />
     <MESSAGE value="updated welcome.php" />
@@ -547,7 +544,8 @@
     <MESSAGE value="Piggy" />
     <MESSAGE value="session_start();" />
     <MESSAGE value="added exit; to php code when success" />
-    <option name="LAST_COMMIT_MESSAGE" value="added exit; to php code when success" />
+    <MESSAGE value="Debug on ajax" />
+    <option name="LAST_COMMIT_MESSAGE" value="Debug on ajax" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
