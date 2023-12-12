@@ -52,6 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                             // For ajax know if login was successful
                             echo 'success';
+                            exit;
                         } else {
                             // Display an error message if password is not valid
                             $login_err = "Invalid username or password.";
