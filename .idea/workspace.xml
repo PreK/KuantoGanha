@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c549277-1796-45c2-b708-1d03a93f7fae" name="Changes" comment="Debug on ajax" />
+    <list default="true" id="7c549277-1796-45c2-b708-1d03a93f7fae" name="Changes" comment="add class on login form">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/register.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -108,15 +111,7 @@
       <workItem from="1701109477943" duration="2481000" />
       <workItem from="1701799347675" duration="6809000" />
       <workItem from="1701888922359" duration="10277000" />
-      <workItem from="1702406965832" duration="3095000" />
-    </task>
-    <task id="LOCAL-00005" summary="Fix grande">
-      <option name="closed" value="true" />
-      <created>1701725709246</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1701725709246</updated>
+      <workItem from="1702406965832" duration="3534000" />
     </task>
     <task id="LOCAL-00006" summary="Fix da barra lateral">
       <option name="closed" value="true" />
@@ -502,7 +497,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702415439697</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="add class on login form">
+      <option name="closed" value="true" />
+      <created>1702415915313</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1702415915313</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -520,7 +523,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add css sidebar.css" />
     <MESSAGE value="add login and logout" />
     <MESSAGE value="updated welcome.php" />
     <MESSAGE value="To test login.php" />
@@ -545,7 +547,8 @@
     <MESSAGE value="session_start();" />
     <MESSAGE value="added exit; to php code when success" />
     <MESSAGE value="Debug on ajax" />
-    <option name="LAST_COMMIT_MESSAGE" value="Debug on ajax" />
+    <MESSAGE value="add class on login form" />
+    <option name="LAST_COMMIT_MESSAGE" value="add class on login form" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
