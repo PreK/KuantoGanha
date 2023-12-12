@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c549277-1796-45c2-b708-1d03a93f7fae" name="Changes" comment="session_start();">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9d5424b0-77f7-4d73-b4ab-668eb0bff6be.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9d5424b0-77f7-4d73-b4ab-668eb0bff6be.xml" afterDir="false" />
+    <list default="true" id="7c549277-1796-45c2-b708-1d03a93f7fae" name="Changes" comment="added exit; to php code when success">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -111,15 +110,7 @@
       <workItem from="1701109477943" duration="2481000" />
       <workItem from="1701799347675" duration="6809000" />
       <workItem from="1701888922359" duration="10277000" />
-      <workItem from="1702406965832" duration="341000" />
-    </task>
-    <task id="LOCAL-00003" summary="change localhost to 127.0.0.1">
-      <option name="closed" value="true" />
-      <created>1700775765396</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1700775765396</updated>
+      <workItem from="1702406965832" duration="2768000" />
     </task>
     <task id="LOCAL-00004" summary="Change Api">
       <option name="closed" value="true" />
@@ -505,7 +496,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701900611431</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="added exit; to php code when success">
+      <option name="closed" value="true" />
+      <created>1702407623199</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1702407623200</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -523,7 +522,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fix da barra lateral" />
     <MESSAGE value="Fix modules/sidebar.php" />
     <MESSAGE value="add css sidebar.css" />
     <MESSAGE value="add login and logout" />
@@ -548,7 +546,8 @@
     <MESSAGE value="Register more pretty" />
     <MESSAGE value="Piggy" />
     <MESSAGE value="session_start();" />
-    <option name="LAST_COMMIT_MESSAGE" value="session_start();" />
+    <MESSAGE value="added exit; to php code when success" />
+    <option name="LAST_COMMIT_MESSAGE" value="added exit; to php code when success" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

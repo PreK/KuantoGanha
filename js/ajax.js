@@ -31,12 +31,14 @@ function loadContent(page) {
 }
 
 function bindFormSubmit() {
-    // Encontra todos os formulários na página e vincula o evento de submit
     document.querySelectorAll('form').forEach(function(form) {
+        console.log("Vinculando formulário:", form); // Debug
         form.addEventListener('submit', function(event) {
             event.preventDefault();
             var formType = form.classList.contains('login-form') ? 'login' : 'register';
+            console.log("Tipo do formulário:", formType); // Debug
             var actionUrl = formType === 'login' ? 'modules/login.php' : 'modules/register.php';
+            console.log("URL de ação:", actionUrl); // Debug
             submitForm(form, actionUrl, formType === 'login');
         });
     });
