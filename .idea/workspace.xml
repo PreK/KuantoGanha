@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c549277-1796-45c2-b708-1d03a93f7fae" name="Changes" comment="add class on login form">
+    <list default="true" id="7c549277-1796-45c2-b708-1d03a93f7fae" name="Changes" comment="add class on register form">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/register.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +26,20 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "PreK"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="e1adb0bd-2e78-493d-87f0-863d25570e80" />
+        <option name="url" value="https://github.com/PreK/KuantoGanha.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -84,7 +98,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-php-predefined-ba97393d7c68-74080bdb84d3-com.jetbrains.php.sharedIndexes-PS-233.11799.232" />
+        <option value="bundled-php-predefined-ba97393d7c68-74080bdb84d3-com.jetbrains.php.sharedIndexes-PS-233.11799.297" />
       </set>
     </attachedChunks>
   </component>
@@ -111,15 +125,9 @@
       <workItem from="1701109477943" duration="2481000" />
       <workItem from="1701799347675" duration="6809000" />
       <workItem from="1701888922359" duration="10277000" />
-      <workItem from="1702406965832" duration="3534000" />
-    </task>
-    <task id="LOCAL-00006" summary="Fix da barra lateral">
-      <option name="closed" value="true" />
-      <created>1701804149031</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1701804149031</updated>
+      <workItem from="1702406965832" duration="3561000" />
+      <workItem from="1702416223760" duration="940000" />
+      <workItem from="1702494081115" duration="827000" />
     </task>
     <task id="LOCAL-00007" summary="Fix modules/sidebar.php">
       <option name="closed" value="true" />
@@ -505,7 +513,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702415915313</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="add class on register form">
+      <option name="closed" value="true" />
+      <created>1702416167003</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1702416167003</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -523,7 +539,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add login and logout" />
     <MESSAGE value="updated welcome.php" />
     <MESSAGE value="To test login.php" />
     <MESSAGE value="dashboard.php" />
@@ -548,7 +563,8 @@
     <MESSAGE value="added exit; to php code when success" />
     <MESSAGE value="Debug on ajax" />
     <MESSAGE value="add class on login form" />
-    <option name="LAST_COMMIT_MESSAGE" value="add class on login form" />
+    <MESSAGE value="add class on register form" />
+    <option name="LAST_COMMIT_MESSAGE" value="add class on register form" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

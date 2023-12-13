@@ -1,6 +1,6 @@
 <?php
 header('Content-Type: application/json');
-require_once '../dbconfig.php';
+require_once '../modules/dbconfig.php';
 
 $pdo = getDbConnection();
 $response = [
