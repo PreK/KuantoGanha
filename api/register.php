@@ -4,7 +4,7 @@ require_once '../modules/dbconfig.php'; // Inclui o ficheiro de configuração d
 header('Content-Type: application/json'); // Define o cabeçalho da resposta como JSON
 
 // Inicializa a resposta como um array
-$response = array("error" => false);
+$response = array("errors" => false);
 
 // Processa os dados do formulário quando a solicitação POST é recebida
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -23,6 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         // Prepara uma declaração de seleção
         $sql = "SELECT uid FROM users WHERE username = :username";
+        $pdo = getDbConnection();
         if ($stmt = $pdo->prepare($sql)) {
             $stmt->bindParam(":username", $username, PDO::PARAM_STR);
 
@@ -65,6 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($response['errors'])) {
         // Prepara uma declaração de inserção
         $sql = "INSERT INTO users (username, email, password) VALUES (:username, :email, :password)";
+        $pdo = getDbConnection();
         if ($stmt = $pdo->prepare($sql)) {
             $stmt->bindParam(":username", $username, PDO::PARAM_STR);
             $stmt->bindParam(":email", $email, PDO::PARAM_STR);

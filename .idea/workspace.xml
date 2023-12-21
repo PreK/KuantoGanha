@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c549277-1796-45c2-b708-1d03a93f7fae" name="Changes" comment="update dbconfig">
-      <change beforePath="$PROJECT_DIR$/.idea/KuantoGanha.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/KuantoGanha.iml" afterDir="false" />
+    <list default="true" id="7c549277-1796-45c2-b708-1d03a93f7fae" name="Changes" comment="Create api/register.php">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -128,15 +127,7 @@
       <workItem from="1702406965832" duration="3561000" />
       <workItem from="1702416223760" duration="940000" />
       <workItem from="1702494081115" duration="3120000" />
-      <workItem from="1703155067668" duration="1758000" />
-    </task>
-    <task id="LOCAL-00008" summary="add css sidebar.css">
-      <option name="closed" value="true" />
-      <created>1701804509050</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1701804509050</updated>
+      <workItem from="1703155067668" duration="3752000" />
     </task>
     <task id="LOCAL-00009" summary="add login and logout">
       <option name="closed" value="true" />
@@ -522,7 +513,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702495019263</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="Create api/register.php">
+      <option name="closed" value="true" />
+      <created>1703157180823</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1703157180824</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -540,7 +539,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="To test login.php" />
     <MESSAGE value="dashboard.php" />
     <MESSAGE value="Include sidebar on dashboard.php" />
     <MESSAGE value="Welcome.php" />
@@ -565,7 +563,8 @@
     <MESSAGE value="add class on login form" />
     <MESSAGE value="add class on register form" />
     <MESSAGE value="update dbconfig" />
-    <option name="LAST_COMMIT_MESSAGE" value="update dbconfig" />
+    <MESSAGE value="Create api/register.php" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create api/register.php" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
