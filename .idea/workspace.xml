@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c549277-1796-45c2-b708-1d03a93f7fae" name="Changes" comment="add class on register form">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+    <list default="true" id="7c549277-1796-45c2-b708-1d03a93f7fae" name="Changes" comment="update dbconfig">
+      <change beforePath="$PROJECT_DIR$/.idea/KuantoGanha.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/KuantoGanha.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,12 +27,12 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "PreK"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;PreK&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -73,7 +73,7 @@
     &quot;node.js.selected.package.stylelint&quot;: &quot;\\\\wsl$\\Ubuntu-22.04\\var\\www\\html\\node_modules\\stylelint&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;web-ide.project.structure&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -127,15 +127,8 @@
       <workItem from="1701888922359" duration="10277000" />
       <workItem from="1702406965832" duration="3561000" />
       <workItem from="1702416223760" duration="940000" />
-      <workItem from="1702494081115" duration="827000" />
-    </task>
-    <task id="LOCAL-00007" summary="Fix modules/sidebar.php">
-      <option name="closed" value="true" />
-      <created>1701804342147</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1701804342147</updated>
+      <workItem from="1702494081115" duration="3120000" />
+      <workItem from="1703155067668" duration="1758000" />
     </task>
     <task id="LOCAL-00008" summary="add css sidebar.css">
       <option name="closed" value="true" />
@@ -521,7 +514,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702416167003</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="update dbconfig">
+      <option name="closed" value="true" />
+      <created>1702495019261</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1702495019263</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -539,7 +540,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="updated welcome.php" />
     <MESSAGE value="To test login.php" />
     <MESSAGE value="dashboard.php" />
     <MESSAGE value="Include sidebar on dashboard.php" />
@@ -564,7 +564,8 @@
     <MESSAGE value="Debug on ajax" />
     <MESSAGE value="add class on login form" />
     <MESSAGE value="add class on register form" />
-    <option name="LAST_COMMIT_MESSAGE" value="add class on register form" />
+    <MESSAGE value="update dbconfig" />
+    <option name="LAST_COMMIT_MESSAGE" value="update dbconfig" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

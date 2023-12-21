@@ -1,6 +1,7 @@
 <?php
+
+require_once '../modules/dbconfig.php'; // Inclui o ficheiro de configuração da base de dados
 header('Content-Type: application/json');
-require_once '../modules/dbconfig.php';
 
 $pdo = getDbConnection();
 $response = [
