@@ -125,15 +125,7 @@
       <workItem from="1702406965832" duration="3561000" />
       <workItem from="1702416223760" duration="940000" />
       <workItem from="1702494081115" duration="3120000" />
-      <workItem from="1703155067668" duration="4053000" />
-    </task>
-    <task id="LOCAL-00010" summary="updated welcome.php">
-      <option name="closed" value="true" />
-      <created>1701805178788</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1701805178788</updated>
+      <workItem from="1703155067668" duration="4368000" />
     </task>
     <task id="LOCAL-00011" summary="To test login.php">
       <option name="closed" value="true" />
@@ -519,7 +511,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703160893982</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="fix $pdo api/register.php">
+      <option name="closed" value="true" />
+      <created>1703161334653</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1703161334654</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

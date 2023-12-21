@@ -16,10 +16,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $data = json_decode(file_get_contents("php://input"), true);
 
     // Atribui os dados recebidos às variáveis
-    $username = trim($data["username"]);
-    $email = trim($data["email"]);
-    $password = trim($data["password"]);
-    $confirm_password = trim($data["confirm_password"]);
+    $username = isset($data["username"]) ? trim($data["username"]) : "";
+    $email = isset($data["email"]) ? trim($data["email"]) : "";
+    $password = isset($data["password"]) ? trim($data["password"]) : "";
+    $confirm_password = isset($data["confirm_password"]) ? trim($data["confirm_password"]) : "";
+
 
     // Validação do nome de utilizador
     if (empty($username)) {
