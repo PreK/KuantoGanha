@@ -90,6 +90,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     unset($pdo); // Fecha a conexão
+    error_log(print_r($data, true)); // Isso imprimirá os dados recebidos no log de erros do PHP
 }
 
 // Retorna a resposta em formato JSON
