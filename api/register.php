@@ -3,6 +3,10 @@ require_once '../modules/dbconfig.php'; // Inclui o ficheiro de configuração d
 
 header('Content-Type: application/json'); // Define o cabeçalho da resposta como JSON
 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 // Inicializa a resposta como um array
 $response = array("errors" => false);
 
