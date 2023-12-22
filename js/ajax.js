@@ -34,15 +34,20 @@ $(document).ready(function() {
             bindFormSubmit();
             bindMenuLinks();
 
-            // Adicionando um delay para garantir que o DOM tenha sido atualizado
-            setTimeout(function() {
-                if ($('#mainContent').text().includes('success')) {
-                    window.location.reload();
-                }
-            }, 100); // Ajuste o tempo de delay conforme necessário
+            processResponse(html);
         }).fail(function() {
             $('#mainContent').html('Erro ao processar o formulário');
         });
+    }
+
+    function processResponse(html) {
+        if (html.includes('register-success')) {
+            loadContent('login.php'); // Carrega a página de login
+        } else if (html.includes('login-success')) {
+            window.location.href = 'index.php'; // Recarrega a página index
+        } else if (html.includes('job-modified')) {
+            loadContent('jobs.php'); // Recarrega a página de jobs
+        }
     }
 
     // Vincula eventos de clique aos links dentro de mainContent
