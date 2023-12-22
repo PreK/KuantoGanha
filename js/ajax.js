@@ -14,6 +14,13 @@ document.addEventListener('DOMContentLoaded', function() {
             loadContent('register.php');
         });
     }
+    // Carregar página de editar profissões
+    var jobsLink = document.getElementById('jobsLink');
+    if (jobsLink) {
+        jobsLink.addEventListener('click', function() {
+            loadContent('jobs.php');
+        });
+    }
 });
 
 function loadContent(page) {
