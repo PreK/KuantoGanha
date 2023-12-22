@@ -27,6 +27,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = isset($data["password"]) ? trim($data["password"]) : "";
     $confirm_password = isset($data["confirm_password"]) ? trim($data["confirm_password"]) : "";
 
+    $pdo = getDbConnection();
+
+    // Verifica se o email já existe
+    $sql = "SELECT uid FROM users WHERE email = :email";
+    if ($stmt = $pdo->prepare($sql)) {
+        $stmt->bindParam(":email", $email, PDO::PARAM_STR);
+        $stmt->execute();
+        if ($stmt->rowCount() > 0) {
+            $response['errors']['email'] = "This email is already taken.";
+        }
+        unset($stmt); // Fecha a declaração
+    }
 
     // Validação do nome de utilizador
     if (empty($username)) {
@@ -34,7 +46,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         // Prepara uma declaração de seleção
         $sql = "SELECT uid FROM users WHERE username = :username";
-        $pdo = getDbConnection();
         if ($stmt = $pdo->prepare($sql)) {
             $stmt->bindParam(":username", $username, PDO::PARAM_STR);
 
@@ -77,7 +88,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($response['error'])) {
         // Prepara uma declaração de inserção
         $sql = "INSERT INTO users (username, email, password) VALUES (:username, :email, :password)";
-        $pdo = getDbConnection();
         if ($stmt = $pdo->prepare($sql)) {
             $stmt->bindParam(":username", $username, PDO::PARAM_STR);
             $stmt->bindParam(":email", $email, PDO::PARAM_STR);
