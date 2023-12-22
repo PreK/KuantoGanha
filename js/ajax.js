@@ -1,43 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
-    var loginLink = document.getElementById('loginLink');
-    var registerLink = document.getElementById('registerLink');
-    var jobsLink = document.getElementById('jobsLink');
-
-    if (loginLink) {
-        loginLink.addEventListener('click', function() {
-            loadContent('login.php');
-        });
-    }
-    if (registerLink) {
-        registerLink.addEventListener('click', function() {
-            loadContent('register.php');
-        });
-    }
-    if (jobsLink) {
-        jobsLink.addEventListener('click', function() {
-            loadContent('jobs.php');
-        });
-    }
+    bindFormSubmit();
 });
-
-function loadContent(page) {
-    fetch('modules/' + page)
-        .then(response => {
-            if (response.ok) {
-                return response.text();
-            } else {
-                throw new Error('Falha ao carregar conteúdo: ' + response.status);
-            }
-        })
-        .then(html => {
-            document.getElementById('mainContent').innerHTML = html;
-            bindFormSubmit();
-        })
-        .catch(error => {
-            console.error('Erro ao carregar conteúdo:', error);
-            document.getElementById('mainContent').innerHTML = 'Erro ao carregar a página';
-        });
-}
 
 function bindFormSubmit() {
     document.querySelectorAll('form').forEach(function(form) {
@@ -70,8 +33,13 @@ function submitForm(form, url) {
     })
         .then(response => response.text())
         .then(html => {
-            if (html.includes('success') && form.classList.contains('login-form')) {
-                window.location.reload();
+            if (html.includes('success')) {
+                if (form.classList.contains('login-form')) {
+                    window.location.reload();
+                } else {
+                    document.getElementById('mainContent').innerHTML = html;
+                    bindFormSubmit();
+                }
             } else {
                 document.getElementById('mainContent').innerHTML = html;
                 bindFormSubmit();
