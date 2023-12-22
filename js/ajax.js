@@ -37,11 +37,14 @@ function loadContent(page) {
 
 function bindFormSubmit() {
     document.querySelectorAll('form').forEach(function(form) {
-        console.log("Vinculando formulário:", form);
         form.addEventListener('submit', function(event) {
             event.preventDefault();
             var actionUrl = form.getAttribute('action');
-            submitForm(form, actionUrl);
+            if (actionUrl) {
+                submitForm(form, actionUrl);
+            } else {
+                console.error('Error: Action URL not defined for the form');
+            }
         });
     });
 }
@@ -52,10 +55,18 @@ function submitForm(form, url) {
         method: 'POST',
         body: formData
     })
-        .then(response => response.text())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok: ' + response.statusText);
+            }
+            return response.text();
+        })
         .then(html => {
             document.getElementById('mainContent').innerHTML = html;
-            bindFormSubmit(); // Vincular novamente para os novos formulários
+            bindFormSubmit(); // Re-bind para novos formulários
         })
-        .catch(error => console.error('Error:', error));
+        .catch(error => {
+            console.error('Error:', error);
+            document.getElementById('mainContent').innerHTML = 'Erro ao processar o formulário';
+        });
 }
