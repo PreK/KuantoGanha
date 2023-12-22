@@ -28,6 +28,7 @@ function loadContent(page) {
             document.getElementById('mainContent').innerHTML = this.responseText;
             bindFormSubmit();
         } else {
+            console.error('Falha ao carregar conteúdo:', this.status);
             document.getElementById('mainContent').innerHTML = 'Erro ao carregar a página';
         }
     };
