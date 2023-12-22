@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Carregar formulário de login
     var loginLink = document.getElementById('loginLink');
     var registerLink = document.getElementById('registerLink');
     var jobsLink = document.getElementById('jobsLink');
@@ -22,18 +21,22 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function loadContent(page) {
-    const xhr = new XMLHttpRequest();
-    xhr.onload = function() {
-        if (this.status === 200) {
-            document.getElementById('mainContent').innerHTML = this.responseText;
+    fetch('modules/' + page)
+        .then(response => {
+            if (response.ok) {
+                return response.text();
+            } else {
+                throw new Error('Falha ao carregar conteúdo: ' + response.status);
+            }
+        })
+        .then(html => {
+            document.getElementById('mainContent').innerHTML = html;
             bindFormSubmit();
-        } else {
-            console.error('Falha ao carregar conteúdo:', this.status);
+        })
+        .catch(error => {
+            console.error('Erro ao carregar conteúdo:', error);
             document.getElementById('mainContent').innerHTML = 'Erro ao carregar a página';
-        }
-    };
-    xhr.open('GET', 'modules/' + page, true);
-    xhr.send();
+        });
 }
 
 function bindFormSubmit() {
@@ -47,7 +50,6 @@ function bindFormSubmit() {
 }
 
 function submitForm(form, url) {
-    // Se o action não está definido, determinar a URL com base na classe do formulário
     if (!url || url === '') {
         if (form.classList.contains('login-form')) {
             url = 'modules/login.php';
@@ -70,16 +72,15 @@ function submitForm(form, url) {
     })
         .then(response => response.text())
         .then(html => {
-            // Verificar se a resposta contém a mensagem de sucesso de login
             if (html.includes('success') && form.classList.contains('login-form')) {
-                window.location.reload(); // Recarregar a página
+                window.location.reload();
             } else {
                 document.getElementById('mainContent').innerHTML = html;
-                bindFormSubmit(); // Re-bind para novos formulários
+                bindFormSubmit();
             }
         })
         .catch(error => {
-            console.error('Error:', error);
+            console.error('Erro:', error);
             document.getElementById('mainContent').innerHTML = 'Erro ao processar o formulário';
         });
 }
