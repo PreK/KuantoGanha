@@ -30,6 +30,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $param_title = trim($_POST["job_title"]);
                 $stmt->execute();
                 unset($stmt);
+                echo "success";
+                exit;
             }
         }
     }
@@ -42,6 +44,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $param_job_id = trim($_POST["job_id"]);
             $stmt->execute();
             unset($stmt);
+            echo "success";
+            exit;
         }
     }
 }
@@ -51,7 +55,7 @@ unset($pdo);
 <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
     <div class="jobs-form">
         <h2>Gestão de Profissões</h2>
-        <form class="jobs-form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+        <form class="jobs-form" id="addJobForm" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div class="mb-3">
                 <label class="form-label">Título do Emprego</label>
                 <input type="text" name="job_title" class="form-control">
@@ -88,4 +92,9 @@ unset($pdo);
     </div>
 </main>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById("jobsLink").classList.add("active");
+    });
+</script>
 
