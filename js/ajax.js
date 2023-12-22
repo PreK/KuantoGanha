@@ -19,7 +19,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     bindFormSubmit();
-    bindMenuLinks();
 });
 
 function loadContent(page) {
@@ -50,15 +49,6 @@ function bindFormSubmit() {
         });
     });
 }
-function bindMenuLinks() {
-    document.querySelectorAll('a').forEach(function(link) {
-        link.addEventListener('click', function(event) {
-            event.preventDefault();
-            var url = link.getAttribute('href');
-            loadPage(url);
-        });
-    });
-}
 
 function submitForm(form, url) {
     if (!url || url === '') {
@@ -66,7 +56,7 @@ function submitForm(form, url) {
             url = 'modules/login.php';
         } else if (form.classList.contains('register-form')) {
             url = 'modules/register.php';
-        } else if (form.classList.contains('jobs-form') || form.classList.contains('job-list')) {
+        } else if (form.classList.contains('jobs-form')) {
             url = 'modules/jobs.php';
         } else {
             console.error('Formulário desconhecido, não é possível determinar o endpoint.');
@@ -83,27 +73,12 @@ function submitForm(form, url) {
         .then(html => {
             document.getElementById('mainContent').innerHTML = html;
             bindFormSubmit();
-            bindMenuLinks();
             if (html.includes('success')) {
-                location.reload();
+                window.location.reload();
             }
         })
         .catch(error => {
             console.error('Erro:', error);
             document.getElementById('mainContent').innerHTML = 'Erro ao processar o formulário';
-        });
-}
-
-function loadPage(url) {
-    fetch(url)
-        .then(response => response.text())
-        .then(html => {
-            document.getElementById('mainContent').innerHTML = html;
-            bindFormSubmit();
-            bindMenuLinks();
-        })
-        .catch(error => {
-            console.error('Erro:', error);
-            document.getElementById('mainContent').innerHTML = 'Erro ao carregar a página';
         });
 }
