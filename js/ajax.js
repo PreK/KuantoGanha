@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     bindFormSubmit();
+    bindMenuLinks();
 });
 
 function bindFormSubmit() {
@@ -8,6 +9,16 @@ function bindFormSubmit() {
             event.preventDefault();
             var actionUrl = form.getAttribute('action');
             submitForm(form, actionUrl);
+        });
+    });
+}
+
+function bindMenuLinks() {
+    document.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            var url = link.getAttribute('href');
+            loadPage(url);
         });
     });
 }
@@ -35,11 +46,24 @@ function submitForm(form, url) {
         .then(html => {
             document.getElementById('mainContent').innerHTML = html;
             bindFormSubmit();
-            window.location.reload();
+            bindMenuLinks();
         })
         .catch(error => {
             console.error('Erro:', error);
             document.getElementById('mainContent').innerHTML = 'Erro ao processar o formulário';
         });
 }
-//v2
+
+function loadPage(url) {
+    fetch(url)
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('mainContent').innerHTML = html;
+            bindFormSubmit();
+            bindMenuLinks();
+        })
+        .catch(error => {
+            console.error('Erro:', error);
+            document.getElementById('mainContent').innerHTML = 'Erro ao carregar a página';
+        });
+}
