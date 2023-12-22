@@ -14,6 +14,7 @@ $response = array("error" => false);
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Recebe os dados em formato JSON
     $data = json_decode(file_get_contents("php://input"), true);
+    echo json_encode($data);
     if (!is_array($data)) {
         // Trate o erro apropriadamente
         $response["error"] = true;
@@ -96,9 +97,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     unset($pdo); // Fecha a conexão
-    error_log(print_r($data, true)); // Isso imprimirá os dados recebidos no log de erros do PHP
 }
 
 // Retorna a resposta em formato JSON
 echo json_encode($response);
+
 ?>
