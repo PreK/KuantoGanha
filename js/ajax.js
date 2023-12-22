@@ -41,17 +41,26 @@ function bindFormSubmit() {
         form.addEventListener('submit', function(event) {
             event.preventDefault();
             var actionUrl = form.getAttribute('action');
-            if (actionUrl) {
-                submitForm(form, actionUrl);
-            } else {
-                console.log("Ação definida para manipulação JS");
-                // Aqui você pode adicionar lógica para lidar com formulários sem 'action'
-            }
+            submitForm(form, actionUrl);
         });
     });
 }
 
 function submitForm(form, url) {
+    // Se o action for o próprio arquivo ou não estiver definido, determinar a URL com base no tipo do formulário
+    if (!url || url === 'index.php') {
+        if (form.classList.contains('login-form')) {
+            url = 'modules/login.php';
+        } else if (form.classList.contains('register-form')) {
+            url = 'modules/register.php';
+        } else if (form.classList.contains('jobs-form')) {
+            url = 'modules/jobs.php';
+        } else {
+            console.error('Formulário desconhecido, não é possível determinar o endpoint.');
+            return;
+        }
+    }
+
     const formData = new FormData(form);
     fetch(url, {
         method: 'POST',
