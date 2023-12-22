@@ -42,3 +42,4 @@ function submitForm(form, url) {
             document.getElementById('mainContent').innerHTML = 'Erro ao processar o formulário';
         });
 }
+//v2
