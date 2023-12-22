@@ -8,7 +8,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 // Inicializa a resposta como um array
-$response = array("errors" => false);
+$response = array("error" => false);
 
 // Processa os dados do formulário quando a solicitação POST é recebida
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Validação do nome de utilizador
     if (empty($username)) {
-        $response['errors']['username'] = "Please enter a username.";
+        $response['error']['username'] = "Please enter a username.";
     } else {
         // Prepara uma declaração de seleção
         $sql = "SELECT uid FROM users WHERE username = :username";
@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Tenta executar
             if ($stmt->execute()) {
                 if ($stmt->rowCount() == 1) {
-                    $response['errors']['username'] = "This username is already taken.";
+                    $response['error']['username'] = "This username is already taken.";
                 }
             } else {
                 $response["error"] = true;
@@ -54,27 +54,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Validação do email
     if (empty($email)) {
-        $response['errors']['email'] = "Please enter an email.";
+        $response['error']['email'] = "Please enter an email.";
     } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $response['errors']['email'] = "Invalid email format.";
+        $response['error']['email'] = "Invalid email format.";
     }
 
     // Validação da password
     if (empty($password)) {
-        $response['errors']['password'] = "Please enter a password.";
+        $response['error']['password'] = "Please enter a password.";
     } elseif (strlen($password) < 6) {
-        $response['errors']['password'] = "Password must have at least 6 characters.";
+        $response['error']['password'] = "Password must have at least 6 characters.";
     }
 
     // Validação da confirmação da password
     if (empty($confirm_password)) {
-        $response['errors']['confirm_password'] = "Please confirm the password.";
+        $response['error']['confirm_password'] = "Please confirm the password.";
     } elseif ($password != $confirm_password) {
-        $response['errors']['confirm_password'] = "Password did not match.";
+        $response['error']['confirm_password'] = "Password did not match.";
     }
 
     // Verifica se há erros antes de inserir na base de dados
-    if (empty($response['errors'])) {
+    if (empty($response['error'])) {
         // Prepara uma declaração de inserção
         $sql = "INSERT INTO users (username, email, password) VALUES (:username, :email, :password)";
         $pdo = getDbConnection();
