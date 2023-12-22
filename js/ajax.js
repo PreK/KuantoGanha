@@ -70,8 +70,13 @@ function submitForm(form, url) {
     })
         .then(response => response.text())
         .then(html => {
-            document.getElementById('mainContent').innerHTML = html;
-            bindFormSubmit(); // Re-bind para novos formulários
+            // Verificar se a resposta contém a mensagem de sucesso de login
+            if (html.includes('success') && form.classList.contains('login-form')) {
+                window.location.reload(); // Recarregar a página
+            } else {
+                document.getElementById('mainContent').innerHTML = html;
+                bindFormSubmit(); // Re-bind para novos formulários
+            }
         })
         .catch(error => {
             console.error('Error:', error);
