@@ -127,23 +127,7 @@
       <workItem from="1702494081115" duration="3120000" />
       <workItem from="1703155067668" duration="6052000" />
       <workItem from="1703241275152" duration="3760000" />
-      <workItem from="1703246628260" duration="11639000" />
-    </task>
-    <task id="LOCAL-00036" summary="fix modules path">
-      <option name="closed" value="true" />
-      <created>1701896771591</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1701896771591</updated>
-    </task>
-    <task id="LOCAL-00037" summary="login more pretty">
-      <option name="closed" value="true" />
-      <created>1701897082167</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1701897082167</updated>
+      <workItem from="1703246628260" duration="11962000" />
     </task>
     <task id="LOCAL-00038" summary="Register more pretty">
       <option name="closed" value="true" />
@@ -521,7 +505,23 @@
       <option name="project" value="LOCAL" />
       <updated>1703268042899</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="jobs.php first fix">
+      <option name="closed" value="true" />
+      <created>1703268432830</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1703268432830</updated>
+    </task>
+    <task id="LOCAL-00086" summary="jobs.php first fix">
+      <option name="closed" value="true" />
+      <created>1703268657988</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1703268657988</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
