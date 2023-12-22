@@ -43,7 +43,8 @@ function bindFormSubmit() {
             if (actionUrl) {
                 submitForm(form, actionUrl);
             } else {
-                console.error('Error: Action URL not defined for the form');
+                console.log("Ação definida para manipulação JS");
+                // Aqui você pode adicionar lógica para lidar com formulários sem 'action'
             }
         });
     });
