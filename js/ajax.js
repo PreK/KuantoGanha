@@ -1,5 +1,4 @@
 $(document).ready(function() {
-    // Carregar conteúdo para login, registro, e jobs
     $('#loginLink, #registerLink, #jobsLink').click(function(event) {
         event.preventDefault();
         var page = $(this).attr('id').replace('Link', '') + '.php';
@@ -16,7 +15,7 @@ $(document).ready(function() {
     }
 
     function bindFormSubmit() {
-        $('form').submit(function(event) {
+        $('#mainContent').find('form').submit(function(event) {
             event.preventDefault();
             submitForm($(this));
         });
