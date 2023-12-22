@@ -75,7 +75,7 @@ unset($pdo);
                 echo "<tr>";
                 echo "<td>" . htmlspecialchars($row['title']) . "</td>";
                 echo "<td>
-            <form method='post' action='" . htmlspecialchars($_SERVER["PHP_SELF"]) . "'>
+            <form class='job-list' method='post' action='" . htmlspecialchars($_SERVER["PHP_SELF"]) . "'>
                 <input type='hidden' name='job_id' value='" . $row['id'] . "'>
                 <button type='submit' name='remove_job' class='btn btn-danger'>Remover</button>
             </form>

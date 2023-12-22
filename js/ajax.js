@@ -55,6 +55,8 @@ function submitForm(form, url) {
             url = 'modules/register.php';
         } else if (form.classList.contains('jobs-form')) {
             url = 'modules/jobs.php';
+        } else if (form.classList.contains('job-list')) {
+            url = 'modules/job.php';
         } else {
             console.error('Formulário desconhecido, não é possível determinar o endpoint.');
             return;
