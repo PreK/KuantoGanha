@@ -49,7 +49,7 @@ unset($pdo);
 ?>
 
 <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-    <div class="job-management-form">
+    <div class="jobs-form">
         <h2>Gestão de Profissões</h2>
         <form class="jobs-form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div class="mb-3">
