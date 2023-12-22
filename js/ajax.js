@@ -29,8 +29,8 @@ $(document).ready(function() {
             $('#mainContent').html(html);
             bindFormSubmit();
 
-            // Verificar se a resposta contém 'success'
-            if (html.includes('success')) {
+            // Verificar se 'success' está presente no conteúdo atualizado de mainContent
+            if ($('#mainContent').text().includes('success')) {
                 // Recarregar a página
                 window.location.reload();
             }
