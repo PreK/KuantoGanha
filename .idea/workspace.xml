@@ -130,23 +130,7 @@
       <workItem from="1703246628260" duration="12706000" />
       <workItem from="1703269436376" duration="1155000" />
       <workItem from="1703270614727" duration="445000" />
-      <workItem from="1703271075193" duration="3799000" />
-    </task>
-    <task id="LOCAL-00060" summary="fix $pdo api/register.php">
-      <option name="closed" value="true" />
-      <created>1703161497835</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1703161497835</updated>
-    </task>
-    <task id="LOCAL-00061" summary="fix $pdo api/register.php">
-      <option name="closed" value="true" />
-      <created>1703172529730</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1703172529730</updated>
+      <workItem from="1703271075193" duration="4268000" />
     </task>
     <task id="LOCAL-00062" summary="debug api/register.php">
       <option name="closed" value="true" />
@@ -524,7 +508,23 @@
       <option name="project" value="LOCAL" />
       <updated>1703274870167</updated>
     </task>
-    <option name="localTasksCounter" value="109" />
+    <task id="LOCAL-00109" summary="jobs.php first fix">
+      <option name="closed" value="true" />
+      <created>1703275144643</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1703275144643</updated>
+    </task>
+    <task id="LOCAL-00110" summary="jobs.php first fix">
+      <option name="closed" value="true" />
+      <created>1703275341486</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1703275341486</updated>
+    </task>
+    <option name="localTasksCounter" value="111" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

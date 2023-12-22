@@ -34,9 +34,12 @@ $(document).ready(function() {
             bindFormSubmit();
             bindMenuLinks();
 
-            if (html.includes('success')) {
-                window.location.reload();
-            }
+            // Adicionando um delay para garantir que o DOM tenha sido atualizado
+            setTimeout(function() {
+                if ($('#mainContent').text().includes('success')) {
+                    window.location.reload();
+                }
+            }, 100); // Ajuste o tempo de delay conforme necessário
         }).fail(function() {
             $('#mainContent').html('Erro ao processar o formulário');
         });
