@@ -13,7 +13,6 @@ $response = array("error" => false);
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Recebe os dados em formato JSON
     $data = json_decode(file_get_contents("php://input"), true);
-    echo json_encode($data);
     if (!is_array($data)) {
         // Trate o erro apropriadamente
         $response["error"] = true;
