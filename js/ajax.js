@@ -47,6 +47,9 @@ function submitForm(form, url) {
             document.getElementById('mainContent').innerHTML = html;
             bindFormSubmit();
             bindMenuLinks();
+            if (html.includes('success')) {
+                location.reload();
+            }
         })
         .catch(error => {
             console.error('Erro:', error);
