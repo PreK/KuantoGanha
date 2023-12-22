@@ -58,7 +58,7 @@ unset($pdo);
                 <span class="text-danger"><?php echo $job_err; ?></span>
             </div>
             <div>
-                <input type="submit" name="add_job" class="btn btn-primary" value="Adicionar Emprego">
+                <input type="submit" name="add_job" class="btn btn-primary" value="Adicionar Profissão">
             </div>
         </form>
 
