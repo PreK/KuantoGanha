@@ -71,10 +71,11 @@ function submitForm(form, url) {
     })
         .then(response => response.text())
         .then(html => {
-            document.getElementById('mainContent').innerHTML = html;
-            bindFormSubmit();
             if (html.includes('success')) {
-                window.location.reload();
+                window.location.reload(); // Recarregar a página se a resposta contém 'success'
+            } else {
+                document.getElementById('mainContent').innerHTML = html;
+                bindFormSubmit(); // Re-bind para novos formulários
             }
         })
         .catch(error => {
