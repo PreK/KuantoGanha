@@ -33,12 +33,9 @@ function submitForm(form, url) {
     })
         .then(response => response.text())
         .then(html => {
-            if (html.includes('success')) {
-                window.location.reload();
-            } else {
-                document.getElementById('mainContent').innerHTML = html;
-                bindFormSubmit();
-            }
+            document.getElementById('mainContent').innerHTML = html;
+            bindFormSubmit();
+            window.location.reload();
         })
         .catch(error => {
             console.error('Erro:', error);
