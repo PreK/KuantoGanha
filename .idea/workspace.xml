@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c549277-1796-45c2-b708-1d03a93f7fae" name="Changes" comment="jobs.php first fix" />
+    <list default="true" id="7c549277-1796-45c2-b708-1d03a93f7fae" name="Changes" comment="jobs.php first fix">
+      <change beforePath="$PROJECT_DIR$/js/ajax.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/ajax.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -130,23 +132,7 @@
       <workItem from="1703246628260" duration="12706000" />
       <workItem from="1703269436376" duration="1155000" />
       <workItem from="1703270614727" duration="445000" />
-      <workItem from="1703271075193" duration="2444000" />
-    </task>
-    <task id="LOCAL-00051" summary="session_start();">
-      <option name="closed" value="true" />
-      <created>1701900611431</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1701900611431</updated>
-    </task>
-    <task id="LOCAL-00052" summary="added exit; to php code when success">
-      <option name="closed" value="true" />
-      <created>1702407623199</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1702407623200</updated>
+      <workItem from="1703271075193" duration="2754000" />
     </task>
     <task id="LOCAL-00053" summary="Debug on ajax">
       <option name="closed" value="true" />
@@ -524,7 +510,23 @@
       <option name="project" value="LOCAL" />
       <updated>1703273336875</updated>
     </task>
-    <option name="localTasksCounter" value="100" />
+    <task id="LOCAL-00100" summary="jobs.php first fix">
+      <option name="closed" value="true" />
+      <created>1703273600061</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1703273600061</updated>
+    </task>
+    <task id="LOCAL-00101" summary="jobs.php first fix">
+      <option name="closed" value="true" />
+      <created>1703273695787</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1703273695787</updated>
+    </task>
+    <option name="localTasksCounter" value="102" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
