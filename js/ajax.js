@@ -34,12 +34,7 @@ function submitForm(form, url) {
         .then(response => response.text())
         .then(html => {
             if (html.includes('success')) {
-                if (form.classList.contains('login-form')) {
-                    window.location.reload();
-                } else {
-                    document.getElementById('mainContent').innerHTML = html;
-                    bindFormSubmit();
-                }
+                window.location.reload();
             } else {
                 document.getElementById('mainContent').innerHTML = html;
                 bindFormSubmit();
