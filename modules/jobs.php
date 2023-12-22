@@ -65,7 +65,8 @@ unset($pdo);
                 <input type="submit" name="add_job" class="btn btn-primary" value="Adicionar Profissão">
             </div>
         </form>
-
+    </div>
+    <div class="jobs-list">
         <!-- Lista de empregos com opção de remoção -->
         <table>
             <tr>
