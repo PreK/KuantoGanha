@@ -25,15 +25,15 @@ $(document).ready(function() {
         var url = $form.attr('action') || 'modules/' + $form.attr('class').split('-')[0] + '.php';
 
         $.post(url, $form.serialize(), function(html) {
-            // Inserir a resposta no mainContent
             $('#mainContent').html(html);
             bindFormSubmit();
 
-            // Verificar se 'success' está presente no conteúdo atualizado de mainContent
-            if ($('#mainContent').text().includes('success')) {
-                // Recarregar a página
-                window.location.reload();
-            }
+            // Delay na verificação para garantir que o DOM foi atualizado
+            setTimeout(function() {
+                if ($('#mainContent').text().includes('success')) {
+                    window.location.reload();
+                }
+            }, 100); // Ajuste o tempo conforme necessário
         }).fail(function() {
             $('#mainContent').html('Erro ao processar o formulário');
         });
