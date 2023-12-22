@@ -47,8 +47,8 @@ function bindFormSubmit() {
 }
 
 function submitForm(form, url) {
-    // Se o action for o próprio arquivo ou não estiver definido, determinar a URL com base no tipo do formulário
-    if (!url || url === 'index.php') {
+    // Se o action não está definido, determinar a URL com base na classe do formulário
+    if (!url || url === '') {
         if (form.classList.contains('login-form')) {
             url = 'modules/login.php';
         } else if (form.classList.contains('register-form')) {
@@ -66,12 +66,7 @@ function submitForm(form, url) {
         method: 'POST',
         body: formData
     })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok: ' + response.statusText);
-            }
-            return response.text();
-        })
+        .then(response => response.text())
         .then(html => {
             document.getElementById('mainContent').innerHTML = html;
             bindFormSubmit(); // Re-bind para novos formulários

@@ -127,15 +127,7 @@
       <workItem from="1702494081115" duration="3120000" />
       <workItem from="1703155067668" duration="6052000" />
       <workItem from="1703241275152" duration="3760000" />
-      <workItem from="1703246628260" duration="9396000" />
-    </task>
-    <task id="LOCAL-00031" summary="Try fix icon login">
-      <option name="closed" value="true" />
-      <created>1701893796498</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1701893796498</updated>
+      <workItem from="1703246628260" duration="9765000" />
     </task>
     <task id="LOCAL-00032" summary="php menu with login/logout">
       <option name="closed" value="true" />
@@ -521,7 +513,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703265818877</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="jobs.php first fix">
+      <option name="closed" value="true" />
+      <created>1703266321169</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1703266321169</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
