@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 .then(response => response.json())
                 .then(data => {
                     console.log(data); // Processa a resposta
-                    // Aqui você pode redirecionar o usuário ou atualizar a interface
+                    window.location.href = 'index.php'; // Redireciona para a página inicial
                 })
                 .catch(error => {
                     console.error('Erro:', error);
