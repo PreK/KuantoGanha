@@ -7,6 +7,6 @@ session_destroy();
 
 // Imprime mensagem de sucesso e redireciona para a página de login
 echo "Logout realizado com sucesso!";
-header("Location: modules\login.php");
+header("Location: login.php");
 exit;
 ?>
