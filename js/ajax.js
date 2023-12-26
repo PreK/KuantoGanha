@@ -1,70 +1,66 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Carregar formulário de login
-    var loginLink = document.getElementById('loginLink');
-    if (loginLink) {
-        loginLink.addEventListener('click', function() {
-            loadContent('login.php');
-        });
+document.addEventListener("DOMContentLoaded", function() {
+    // Função para carregar conteúdo no mainContent
+    function loadContent(url) {
+        fetch(url)
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('mainContent').innerHTML = html;
+            })
+            .catch(error => {
+                console.error('Erro ao carregar o conteúdo:', error);
+            });
     }
 
-    // Carregar formulário de registro
-    var registerLink = document.getElementById('registerLink');
-    if (registerLink) {
-        registerLink.addEventListener('click', function() {
-            loadContent('register.php');
+    // Manipuladores de clique para links da barra lateral
+    document.querySelectorAll('.sidebar .nav-link').forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            const url = this.getAttribute('href');
+            if (url !== '#') {
+                loadContent(url);
+            }
         });
+    });
+
+    // Função para enviar dados de formulários via AJAX
+    function sendForm(form, url) {
+        var formData = new FormData(form);
+        fetch(url, {
+            method: 'POST',
+            body: formData
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data); // Processar a resposta
+                // Aqui você pode redirecionar o usuário ou atualizar a interface
+            })
+            .catch(error => {
+                console.error('Erro:', error);
+            });
     }
-    // Carregar página de editar profissões
-    var jobsLink = document.getElementById('jobsLink');
-    if (jobsLink) {
-        jobsLink.addEventListener('click', function() {
-            loadContent('jobs.php');
+
+    // Intercepta submissões de formulário de login e registro
+    document.querySelectorAll('.ajaxForm').forEach(form => {
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            sendForm(this, this.getAttribute('action'));
+        });
+    });
+
+    // Logout
+    const logoutLink = document.getElementById('logoutLink');
+    if (logoutLink) {
+        logoutLink.addEventListener('click', function(event) {
+            event.preventDefault();
+            fetch('modules/logout.php', { method: 'POST' })
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    // Redirecionar para a página de login ou atualizar a interface
+                })
+                .catch(error => {
+                    console.error('Erro no logout:', error);
+                });
         });
     }
 });
-
-function loadContent(page) {
-    const xhr = new XMLHttpRequest();
-    xhr.onload = function() {
-        if (this.status === 200) {
-            document.getElementById('mainContent').innerHTML = this.responseText;
-            bindFormSubmit();
-        } else {
-            document.getElementById('mainContent').innerHTML = 'Erro ao carregar a página';
-        }
-    };
-    xhr.open('GET', 'modules/' + page, true);
-    xhr.send();
-}
-
-function bindFormSubmit() {
-    document.querySelectorAll('form').forEach(function(form) {
-        console.log("Vinculando formulário:", form); // Debug
-        form.addEventListener('submit', function(event) {
-            event.preventDefault();
-            var formType = form.classList.contains('login-form') ? 'login' : 'register';
-            console.log("Tipo do formulário:", formType); // Debug
-            var actionUrl = formType === 'login' ? 'modules/login.php' : 'modules/register.php';
-            console.log("URL de ação:", actionUrl); // Debug
-            submitForm(form, actionUrl, formType === 'login');
-        });
-    });
-}
-
-function submitForm(form, url, isLogin) {
-    const formData = new FormData(form);
-    fetch(url, {
-        method: 'POST',
-        body: formData
-    })
-        .then(response => response.text())
-        .then(html => {
-            if (isLogin && html.includes('success')) {
-                window.location.reload();
-            } else {
-                document.getElementById('mainContent').innerHTML = html;
-                bindFormSubmit(); // Vincular novamente para os novos formulários
-            }
-        })
-        .catch(error => console.error('Error:', error));
-}

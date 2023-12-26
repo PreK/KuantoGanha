@@ -27,7 +27,7 @@ session_start();
                     </li>
                 <?php } ?>
                 <li class="nav-item">
-                    <a class="nav-link d-flex align-items-center gap-2" href="modules/logout.php">
+                    <a class="nav-link d-flex align-items-center gap-2" href="#" id="logoutLink">
                         <i class="bi bi-box-arrow-left"></i>
                         Logout
                     </a>

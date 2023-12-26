@@ -1,107 +1,23 @@
-<?php
-session_start(); // Start the session
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <form id="loginForm" class="ajaxForm" method="post">
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Utilizador:</label>
+                            <input type="text" class="form-control" id="username" name="username" required>
+                        </div>
 
-require_once 'dbconfig.php'; // Include database configuration file
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password:</label>
+                            <input type="password" class="form-control" id="password" name="password" required>
+                        </div>
 
-// Initialize variables for username and password
-$username = $password = "";
-$username_err = $password_err = $login_err = "";
-
-// Process the form data when the form is submitted
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
-    // Validate username
-    if (empty(trim($_POST["username"]))) {
-        $username_err = "Please enter your username.";
-    } else {
-        $username = trim($_POST["username"]);
-    }
-
-    // Validate password
-    if (empty(trim($_POST["password"]))) {
-        $password_err = "Please enter your password.";
-    } else {
-        $password = trim($_POST["password"]);
-    }
-
-    // Validate credentials
-    if (empty($username_err) && empty($password_err)) {
-        $pdo = getDbConnection();
-        $sql = "SELECT uid, username, password FROM users WHERE username = :username";
-
-        if ($stmt = $pdo->prepare($sql)) {
-            $stmt->bindParam(":username", $param_username, PDO::PARAM_STR);
-            $param_username = $username;
-
-            // Attempt to execute the prepared statement
-            if ($stmt->execute()) {
-                // Check if username exists, if yes then verify password
-                if ($stmt->rowCount() == 1) {
-                    if ($row = $stmt->fetch()) {
-                        if (isset($row["id"])) {
-                            $id = $row["id"];
-                        }
-                        $username = $row["username"];
-                        $hashed_password = $row["password"];
-                        if (password_verify($password, $hashed_password)) {
-
-                            // Store data in session variables
-                            $_SESSION["loggedin"] = true;
-                           // $_SESSION["id"] = $id;
-                            $_SESSION["username"] = $username;
-
-                            // For ajax know if login was successful
-                            echo 'success';
-                            exit;
-                        } else {
-                            // Display an error message if password is not valid
-                            $login_err = "Invalid username or password.";
-                        }
-                    }
-                } else {
-                    // Display an error message if username doesn't exist
-                    $login_err = "Invalid username or password.";
-                }
-            } else {
-                echo "Oops! Something went wrong. Please try again later.";
-            }
-
-            // Close statement
-            unset($stmt);
-        }
-    }
-
-    // Close connection
-    unset($pdo);
-}
-?>
-<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-    <div class="login-form">
-        <h2>Login</h2>
-        <p>Please fill in your credentials to login.</p>
-
-        <?php
-        if(!empty($login_err)){
-            echo '<div class="alert alert-danger">' . $login_err . '</div>';
-        }
-        ?>
-
-        <form class="login-form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-            <div class="form-group">
-                <label>Username</label>
-                <input type="text" name="username" class="form-control" value="<?php echo $username; ?>">
-                <span class="text-danger"><?php echo $username_err; ?></span>
+                        <button type="submit" class="btn btn-primary">Entrar</button>
+                    </form>
+                </div>
             </div>
-            <div class="form-group">
-                <label>Password</label>
-                <input type="password" name="password" class="form-control">
-                <span class="text-danger"><?php echo $password_err; ?></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" class="btn btn-primary" value="Login">
-            </div>
-        </form>
+        </div>
     </div>
-</main>
-
-
+</div>
