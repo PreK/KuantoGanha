@@ -11,6 +11,11 @@ session_start();
         <ul class="nav flex-column">
             <?php if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) { ?>
                 <li class="nav-item">
+                    <a class="nav-link d-flex align-items-center gap-2" href="index.php">
+                        <i class="bi bi-gear"></i>Dashboard
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link d-flex align-items-center gap-2" href="#" data-target="modules/profile.php" id="profileLink">
                         <i class="bi bi-person"></i>Perfil
                     </a>
@@ -22,6 +27,7 @@ session_start();
                         </a>
                     </li>
                 <?php } ?>
+
                 <!-- Link direto para logout, sem AJAX -->
                 <li class="nav-item">
                     <a class="nav-link d-flex align-items-center gap-2" href="#" data-target="modules/logout.php" id="logout">
@@ -40,14 +46,5 @@ session_start();
                     </a>
                 </li>
             <?php } ?>
-            <hr class="my-3">
-            <!-- Outras Opções de Menu -->
-            <ul class="nav flex-column mb-auto">
-                <li class="nav-item">
-                    <a class="nav-link d-flex align-items-center gap-2" href="#" data-target="ext/dashboard.php" id="dasboardLink">
-                        <i class="bi bi-gear"></i>Dashboard
-                    </a>
-                </li>
-            </ul>
     </div>
 </div>
