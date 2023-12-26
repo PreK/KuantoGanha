@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function() {
             // Coleta os dados do formulário e converte em um objeto
             var formData = new FormData(this);
             var object = {};
-            formData.forEach((value, key) => object[key] = value);
+            formData.forEach((value, key) => { object[key] = value; })
 
             // Converte os dados do formulário em JSON
             var json = JSON.stringify(object);
