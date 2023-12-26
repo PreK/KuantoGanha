@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
 
+
     // Função para carregar o conteúdo
     function loadContent(url, targetElementId) {
         if (url !== '#') {
@@ -9,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     document.getElementById(targetElementId).innerHTML = html;
 
                     // Reconfiguração específica para o formulário de login
-                    if (url === 'login.php') {
+                    if (url === 'modules/login.php') {
                         setupLoginForm();
                     }
 
@@ -25,29 +26,21 @@ document.addEventListener('DOMContentLoaded', function() {
             loginForm.addEventListener('submit', function(e) {
                 e.preventDefault();
 
-                // Obter dados do formulário
                 var formData = new FormData(loginForm);
 
-                // Enviar dados do formulário via AJAX
-                fetch('process_login.php', {
+                fetch('modules/login.php', {
                     method: 'POST',
                     body: formData
                 })
-                    .then(response => response.text())
+                    .then(response => response.json())
                     .then(data => {
-                        if (data === 'success') {
-                            // Redirecionar ou realizar ações após o login bem-sucedido
-                            alert('Login successful');
-                            // Você pode redirecionar para outra página ou fazer algo aqui
+                        if(data.success) {
+                            location.reload();
                         } else {
-                            // Exibir mensagem de erro no formulário
-                            var loginError = document.getElementById('loginError');
-                            if (loginError) {
-                                loginError.textContent = 'Invalid username or password.';
-                            }
+                            alert("Erro ao processar o login!" + data);
                         }
                     })
-                    .catch(error => console.error('Erro ao enviar dados via AJAX:', error));
+                    .catch(error => console.error('Erro ao processar o login:', error));
             });
         }
     }
