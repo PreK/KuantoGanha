@@ -36,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     .then(data => {
                         if(data.success) {
                             location.reload();
+                            alert("Login efetuado com sucesso!")
                         } else {
                             alert("Erro ao processar o login!" + data);
                         }
