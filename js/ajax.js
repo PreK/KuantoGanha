@@ -14,6 +14,10 @@ document.addEventListener('DOMContentLoaded', function() {
                         setupLoginForm();
                     }
 
+                    if (url === 'modules/register.php') {
+                        setupRegisterForm();
+                    }
+
                     // Aqui você pode adicionar condições semelhantes para outros formulários se necessário
                 })
                 .catch(error => console.error('Erro ao carregar o conteúdo:', error));
@@ -50,6 +54,32 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     }
+
+    function setupRegisterForm() {
+        var registerForm = document.getElementById('registerForm');
+        if (registerForm) {
+            registerForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                var formData = new FormData(registerForm);
+
+                fetch('modules/register.php', {
+                    method: 'POST',
+                    body: formData
+                })
+                    .then(response => response.text())
+                    .then(data => {
+                        console.log(data); // Verifique o que está sendo retornado
+                        if(data === 'success') {
+                            alert("Registro efetuado com sucesso!");
+                            loadContent("modules/login.php", "mainContent");// Você pode redirecionar o usuário ou atualizar a página aqui
+                        } else {
+                            alert("Erro ao processar o registro: " + data);
+                        }
+                    })
+                    .catch(error => console.error('Erro ao processar o registro:', error));
+            });
+        }
 
     // Adiciona ouvintes de eventos para os links da barra lateral
     document.querySelectorAll('.nav-link').forEach(link => {
