@@ -50,12 +50,12 @@ function submitForm(form) {
         method: 'POST',
         body: formData
     })
-        .then(response => response.text())
+        .then(response => response.json()) // Processa a resposta como JSON
         .then(data => {
-            if (data.includes('Login bem-sucedido')) {
-                window.location.reload(); // Recarrega a página atual
+            if (data.success) {
+                window.location.reload(); // Recarrega a página em caso de sucesso
             } else {
-                document.getElementById('mainContent').innerHTML = data;
+                document.getElementById('mainContent').innerHTML = data.message; // Exibe a mensagem de erro
                 bindFormSubmit(); // Re-vincular para os novos formulários
             }
         })

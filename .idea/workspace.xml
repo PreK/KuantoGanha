@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c549277-1796-45c2-b708-1d03a93f7fae" name="Changes" comment="jobs.php first fix" />
+    <list default="true" id="7c549277-1796-45c2-b708-1d03a93f7fae" name="Changes" comment="Remake ajax.js">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/login.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -130,55 +133,8 @@
       <workItem from="1703246628260" duration="12706000" />
       <workItem from="1703269436376" duration="1155000" />
       <workItem from="1703270614727" duration="445000" />
-      <workItem from="1703271075193" duration="4268000" />
-    </task>
-    <task id="LOCAL-00062" summary="debug api/register.php">
-      <option name="closed" value="true" />
-      <created>1703241903741</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1703241903742</updated>
-    </task>
-    <task id="LOCAL-00063" summary="debug api/register.php">
-      <option name="closed" value="true" />
-      <created>1703242010137</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1703242010137</updated>
-    </task>
-    <task id="LOCAL-00064" summary="debug api/register.php">
-      <option name="closed" value="true" />
-      <created>1703242147682</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1703242147683</updated>
-    </task>
-    <task id="LOCAL-00065" summary="debug api/register.php">
-      <option name="closed" value="true" />
-      <created>1703242550548</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1703242550548</updated>
-    </task>
-    <task id="LOCAL-00066" summary="debug api/register.php">
-      <option name="closed" value="true" />
-      <created>1703243028398</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1703243028398</updated>
-    </task>
-    <task id="LOCAL-00067" summary="debug api/register.php">
-      <option name="closed" value="true" />
-      <created>1703243104510</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1703243104510</updated>
+      <workItem from="1703271075193" duration="5027000" />
+      <workItem from="1703588617887" duration="5546000" />
     </task>
     <task id="LOCAL-00068" summary="Creation of CRUD">
       <option name="closed" value="true" />
@@ -524,7 +480,55 @@
       <option name="project" value="LOCAL" />
       <updated>1703275341486</updated>
     </task>
-    <option name="localTasksCounter" value="111" />
+    <task id="LOCAL-00111" summary="jobs.php first fix">
+      <option name="closed" value="true" />
+      <created>1703275444850</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1703275444850</updated>
+    </task>
+    <task id="LOCAL-00112" summary="jobs.php first fix">
+      <option name="closed" value="true" />
+      <created>1703275788848</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1703275788848</updated>
+    </task>
+    <task id="LOCAL-00113" summary="Remake ajax.js">
+      <option name="closed" value="true" />
+      <created>1703589022016</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1703589022016</updated>
+    </task>
+    <task id="LOCAL-00114" summary="Remake ajax.js">
+      <option name="closed" value="true" />
+      <created>1703590650062</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1703590650063</updated>
+    </task>
+    <task id="LOCAL-00115" summary="Remake ajax.js">
+      <option name="closed" value="true" />
+      <created>1703590895931</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1703590895931</updated>
+    </task>
+    <task id="LOCAL-00116" summary="Remake ajax.js">
+      <option name="closed" value="true" />
+      <created>1703603947711</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1703603947711</updated>
+    </task>
+    <option name="localTasksCounter" value="117" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -542,7 +546,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="logout.php" />
     <MESSAGE value="Bootstrap enable" />
     <MESSAGE value="Style css" />
     <MESSAGE value="revert css" />
@@ -567,7 +570,8 @@
     <MESSAGE value="sidebar jobs update" />
     <MESSAGE value="jobs.php test" />
     <MESSAGE value="jobs.php first fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="jobs.php first fix" />
+    <MESSAGE value="Remake ajax.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remake ajax.js" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
