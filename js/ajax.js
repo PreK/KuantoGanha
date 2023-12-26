@@ -115,8 +115,7 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(data => {
                 console.log(data); // Verifique a resposta
                 if(data === 'success') {
-                    alert('Ação de Profissão realizada com sucesso!');
-                    location.reload();
+                    loadContent("modules/jobs.php", "mainContent");
                 } else {
                     alert('Erro: ' + data);
                 }
