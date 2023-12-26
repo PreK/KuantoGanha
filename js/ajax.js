@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
+
+
     // Função para carregar o conteúdo
     function loadContent(url, targetElementId) {
         if (url !== '#') {
@@ -6,9 +8,26 @@ document.addEventListener('DOMContentLoaded', function() {
                 .then(response => response.text())
                 .then(html => {
                     document.getElementById(targetElementId).innerHTML = html;
-                    // Inicializar scripts adicionais aqui, se necessário
+
+                    // Reconfiguração específica para o formulário de login
+                    if (url === 'modules/login.php') {
+                        setupLoginForm();
+                    }
+
+                    // Aqui você pode adicionar condições semelhantes para outros formulários se necessário
                 })
                 .catch(error => console.error('Erro ao carregar o conteúdo:', error));
+        }
+    }
+
+    function setupLoginForm() {
+        var loginForm = document.getElementById('loginForm');
+        if (loginForm) {
+            loginForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                // Aqui você pode adicionar a lógica para enviar os dados do formulário de login
+                // Por exemplo, usando AJAX para autenticação
+            });
         }
     }
 
@@ -20,4 +39,5 @@ document.addEventListener('DOMContentLoaded', function() {
             loadContent(targetUrl, 'mainContent');
         });
     });
+
 });
