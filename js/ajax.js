@@ -82,6 +82,44 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    function setupJobsForm() {
+        var addJobForm = document.getElementById('addJobForm');
+        if (addJobForm) {
+            addJobForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                submitJobForm(addJobForm, 'add');
+            });
+        }
+
+        document.querySelectorAll('.job-list').forEach(function(form) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                submitJobForm(form, 'remove');
+            });
+        });
+    }
+
+    function submitJobForm(form, action) {
+        var formData = new FormData(form);
+        formData.append('action', action); // Adicione uma ação para distinguir no servidor
+
+        fetch('modules/jobs.php', {
+            method: 'POST',
+            body: formData
+        })
+            .then(response => response.text())
+            .then(data => {
+                console.log(data); // Verifique a resposta
+                if(data === 'success') {
+                    alert('Ação de Profissão realizada com sucesso!');
+                    location.reload();
+                } else {
+                    alert('Erro: ' + data);
+                }
+            })
+            .catch(error => console.error('Erro:', error));
+    }
+
     // Adiciona ouvintes de eventos para os links da barra lateral
     document.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', function(e) {
