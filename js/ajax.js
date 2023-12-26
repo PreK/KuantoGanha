@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
     document.querySelectorAll('.sidebar .nav-link').forEach(link => {
         link.addEventListener('click', function(event) {
             event.preventDefault();
+            console.log('Link clicado:', this.getAttribute('href')); // Para depuração
             const url = this.getAttribute('href');
             if (url !== '#') {
                 loadContent(url);
@@ -89,4 +90,5 @@ document.addEventListener("DOMContentLoaded", function() {
                 });
         });
     }
+
 });
