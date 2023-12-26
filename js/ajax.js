@@ -52,8 +52,12 @@ function submitForm(form) {
     })
         .then(response => response.text())
         .then(data => {
-            document.getElementById('mainContent').innerHTML = data;
-            bindFormSubmit(); // Re-vincular para os novos formulários
+            if (data.includes('Login bem-sucedido')) {
+                window.location.reload(); // Recarrega a página atual
+            } else {
+                document.getElementById('mainContent').innerHTML = data;
+                bindFormSubmit(); // Re-vincular para os novos formulários
+            }
         })
         .catch(error => console.error('Error:', error));
 }
