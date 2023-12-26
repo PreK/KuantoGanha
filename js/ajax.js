@@ -80,6 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     .catch(error => console.error('Erro ao processar o registro:', error));
             });
         }
+    }
 
     // Adiciona ouvintes de eventos para os links da barra lateral
     document.querySelectorAll('.nav-link').forEach(link => {
