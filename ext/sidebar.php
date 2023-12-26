@@ -24,7 +24,7 @@ session_start();
                 <?php } ?>
                 <!-- Link direto para logout, sem AJAX -->
                 <li class="nav-item">
-                    <a class="nav-link d-flex align-items-center gap-2" href="modules/logout.php">
+                    <a class="nav-link d-flex align-items-center gap-2" href="#" data-target="modules/logout.php" id="logout">
                         <i class="bi bi-box-arrow-left"></i>Logout
                     </a>
                 </li>
