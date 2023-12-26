@@ -17,7 +17,7 @@ session_start();
                 </li>
                 <?php if ($_SESSION["username"] === "admin") { ?>
                     <li class="nav-item">
-                        <a class="nav-link d-flex align-items-center gap-2" href="#" data-target="models/jobs.php" id="jobsLink">
+                        <a class="nav-link d-flex align-items-center gap-2" href="#" data-target="modules/jobs.php" id="jobsLink">
                             <i class="bi bi-journal-bookmark"></i>Profissões
                         </a>
                     </li>
