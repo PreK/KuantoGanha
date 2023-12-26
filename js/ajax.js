@@ -31,9 +31,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 fetch('modules/login.php', {
                     method: 'POST',
                     body: formData
+                    headers: {
+                        'Content-Type': 'multipart/form-data'
+                    }
                 })
                     .then(response => response.json())
                     .then(data => {
+                        console.log(data); // Verifique o que está sendo retornado
                         if(data.success) {
                             location.reload();
                             alert("Login efetuado com sucesso!")
