@@ -1,20 +1,19 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Adicione aqui os listeners para os links da sua sidebar
     var loginLink = document.getElementById('loginLink');
     if (loginLink) {
-        loginLink.addEventListener('click', function() {
+        loginLink.addEventListener('click', function(event) {
+            event.preventDefault(); // Previne o comportamento padrão do link
             loadContent('login.php');
         });
     }
 
     var registerLink = document.getElementById('registerLink');
     if (registerLink) {
-        registerLink.addEventListener('click', function() {
+        registerLink.addEventListener('click', function(event) {
+            event.preventDefault(); // Previne o comportamento padrão do link
             loadContent('register.php');
         });
     }
-
-    // Adicione mais listeners conforme necessário
 });
 
 function loadContent(page) {
@@ -35,7 +34,7 @@ function loadContent(page) {
 }
 
 function bindFormSubmit() {
-    document.querySelectorAll('form').forEach(form => {
+    document.querySelectorAll('#mainContent form').forEach(form => {
         form.addEventListener('submit', function(event) {
             event.preventDefault();
             submitForm(form);
@@ -53,13 +52,8 @@ function submitForm(form) {
     })
         .then(response => response.text())
         .then(data => {
-            if (data.includes('success')) {
-                // Trate a resposta de sucesso aqui
-                // Por exemplo, recarregar a página ou redirecionar
-            } else {
-                document.getElementById('mainContent').innerHTML = data;
-                bindFormSubmit(); // Re-vincular para os novos formulários
-            }
+            document.getElementById('mainContent').innerHTML = data;
+            bindFormSubmit(); // Re-vincular para os novos formulários
         })
         .catch(error => console.error('Error:', error));
 }
