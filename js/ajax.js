@@ -44,20 +44,24 @@ function bindFormSubmit() {
 
 function submitForm(form) {
     const formData = new FormData(form);
+    let formObject = {};
+    formData.forEach((value, key) => formObject[key] = value);
     const url = form.getAttribute('action');
 
     fetch(url, {
         method: 'POST',
-        body: formData
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formObject)
     })
         .then(response => response.json()) // Processa a resposta como JSON
         .then(data => {
             if (data.success) {
                 window.location.reload(); // Recarrega a página em caso de sucesso
             } else {
-                // Exibe a mensagem de erro em um alerta do Bootstrap
-                const alertBox = `<div class="alert alert-danger" role="alert">${data.message}</div>`;
-                form.insertAdjacentHTML('beforebegin', alertBox);
+                // Exibe a mensagem de erro
+                displayErrorMessage(form, data.message);
                 bindFormSubmit(); // Re-vincular para os novos formulários
             }
         })
