@@ -55,7 +55,9 @@ function submitForm(form) {
             if (data.success) {
                 window.location.reload(); // Recarrega a página em caso de sucesso
             } else {
-                document.getElementById('mainContent').innerHTML = data.message; // Exibe a mensagem de erro
+                // Exibe a mensagem de erro em um alerta do Bootstrap
+                const alertBox = `<div class="alert alert-danger" role="alert">${data.message}</div>`;
+                form.insertAdjacentHTML('beforebegin', alertBox);
                 bindFormSubmit(); // Re-vincular para os novos formulários
             }
         })
