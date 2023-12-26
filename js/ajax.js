@@ -30,10 +30,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 fetch('modules/login.php', {
                     method: 'POST',
-                    body: formData
-                    headers: {
-                        'Content-Type': 'multipart/form-data'
-                    }
+                    body: formData,
+                    headers: new Headers({
+                        'Accept': 'application/json'
+                    })
                 })
                     .then(response => response.json())
                     .then(data => {
