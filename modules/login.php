@@ -51,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             $_SESSION["username"] = $username;
 
                             // For ajax know if login was successful
-                            echo 'success';
+                            echo json_encode(["success" => true]);
                             exit;
                         } else {
                             // Display an error message if password is not valid
