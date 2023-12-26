@@ -1,63 +1,63 @@
-$(document).ready(function() {
-    // Vincula eventos de clique para carregar páginas específicas
-    $('#loginLink, #registerLink, #jobsLink').click(function(event) {
-        event.preventDefault();
-        var page = $(this).attr('id').replace('Link', '') + '.php';
-        loadContent(page);
-    });
-
-    // Carrega o conteúdo dinamicamente e atualiza mainContent
-    function loadContent(page) {
-        $.get('modules/' + page, function(html) {
-            $('#mainContent').html(html);
-            bindFormSubmit();
-            bindMenuLinks();
-        }).fail(function() {
-            $('#mainContent').html('Erro ao carregar a página');
-        });
-    }
-
-    // Vincula eventos de submissão de formulários
-    function bindFormSubmit() {
-        $('#mainContent').find('form').submit(function(event) {
-            event.preventDefault();
-            submitForm($(this));
-        });
-    }
-
-    // Trata a submissão do formulário
-    function submitForm($form) {
-        var url = $form.attr('action') || 'modules/' + $form.attr('class').split('-')[0] + '.php';
-
-        $.post(url, $form.serialize(), function(html) {
-            $('#mainContent').html(html);
-            bindFormSubmit();
-            bindMenuLinks();
-
-            processResponse(html);
-        }).fail(function() {
-            $('#mainContent').html('Erro ao processar o formulário');
-        });
-    }
-
-    function processResponse(html) {
-        if (html.includes('register-success')) {
-            loadContent('login.php'); // Carrega a página de login
-        } else if (html.includes('login-success')) {
-            window.location.href = 'index.php'; // Recarrega a página index
-        } else if (html.includes('job-modified')) {
-            loadContent('jobs.php'); // Recarrega a página de jobs
-        }
-    }
-
-    // Vincula eventos de clique aos links dentro de mainContent
-    function bindMenuLinks() {
-        $('#mainContent a').click(function(event) {
-            event.preventDefault();
-            var href = $(this).attr('href');
-            if (href) {
-                loadContent(href);
-            }
-        });
-    }
+document.addEventListener('DOMContentLoaded', function() {
+    // Carregar conteúdo dinâmico para login e registro
+    bindDynamicContentLoader('loginLink', 'login.php');
+    bindDynamicContentLoader('registerLink', 'register.php');
+    // Adicione mais binds conforme necessário
 });
+
+// Função para vincular links para carregar conteúdo
+function bindDynamicContentLoader(linkId, page) {
+    var link = document.getElementById(linkId);
+    if (link) {
+        link.addEventListener('click', function() {
+            loadContent(page);
+        });
+    }
+}
+
+// Carregar conteúdo na div mainContent
+function loadContent(page) {
+    const xhr = new XMLHttpRequest();
+    xhr.onload = function() {
+        if (this.status === 200) {
+            document.getElementById('mainContent').innerHTML = this.responseText;
+            bindFormSubmit(); // Vincula os eventos de submit dos formulários carregados
+        } else {
+            document.getElementById('mainContent').innerHTML = 'Erro ao carregar a página';
+        }
+    };
+    xhr.open('GET', 'modules/' + page, true);
+    xhr.send();
+}
+
+// Vincular eventos de submit dos formulários
+function bindFormSubmit() {
+    document.querySelectorAll('form').forEach(function(form) {
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            var formType = form.classList.contains('login-form') ? 'login' : 'register';
+            var actionUrl = formType === 'login' ? 'modules/login.php' : 'modules/register.php';
+            submitForm(form, actionUrl, formType === 'login');
+        });
+    });
+}
+
+// Submeter formulário e tratar resposta
+function submitForm(form, url, isLogin) {
+    const formData = new FormData(form);
+    fetch(url, {
+        method: 'POST',
+        body: formData
+    })
+        .then(response => response.json()) // assumindo que a resposta é JSON
+        .then(data => {
+            if (isLogin && data.success) {
+                window.location.reload(); // Recarregar a página após login bem-sucedido
+            } else {
+                // Atualizar mainContent com a resposta (por exemplo, mensagens de erro)
+                document.getElementById('mainContent').innerHTML = data.message;
+                bindFormSubmit(); // Vincular novamente para os novos formulários
+            }
+        })
+        .catch(error => console.error('Error:', error));
+}
