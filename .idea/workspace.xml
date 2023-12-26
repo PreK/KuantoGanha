@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7c549277-1796-45c2-b708-1d03a93f7fae" name="Changes" comment="Remake ajax.js">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ext/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/ext/sidebar.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,22 +135,6 @@
       <workItem from="1703155067668" duration="6052000" />
       <workItem from="1703241275152" duration="3760000" />
       <workItem from="1703246628260" duration="4140000" />
-    </task>
-    <task id="LOCAL-00026" summary="revert css">
-      <option name="closed" value="true" />
-      <created>1701890788556</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1701890788556</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Test Login">
-      <option name="closed" value="true" />
-      <created>1701892075997</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1701892075997</updated>
     </task>
     <task id="LOCAL-00028" summary="Try fix icon login">
       <option name="closed" value="true" />
@@ -528,7 +512,23 @@
       <option name="project" value="LOCAL" />
       <updated>1703610906429</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="Remake ajax.js">
+      <option name="closed" value="true" />
+      <created>1703611770270</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1703611770270</updated>
+    </task>
+    <task id="LOCAL-00076" summary="Remake ajax.js">
+      <option name="closed" value="true" />
+      <created>1703612267685</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1703612267685</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
