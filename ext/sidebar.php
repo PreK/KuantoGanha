@@ -13,14 +13,14 @@ session_start();
 <!--            Menu with Login and Register if logged out-->
             <?php if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) { ?>
                 <li class="nav-item">
-                    <a class="nav-link d-flex align-items-center gap-2" href="#" id="profileLink">
+                    <a class="nav-link d-flex align-items-center gap-2" href="modules/profile.php" id="profileLink">
                         <i class="bi bi-person"></i>
                         Perfil
                     </a>
                 </li>
                 <?php if ($_SESSION["username"] === "admin") { ?>
                     <li class="nav-item">
-                        <a class="nav-link d-flex align-items-center gap-2" href="#" id="jobsLink">
+                        <a class="nav-link d-flex align-items-center gap-2" href="models/jobs.php" id="jobsLink">
                             <i class="bi bi-journal-bookmark"></i>
                             Profissões
                         </a>
@@ -35,13 +35,13 @@ session_start();
             <?php } else { ?>
                 <!-- Utilizador não Logado: Mostrar Login e Registro -->
                 <li class="nav-item">
-                    <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="#" id="loginLink">
+                    <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="modules/login.php" id="loginLink">
                         <i class="bi bi-box-arrow-in-right"></i>
                         Login
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link d-flex align-items-center gap-2" href="#" id="registerLink">
+                    <a class="nav-link d-flex align-items-center gap-2" href="modules/register.php" id="registerLink">
                         <i class="bi bi-pencil"></i>
                         Registar
                     </a>
