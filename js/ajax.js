@@ -1,62 +1,64 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Carregar conteúdo dinâmico para login e registro
-    bindDynamicContentLoader('loginLink', 'login.php');
-    bindDynamicContentLoader('registerLink', 'register.php');
-    // Adicione mais binds conforme necessário
-});
-
-// Função para vincular links para carregar conteúdo
-function bindDynamicContentLoader(linkId, page) {
-    var link = document.getElementById(linkId);
-    if (link) {
-        link.addEventListener('click', function() {
-            loadContent(page);
+    // Adicione aqui os listeners para os links da sua sidebar
+    var loginLink = document.getElementById('loginLink');
+    if (loginLink) {
+        loginLink.addEventListener('click', function() {
+            loadContent('login.php');
         });
     }
-}
 
-// Carregar conteúdo na div mainContent
+    var registerLink = document.getElementById('registerLink');
+    if (registerLink) {
+        registerLink.addEventListener('click', function() {
+            loadContent('register.php');
+        });
+    }
+
+    // Adicione mais listeners conforme necessário
+});
+
 function loadContent(page) {
-    const xhr = new XMLHttpRequest();
-    xhr.onload = function() {
-        if (this.status === 200) {
-            document.getElementById('mainContent').innerHTML = this.responseText;
-            bindFormSubmit(); // Vincula os eventos de submit dos formulários carregados
-        } else {
-            document.getElementById('mainContent').innerHTML = 'Erro ao carregar a página';
-        }
-    };
-    xhr.open('GET', 'modules/' + page, true);
-    xhr.send();
+    fetch('modules/' + page)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Erro ao carregar a página');
+            }
+            return response.text();
+        })
+        .then(html => {
+            document.getElementById('mainContent').innerHTML = html;
+            bindFormSubmit();
+        })
+        .catch(error => {
+            document.getElementById('mainContent').innerHTML = error.message;
+        });
 }
 
-// Vincular eventos de submit dos formulários
 function bindFormSubmit() {
-    document.querySelectorAll('form').forEach(function(form) {
+    document.querySelectorAll('form').forEach(form => {
         form.addEventListener('submit', function(event) {
             event.preventDefault();
-            var formType = form.classList.contains('login-form') ? 'login' : 'register';
-            var actionUrl = formType === 'login' ? 'modules/login.php' : 'modules/register.php';
-            submitForm(form, actionUrl, formType === 'login');
+            submitForm(form);
         });
     });
 }
 
-// Submeter formulário e tratar resposta
-function submitForm(form, url, isLogin) {
+function submitForm(form) {
     const formData = new FormData(form);
+    const url = form.getAttribute('action');
+
     fetch(url, {
         method: 'POST',
         body: formData
     })
-        .then(response => response.json()) // assumindo que a resposta é JSON
+        .then(response => response.text())
         .then(data => {
-            if (isLogin && data.success) {
-                window.location.reload(); // Recarregar a página após login bem-sucedido
+            if (data.includes('success')) {
+                // Trate a resposta de sucesso aqui
+                // Por exemplo, recarregar a página ou redirecionar
             } else {
-                // Atualizar mainContent com a resposta (por exemplo, mensagens de erro)
-                document.getElementById('mainContent').innerHTML = data.message;
-                bindFormSubmit(); // Vincular novamente para os novos formulários
+                document.getElementById('mainContent').innerHTML = data;
+                bindFormSubmit(); // Re-vincular para os novos formulários
             }
         })
         .catch(error => console.error('Error:', error));
