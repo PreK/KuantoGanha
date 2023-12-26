@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c549277-1796-45c2-b708-1d03a93f7fae" name="Changes" comment="Remake ajax.js">
+    <list default="true" id="7c549277-1796-45c2-b708-1d03a93f7fae" name="Changes" comment="sidebar jobs update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/ajax.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/ajax.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +24,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
@@ -56,32 +61,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/prekp/OneDrive - Universidade de Aveiro/Projecto/KuantoGanha/modules&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.stylelint&quot;: &quot;\\\\wsl$\\Ubuntu-22.04\\var\\www\\html\\node_modules\\stylelint&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "29c4e504",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/prekp/OneDrive - Universidade de Aveiro/Projecto/KuantoGanha/modules",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.stylelint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.stylelint": "\\\\wsl$\\Ubuntu-22.04\\var\\www\\html\\node_modules\\stylelint",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.new.ui",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\prekp\OneDrive - Universidade de Aveiro\Projecto\KuantoGanha\modules" />
@@ -130,11 +135,383 @@
       <workItem from="1702494081115" duration="3120000" />
       <workItem from="1703155067668" duration="6052000" />
       <workItem from="1703241275152" duration="3760000" />
-      <workItem from="1703246628260" duration="12706000" />
-      <workItem from="1703269436376" duration="1155000" />
-      <workItem from="1703270614727" duration="445000" />
-      <workItem from="1703271075193" duration="5027000" />
-      <workItem from="1703588617887" duration="5546000" />
+      <workItem from="1703246628260" duration="4140000" />
+    </task>
+    <task id="LOCAL-00021" summary="logout.php">
+      <option name="closed" value="true" />
+      <created>1701808352259</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1701808352259</updated>
+    </task>
+    <task id="LOCAL-00022" summary="logout.php">
+      <option name="closed" value="true" />
+      <created>1701809101178</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1701809101178</updated>
+    </task>
+    <task id="LOCAL-00023" summary="logout.php">
+      <option name="closed" value="true" />
+      <created>1701809251212</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1701809251212</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Bootstrap enable">
+      <option name="closed" value="true" />
+      <created>1701890414722</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1701890414722</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Style css">
+      <option name="closed" value="true" />
+      <created>1701890626319</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1701890626319</updated>
+    </task>
+    <task id="LOCAL-00026" summary="revert css">
+      <option name="closed" value="true" />
+      <created>1701890788556</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1701890788556</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Test Login">
+      <option name="closed" value="true" />
+      <created>1701892075997</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1701892075997</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Try fix icon login">
+      <option name="closed" value="true" />
+      <created>1701892222132</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1701892222132</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Try fix icon login">
+      <option name="closed" value="true" />
+      <created>1701892625020</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1701892625020</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Try fix icon login">
+      <option name="closed" value="true" />
+      <created>1701892737363</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1701892737363</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Try fix icon login">
+      <option name="closed" value="true" />
+      <created>1701893796498</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1701893796498</updated>
+    </task>
+    <task id="LOCAL-00032" summary="php menu with login/logout">
+      <option name="closed" value="true" />
+      <created>1701896142874</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1701896142874</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Ajax for login/register">
+      <option name="closed" value="true" />
+      <created>1701896503038</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1701896503038</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Ajax for login/register">
+      <option name="closed" value="true" />
+      <created>1701896608218</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1701896608218</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Ajax for login/register">
+      <option name="closed" value="true" />
+      <created>1701896667101</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1701896667101</updated>
+    </task>
+    <task id="LOCAL-00036" summary="fix modules path">
+      <option name="closed" value="true" />
+      <created>1701896771591</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1701896771591</updated>
+    </task>
+    <task id="LOCAL-00037" summary="login more pretty">
+      <option name="closed" value="true" />
+      <created>1701897082167</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1701897082167</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Register more pretty">
+      <option name="closed" value="true" />
+      <created>1701897210217</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1701897210217</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Piggy">
+      <option name="closed" value="true" />
+      <created>1701897351092</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1701897351092</updated>
+    </task>
+    <task id="LOCAL-00040" summary="session_start();">
+      <option name="closed" value="true" />
+      <created>1701898007918</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1701898007918</updated>
+    </task>
+    <task id="LOCAL-00041" summary="session_start();">
+      <option name="closed" value="true" />
+      <created>1701898118080</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1701898118080</updated>
+    </task>
+    <task id="LOCAL-00042" summary="session_start();">
+      <option name="closed" value="true" />
+      <created>1701898233556</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1701898233556</updated>
+    </task>
+    <task id="LOCAL-00043" summary="session_start();">
+      <option name="closed" value="true" />
+      <created>1701898355261</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1701898355261</updated>
+    </task>
+    <task id="LOCAL-00044" summary="session_start();">
+      <option name="closed" value="true" />
+      <created>1701898392588</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1701898392588</updated>
+    </task>
+    <task id="LOCAL-00045" summary="session_start();">
+      <option name="closed" value="true" />
+      <created>1701898842514</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1701898842514</updated>
+    </task>
+    <task id="LOCAL-00046" summary="session_start();">
+      <option name="closed" value="true" />
+      <created>1701899197585</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1701899197585</updated>
+    </task>
+    <task id="LOCAL-00047" summary="session_start();">
+      <option name="closed" value="true" />
+      <created>1701899375978</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1701899375978</updated>
+    </task>
+    <task id="LOCAL-00048" summary="session_start();">
+      <option name="closed" value="true" />
+      <created>1701899987714</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1701899987714</updated>
+    </task>
+    <task id="LOCAL-00049" summary="session_start();">
+      <option name="closed" value="true" />
+      <created>1701900184978</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1701900184978</updated>
+    </task>
+    <task id="LOCAL-00050" summary="session_start();">
+      <option name="closed" value="true" />
+      <created>1701900546638</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1701900546638</updated>
+    </task>
+    <task id="LOCAL-00051" summary="session_start();">
+      <option name="closed" value="true" />
+      <created>1701900611431</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1701900611431</updated>
+    </task>
+    <task id="LOCAL-00052" summary="added exit; to php code when success">
+      <option name="closed" value="true" />
+      <created>1702407623199</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1702407623200</updated>
+    </task>
+    <task id="LOCAL-00053" summary="Debug on ajax">
+      <option name="closed" value="true" />
+      <created>1702415439697</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1702415439697</updated>
+    </task>
+    <task id="LOCAL-00054" summary="add class on login form">
+      <option name="closed" value="true" />
+      <created>1702415915313</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1702415915313</updated>
+    </task>
+    <task id="LOCAL-00055" summary="add class on register form">
+      <option name="closed" value="true" />
+      <created>1702416167003</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1702416167003</updated>
+    </task>
+    <task id="LOCAL-00056" summary="update dbconfig">
+      <option name="closed" value="true" />
+      <created>1702495019261</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1702495019263</updated>
+    </task>
+    <task id="LOCAL-00057" summary="Create api/register.php">
+      <option name="closed" value="true" />
+      <created>1703157180823</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1703157180824</updated>
+    </task>
+    <task id="LOCAL-00058" summary="fix $pdo api/register.php">
+      <option name="closed" value="true" />
+      <created>1703160893982</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1703160893982</updated>
+    </task>
+    <task id="LOCAL-00059" summary="fix $pdo api/register.php">
+      <option name="closed" value="true" />
+      <created>1703161334653</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1703161334654</updated>
+    </task>
+    <task id="LOCAL-00060" summary="fix $pdo api/register.php">
+      <option name="closed" value="true" />
+      <created>1703161497835</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1703161497835</updated>
+    </task>
+    <task id="LOCAL-00061" summary="fix $pdo api/register.php">
+      <option name="closed" value="true" />
+      <created>1703172529730</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1703172529730</updated>
+    </task>
+    <task id="LOCAL-00062" summary="debug api/register.php">
+      <option name="closed" value="true" />
+      <created>1703241903741</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1703241903742</updated>
+    </task>
+    <task id="LOCAL-00063" summary="debug api/register.php">
+      <option name="closed" value="true" />
+      <created>1703242010137</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1703242010137</updated>
+    </task>
+    <task id="LOCAL-00064" summary="debug api/register.php">
+      <option name="closed" value="true" />
+      <created>1703242147682</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1703242147683</updated>
+    </task>
+    <task id="LOCAL-00065" summary="debug api/register.php">
+      <option name="closed" value="true" />
+      <created>1703242550548</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1703242550548</updated>
+    </task>
+    <task id="LOCAL-00066" summary="debug api/register.php">
+      <option name="closed" value="true" />
+      <created>1703243028398</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1703243028398</updated>
+    </task>
+    <task id="LOCAL-00067" summary="debug api/register.php">
+      <option name="closed" value="true" />
+      <created>1703243104510</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1703243104510</updated>
     </task>
     <task id="LOCAL-00068" summary="Creation of CRUD">
       <option name="closed" value="true" />
@@ -152,383 +529,7 @@
       <option name="project" value="LOCAL" />
       <updated>1703260091153</updated>
     </task>
-    <task id="LOCAL-00070" summary="jobs.php test">
-      <option name="closed" value="true" />
-      <created>1703260804148</created>
-      <option name="number" value="00070" />
-      <option name="presentableId" value="LOCAL-00070" />
-      <option name="project" value="LOCAL" />
-      <updated>1703260804150</updated>
-    </task>
-    <task id="LOCAL-00071" summary="jobs.php first fix">
-      <option name="closed" value="true" />
-      <created>1703261244618</created>
-      <option name="number" value="00071" />
-      <option name="presentableId" value="LOCAL-00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1703261244618</updated>
-    </task>
-    <task id="LOCAL-00072" summary="jobs.php first fix">
-      <option name="closed" value="true" />
-      <created>1703261804458</created>
-      <option name="number" value="00072" />
-      <option name="presentableId" value="LOCAL-00072" />
-      <option name="project" value="LOCAL" />
-      <updated>1703261804458</updated>
-    </task>
-    <task id="LOCAL-00073" summary="jobs.php first fix">
-      <option name="closed" value="true" />
-      <created>1703262657779</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1703262657779</updated>
-    </task>
-    <task id="LOCAL-00074" summary="jobs.php first fix">
-      <option name="closed" value="true" />
-      <created>1703263000247</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1703263000247</updated>
-    </task>
-    <task id="LOCAL-00075" summary="jobs.php first fix">
-      <option name="closed" value="true" />
-      <created>1703263658896</created>
-      <option name="number" value="00075" />
-      <option name="presentableId" value="LOCAL-00075" />
-      <option name="project" value="LOCAL" />
-      <updated>1703263658897</updated>
-    </task>
-    <task id="LOCAL-00076" summary="jobs.php first fix">
-      <option name="closed" value="true" />
-      <created>1703263922897</created>
-      <option name="number" value="00076" />
-      <option name="presentableId" value="LOCAL-00076" />
-      <option name="project" value="LOCAL" />
-      <updated>1703263922897</updated>
-    </task>
-    <task id="LOCAL-00077" summary="jobs.php first fix">
-      <option name="closed" value="true" />
-      <created>1703264035430</created>
-      <option name="number" value="00077" />
-      <option name="presentableId" value="LOCAL-00077" />
-      <option name="project" value="LOCAL" />
-      <updated>1703264035430</updated>
-    </task>
-    <task id="LOCAL-00078" summary="jobs.php first fix">
-      <option name="closed" value="true" />
-      <created>1703265552842</created>
-      <option name="number" value="00078" />
-      <option name="presentableId" value="LOCAL-00078" />
-      <option name="project" value="LOCAL" />
-      <updated>1703265552842</updated>
-    </task>
-    <task id="LOCAL-00079" summary="jobs.php first fix">
-      <option name="closed" value="true" />
-      <created>1703265818877</created>
-      <option name="number" value="00079" />
-      <option name="presentableId" value="LOCAL-00079" />
-      <option name="project" value="LOCAL" />
-      <updated>1703265818877</updated>
-    </task>
-    <task id="LOCAL-00080" summary="jobs.php first fix">
-      <option name="closed" value="true" />
-      <created>1703266321169</created>
-      <option name="number" value="00080" />
-      <option name="presentableId" value="LOCAL-00080" />
-      <option name="project" value="LOCAL" />
-      <updated>1703266321169</updated>
-    </task>
-    <task id="LOCAL-00081" summary="jobs.php first fix">
-      <option name="closed" value="true" />
-      <created>1703266472438</created>
-      <option name="number" value="00081" />
-      <option name="presentableId" value="LOCAL-00081" />
-      <option name="project" value="LOCAL" />
-      <updated>1703266472438</updated>
-    </task>
-    <task id="LOCAL-00082" summary="jobs.php first fix">
-      <option name="closed" value="true" />
-      <created>1703266607508</created>
-      <option name="number" value="00082" />
-      <option name="presentableId" value="LOCAL-00082" />
-      <option name="project" value="LOCAL" />
-      <updated>1703266607508</updated>
-    </task>
-    <task id="LOCAL-00083" summary="jobs.php first fix">
-      <option name="closed" value="true" />
-      <created>1703268011588</created>
-      <option name="number" value="00083" />
-      <option name="presentableId" value="LOCAL-00083" />
-      <option name="project" value="LOCAL" />
-      <updated>1703268011588</updated>
-    </task>
-    <task id="LOCAL-00084" summary="jobs.php first fix">
-      <option name="closed" value="true" />
-      <created>1703268042899</created>
-      <option name="number" value="00084" />
-      <option name="presentableId" value="LOCAL-00084" />
-      <option name="project" value="LOCAL" />
-      <updated>1703268042899</updated>
-    </task>
-    <task id="LOCAL-00085" summary="jobs.php first fix">
-      <option name="closed" value="true" />
-      <created>1703268432830</created>
-      <option name="number" value="00085" />
-      <option name="presentableId" value="LOCAL-00085" />
-      <option name="project" value="LOCAL" />
-      <updated>1703268432830</updated>
-    </task>
-    <task id="LOCAL-00086" summary="jobs.php first fix">
-      <option name="closed" value="true" />
-      <created>1703268657988</created>
-      <option name="number" value="00086" />
-      <option name="presentableId" value="LOCAL-00086" />
-      <option name="project" value="LOCAL" />
-      <updated>1703268657988</updated>
-    </task>
-    <task id="LOCAL-00087" summary="jobs.php first fix">
-      <option name="closed" value="true" />
-      <created>1703268780267</created>
-      <option name="number" value="00087" />
-      <option name="presentableId" value="LOCAL-00087" />
-      <option name="project" value="LOCAL" />
-      <updated>1703268780267</updated>
-    </task>
-    <task id="LOCAL-00088" summary="jobs.php first fix">
-      <option name="closed" value="true" />
-      <created>1703269115379</created>
-      <option name="number" value="00088" />
-      <option name="presentableId" value="LOCAL-00088" />
-      <option name="project" value="LOCAL" />
-      <updated>1703269115379</updated>
-    </task>
-    <task id="LOCAL-00089" summary="jobs.php first fix">
-      <option name="closed" value="true" />
-      <created>1703271458480</created>
-      <option name="number" value="00089" />
-      <option name="presentableId" value="LOCAL-00089" />
-      <option name="project" value="LOCAL" />
-      <updated>1703271458480</updated>
-    </task>
-    <task id="LOCAL-00090" summary="jobs.php first fix">
-      <option name="closed" value="true" />
-      <created>1703271576465</created>
-      <option name="number" value="00090" />
-      <option name="presentableId" value="LOCAL-00090" />
-      <option name="project" value="LOCAL" />
-      <updated>1703271576465</updated>
-    </task>
-    <task id="LOCAL-00091" summary="jobs.php first fix">
-      <option name="closed" value="true" />
-      <created>1703271624634</created>
-      <option name="number" value="00091" />
-      <option name="presentableId" value="LOCAL-00091" />
-      <option name="project" value="LOCAL" />
-      <updated>1703271624634</updated>
-    </task>
-    <task id="LOCAL-00092" summary="jobs.php first fix">
-      <option name="closed" value="true" />
-      <created>1703271695594</created>
-      <option name="number" value="00092" />
-      <option name="presentableId" value="LOCAL-00092" />
-      <option name="project" value="LOCAL" />
-      <updated>1703271695594</updated>
-    </task>
-    <task id="LOCAL-00093" summary="jobs.php first fix">
-      <option name="closed" value="true" />
-      <created>1703271939392</created>
-      <option name="number" value="00093" />
-      <option name="presentableId" value="LOCAL-00093" />
-      <option name="project" value="LOCAL" />
-      <updated>1703271939392</updated>
-    </task>
-    <task id="LOCAL-00094" summary="jobs.php first fix">
-      <option name="closed" value="true" />
-      <created>1703272251873</created>
-      <option name="number" value="00094" />
-      <option name="presentableId" value="LOCAL-00094" />
-      <option name="project" value="LOCAL" />
-      <updated>1703272251873</updated>
-    </task>
-    <task id="LOCAL-00095" summary="jobs.php first fix">
-      <option name="closed" value="true" />
-      <created>1703272538421</created>
-      <option name="number" value="00095" />
-      <option name="presentableId" value="LOCAL-00095" />
-      <option name="project" value="LOCAL" />
-      <updated>1703272538421</updated>
-    </task>
-    <task id="LOCAL-00096" summary="jobs.php first fix">
-      <option name="closed" value="true" />
-      <created>1703272638902</created>
-      <option name="number" value="00096" />
-      <option name="presentableId" value="LOCAL-00096" />
-      <option name="project" value="LOCAL" />
-      <updated>1703272638902</updated>
-    </task>
-    <task id="LOCAL-00097" summary="jobs.php first fix">
-      <option name="closed" value="true" />
-      <created>1703272834632</created>
-      <option name="number" value="00097" />
-      <option name="presentableId" value="LOCAL-00097" />
-      <option name="project" value="LOCAL" />
-      <updated>1703272834632</updated>
-    </task>
-    <task id="LOCAL-00098" summary="jobs.php first fix">
-      <option name="closed" value="true" />
-      <created>1703273070772</created>
-      <option name="number" value="00098" />
-      <option name="presentableId" value="LOCAL-00098" />
-      <option name="project" value="LOCAL" />
-      <updated>1703273070772</updated>
-    </task>
-    <task id="LOCAL-00099" summary="jobs.php first fix">
-      <option name="closed" value="true" />
-      <created>1703273336875</created>
-      <option name="number" value="00099" />
-      <option name="presentableId" value="LOCAL-00099" />
-      <option name="project" value="LOCAL" />
-      <updated>1703273336875</updated>
-    </task>
-    <task id="LOCAL-00100" summary="jobs.php first fix">
-      <option name="closed" value="true" />
-      <created>1703273600061</created>
-      <option name="number" value="00100" />
-      <option name="presentableId" value="LOCAL-00100" />
-      <option name="project" value="LOCAL" />
-      <updated>1703273600061</updated>
-    </task>
-    <task id="LOCAL-00101" summary="jobs.php first fix">
-      <option name="closed" value="true" />
-      <created>1703273695787</created>
-      <option name="number" value="00101" />
-      <option name="presentableId" value="LOCAL-00101" />
-      <option name="project" value="LOCAL" />
-      <updated>1703273695787</updated>
-    </task>
-    <task id="LOCAL-00102" summary="jobs.php first fix">
-      <option name="closed" value="true" />
-      <created>1703273865003</created>
-      <option name="number" value="00102" />
-      <option name="presentableId" value="LOCAL-00102" />
-      <option name="project" value="LOCAL" />
-      <updated>1703273865003</updated>
-    </task>
-    <task id="LOCAL-00103" summary="jobs.php first fix">
-      <option name="closed" value="true" />
-      <created>1703274058813</created>
-      <option name="number" value="00103" />
-      <option name="presentableId" value="LOCAL-00103" />
-      <option name="project" value="LOCAL" />
-      <updated>1703274058813</updated>
-    </task>
-    <task id="LOCAL-00104" summary="jobs.php first fix">
-      <option name="closed" value="true" />
-      <created>1703274186738</created>
-      <option name="number" value="00104" />
-      <option name="presentableId" value="LOCAL-00104" />
-      <option name="project" value="LOCAL" />
-      <updated>1703274186738</updated>
-    </task>
-    <task id="LOCAL-00105" summary="jobs.php first fix">
-      <option name="closed" value="true" />
-      <created>1703274558898</created>
-      <option name="number" value="00105" />
-      <option name="presentableId" value="LOCAL-00105" />
-      <option name="project" value="LOCAL" />
-      <updated>1703274558898</updated>
-    </task>
-    <task id="LOCAL-00106" summary="jobs.php first fix">
-      <option name="closed" value="true" />
-      <created>1703274660203</created>
-      <option name="number" value="00106" />
-      <option name="presentableId" value="LOCAL-00106" />
-      <option name="project" value="LOCAL" />
-      <updated>1703274660203</updated>
-    </task>
-    <task id="LOCAL-00107" summary="jobs.php first fix">
-      <option name="closed" value="true" />
-      <created>1703274754604</created>
-      <option name="number" value="00107" />
-      <option name="presentableId" value="LOCAL-00107" />
-      <option name="project" value="LOCAL" />
-      <updated>1703274754604</updated>
-    </task>
-    <task id="LOCAL-00108" summary="jobs.php first fix">
-      <option name="closed" value="true" />
-      <created>1703274870167</created>
-      <option name="number" value="00108" />
-      <option name="presentableId" value="LOCAL-00108" />
-      <option name="project" value="LOCAL" />
-      <updated>1703274870167</updated>
-    </task>
-    <task id="LOCAL-00109" summary="jobs.php first fix">
-      <option name="closed" value="true" />
-      <created>1703275144643</created>
-      <option name="number" value="00109" />
-      <option name="presentableId" value="LOCAL-00109" />
-      <option name="project" value="LOCAL" />
-      <updated>1703275144643</updated>
-    </task>
-    <task id="LOCAL-00110" summary="jobs.php first fix">
-      <option name="closed" value="true" />
-      <created>1703275341486</created>
-      <option name="number" value="00110" />
-      <option name="presentableId" value="LOCAL-00110" />
-      <option name="project" value="LOCAL" />
-      <updated>1703275341486</updated>
-    </task>
-    <task id="LOCAL-00111" summary="jobs.php first fix">
-      <option name="closed" value="true" />
-      <created>1703275444850</created>
-      <option name="number" value="00111" />
-      <option name="presentableId" value="LOCAL-00111" />
-      <option name="project" value="LOCAL" />
-      <updated>1703275444850</updated>
-    </task>
-    <task id="LOCAL-00112" summary="jobs.php first fix">
-      <option name="closed" value="true" />
-      <created>1703275788848</created>
-      <option name="number" value="00112" />
-      <option name="presentableId" value="LOCAL-00112" />
-      <option name="project" value="LOCAL" />
-      <updated>1703275788848</updated>
-    </task>
-    <task id="LOCAL-00113" summary="Remake ajax.js">
-      <option name="closed" value="true" />
-      <created>1703589022016</created>
-      <option name="number" value="00113" />
-      <option name="presentableId" value="LOCAL-00113" />
-      <option name="project" value="LOCAL" />
-      <updated>1703589022016</updated>
-    </task>
-    <task id="LOCAL-00114" summary="Remake ajax.js">
-      <option name="closed" value="true" />
-      <created>1703590650062</created>
-      <option name="number" value="00114" />
-      <option name="presentableId" value="LOCAL-00114" />
-      <option name="project" value="LOCAL" />
-      <updated>1703590650063</updated>
-    </task>
-    <task id="LOCAL-00115" summary="Remake ajax.js">
-      <option name="closed" value="true" />
-      <created>1703590895931</created>
-      <option name="number" value="00115" />
-      <option name="presentableId" value="LOCAL-00115" />
-      <option name="project" value="LOCAL" />
-      <updated>1703590895931</updated>
-    </task>
-    <task id="LOCAL-00116" summary="Remake ajax.js">
-      <option name="closed" value="true" />
-      <created>1703603947711</created>
-      <option name="number" value="00116" />
-      <option name="presentableId" value="LOCAL-00116" />
-      <option name="project" value="LOCAL" />
-      <updated>1703603947711</updated>
-    </task>
-    <option name="localTasksCounter" value="117" />
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -546,6 +547,9 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="Dashboard word fix" />
+    <MESSAGE value="Sidebar" />
+    <MESSAGE value="logout.php" />
     <MESSAGE value="Bootstrap enable" />
     <MESSAGE value="Style css" />
     <MESSAGE value="revert css" />
@@ -568,10 +572,7 @@
     <MESSAGE value="debug api/register.php" />
     <MESSAGE value="Creation of CRUD" />
     <MESSAGE value="sidebar jobs update" />
-    <MESSAGE value="jobs.php test" />
-    <MESSAGE value="jobs.php first fix" />
-    <MESSAGE value="Remake ajax.js" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remake ajax.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="sidebar jobs update" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
