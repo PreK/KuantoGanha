@@ -13,9 +13,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     if (url === 'modules/login.php') {
                         setupLoginForm();
                     }
-                    if (url === 'modules/login.php') {
-                        location.reload();
-                    }
 
                     // Aqui você pode adicionar condições semelhantes para outros formulários se necessário
                 })

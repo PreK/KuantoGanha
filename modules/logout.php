@@ -5,6 +5,8 @@ session_start();
 // Destroy the session
 session_destroy();
 
-// Redirect to the index page
-header("Location: ../index.php");
+// Imprime mensagem de sucesso e redireciona para a página de login
+echo "Logout realizado com sucesso!";
+header("Location: modules\login.php");
+exit;
 ?>
