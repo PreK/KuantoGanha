@@ -24,7 +24,8 @@ document.addEventListener('DOMContentLoaded', function() {
         var loginForm = document.getElementById('loginForm');
         if (loginForm) {
             loginForm.addEventListener('submit', function(e) {
-                e.preventDefault();
+                console.log("Formulário está tentando enviar");
+                //e.preventDefault();
 
                 var formData = new FormData(loginForm);
 
