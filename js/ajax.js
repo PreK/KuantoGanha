@@ -43,9 +43,35 @@ document.addEventListener("DOMContentLoaded", function() {
     document.querySelectorAll('.ajaxForm').forEach(form => {
         form.addEventListener('submit', function(event) {
             event.preventDefault();
-            sendForm(this, this.getAttribute('action'));
+
+            // Coleta os dados do formulário e converte em um objeto
+            var formData = new FormData(this);
+            var object = {};
+            formData.forEach((value, key) => object[key] = value);
+
+            // Converte os dados do formulário em JSON
+            var json = JSON.stringify(object);
+
+            // Faz a requisição AJAX
+            fetch(this.getAttribute('action'), {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            })
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data); // Processa a resposta
+                    // Aqui você pode redirecionar o usuário ou atualizar a interface
+                })
+                .catch(error => {
+                    console.error('Erro:', error);
+                });
         });
     });
+
 
     // Logout
     const logoutLink = document.getElementById('logoutLink');
