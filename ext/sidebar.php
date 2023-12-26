@@ -44,7 +44,7 @@ session_start();
             <!-- Outras Opções de Menu -->
             <ul class="nav flex-column mb-auto">
                 <li class="nav-item">
-                    <a class="nav-link d-flex align-items-center gap-2" href="#" data-target="modules/dashboard.php" id="dasboardLink">
+                    <a class="nav-link d-flex align-items-center gap-2" href="#" data-target="ext/dashboard.php" id="dasboardLink">
                         <i class="bi bi-gear"></i>Dashboard
                     </a>
                 </li>
