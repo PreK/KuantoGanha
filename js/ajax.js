@@ -18,6 +18,10 @@ document.addEventListener('DOMContentLoaded', function() {
                         setupRegisterForm();
                     }
 
+                    if (url === 'modules/jobs.php') {
+                        setupJobsForm();
+                    }
+
                     // Aqui você pode adicionar condições semelhantes para outros formulários se necessário
                 })
                 .catch(error => console.error('Erro ao carregar o conteúdo:', error));
