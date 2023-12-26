@@ -128,7 +128,11 @@ document.addEventListener('DOMContentLoaded', function() {
         link.addEventListener('click', function(e) {
             e.preventDefault();
             var targetUrl = this.getAttribute('data-target');
-            loadContent(targetUrl, 'mainContent');
+            if(targetUrl === null) {
+                location.reload();
+            }else{
+                loadContent(targetUrl, 'mainContent');
+            }
         });
     });
 
