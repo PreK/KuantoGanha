@@ -12,12 +12,6 @@ $jobData = getJobData($_SESSION['uid']);
 echo '<pre>';
 print_r($userData);
 echo '</pre>';
-echo '<pre>';
-print_r($academicData);
-echo '</pre>';
-echo '<pre>';
-print_r($jobData);
-echo '</pre>';
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['updateUserInfo'])) {
