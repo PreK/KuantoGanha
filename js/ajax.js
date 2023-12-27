@@ -90,30 +90,44 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function setupUserJobsForm() {
-        var userJobsForm = document.getElementById('userJobsForm');
-        if (userJobsForm) {
-            userJobsForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                var formData = new FormData(userJobsForm);
+        var addUserJobsForm = document.getElementById('userJobsForm');
+        var removeUserJobsForm = document.getElementById('removeUserJobsForm');
 
-                fetch('modules/userJobs.php', {
-                    method: 'POST',
-                    body: formData
-                })
-                    .then(response => response.text())
-                    .then(data => {
-                        console.log(data); // Verifique o que está sendo retornado
-                        if(data === 'success') {
-                            alert("Profissão adicionada com sucesso!");
-                            loadContent("modules/userJobs.php", "mainContent");
-                        } else {
-                            alert("Erro ao processar a profissão: " + data);
-                        }
-                    })
-                    .catch(error => console.error('Erro ao processar a profissão:', error));
+        if (addUserJobsForm) {
+            addUserJobsForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                submitUserJobForm(this, "Adição");
+            });
+        }
+
+        if (removeUserJobsForm) {
+            removeUserJobsForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                submitUserJobForm(this, "Remoção");
             });
         }
     }
+
+    function submitUserJobForm(form, actionType) {
+        var formData = new FormData(form);
+
+        fetch('modules/userJobs.php', {
+            method: 'POST',
+            body: formData
+        })
+            .then(response => response.text())
+            .then(data => {
+                console.log(data); // Verifique o que está sendo retornado
+                if (data === 'success') {
+                    alert("Profissão " + actionType + " com sucesso!");
+                    loadContent("modules/userJobs.php", "mainContent");
+                } else {
+                    alert("Erro ao processar a profissão: " + data);
+                }
+            })
+            .catch(error => console.error('Erro ao processar a profissão:', error));
+    }
+
 
     function setupJobsForm() {
         var addJobForm = document.getElementById('addJobForm');

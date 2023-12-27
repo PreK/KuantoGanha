@@ -18,7 +18,7 @@ $districts = getDistricts();
 $modalities = getModalities();
 
 // Processar o formulário
-if ($_SERVER["REQUEST_METHOD"] == "POST" && $_SERVER["PHP_SELF"] == "/modules/userJobs.php") {
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['action']) && $_POST['action'] == 'add') {
     // Recolha e validação dos dados do formulário
     $jobId = $_POST['job_id'];
     $locationId = $_POST['location_id'];
@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && $_SERVER["PHP_SELF"] == "/modules/us
     }
 
 }
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['remove_job_id'])) {
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['action']) && $_POST['action'] == 'remove') {
     $removeJobId = $_POST['remove_job_id'];
     if (removeUserJob($removeJobId, $userId)) {
         echo "Profissão removida com sucesso.";
@@ -149,6 +149,7 @@ function insertUserJob($userId, $jobId, $locationId, $modalityId, $startDate, $e
         <h2>Associar Emprego ao Utilizador</h2>
         <p>Selecione as informações do emprego para associar ao seu perfil.</p>
         <form class="userJobsForm" id="userJobsForm" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+            <input type="hidden" name="action" value="add">
             <div class="form-group">
                 <label for="job_id">Emprego:</label>
                 <select name="job_id" id="job_id" class="form-control">
@@ -215,8 +216,9 @@ function insertUserJob($userId, $jobId, $locationId, $modalityId, $startDate, $e
                     <td><?php echo htmlspecialchars($userJob['start_date']); ?></td>
                     <td><?php echo htmlspecialchars($userJob['end_date']); ?></td>
                     <td>
-                        <form method="post">
-                            <input type="hidden" name="remove_job_id" value="<?php echo $userJob['user_job_id']; ?>">
+                        <form class="removeUserJobsForm" method="post">
+                            <input type="hidden" name="action" value="remove">
+                            <input type="hidden" name="remove_job_id" value="<?php echo htmlspecialchars($userJob['user_job_id']); ?>">
                             <input type="submit" value="Remover">
                         </form>
                     </td>
