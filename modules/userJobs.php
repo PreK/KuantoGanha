@@ -18,7 +18,7 @@ $districts = getDistricts();
 $modalities = getModalities();
 
 // Processar o formulário
-if ($_SERVER["REQUEST_METHOD"] == "POST" && $_SERVER["PHP_SELF"]) {
+if ($_SERVER["REQUEST_METHOD"] == "POST" && $_SERVER["PHP_SELF"] == "/modules/userJobs.php") {
     // Recolha e validação dos dados do formulário
     $jobId = $_POST['job_id'];
     $locationId = $_POST['location_id'];
