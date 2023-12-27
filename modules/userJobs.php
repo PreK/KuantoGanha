@@ -17,13 +17,21 @@ $jobs = getJobs();
 $districts = getDistricts();
 $modalities = getModalities();
 
-
+echo '<pre>';
+print_r($jobs);
+echo '</pre>';
+echo '<pre>';
+print_r($districts);
+echo '</pre>';
+echo '<pre>';
+print_r($modalities);
+echo '</pre>';
 // Processar o formulário
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Recolha e validação dos dados do formulário
     $jobId = $_POST['job_id'];
-    $locationId = $_POST['location_id']; // Supondo que você tenha este campo no formulário
-    $modalityId = $_POST['modality_id']; // Supondo que você tenha este campo no formulário
+    $locationId = $_POST['location_id'];
+    $modalityId = $_POST['modality_id'];
     $startDate = $_POST['start_date'];
     $endDate = $_POST['end_date'];
 

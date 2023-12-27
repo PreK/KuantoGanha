@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7c549277-1796-45c2-b708-1d03a93f7fae" name="Changes" comment="Creation perfil.php">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/install.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/install.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/userJobs.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/userJobs.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -136,14 +135,6 @@
       <workItem from="1703155067668" duration="6052000" />
       <workItem from="1703241275152" duration="3760000" />
       <workItem from="1703246628260" duration="4140000" />
-    </task>
-    <task id="LOCAL-00063" summary="debug api/register.php">
-      <option name="closed" value="true" />
-      <created>1703242010137</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1703242010137</updated>
     </task>
     <task id="LOCAL-00064" summary="debug api/register.php">
       <option name="closed" value="true" />
@@ -529,7 +520,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703690093065</updated>
     </task>
-    <option name="localTasksCounter" value="112" />
+    <task id="LOCAL-00112" summary="Creation perfil.php">
+      <option name="closed" value="true" />
+      <created>1703690874246</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1703690874246</updated>
+    </task>
+    <option name="localTasksCounter" value="113" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
