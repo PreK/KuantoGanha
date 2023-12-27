@@ -107,7 +107,7 @@ function removeUserJob($jobId, $userId): bool
     }
 
     // Em seguida, remover a profissão
-    $sql = "DELETE FROM user_jobs WHERE id = :job_id AND user_id = :user_id";
+    $sql = "DELETE FROM user_jobs WHERE job_id = :job_id AND user_id = :user_id";
     if ($stmt = $pdo->prepare($sql)) {
         $stmt->bindParam(':job_id', $jobId, PDO::PARAM_INT);
         $stmt->bindParam(':user_id', $userId, PDO::PARAM_INT);
