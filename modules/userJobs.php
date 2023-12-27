@@ -41,20 +41,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['action']) && $_POST['a
 
             if ($salaryResult) {
                 echo "success";
-                exit;
-            } else {
+                } else {
                 echo "Erro ao inserir informações salariais";
-                exit;
-            }
+                }
         } else {
             echo "Erro ao associar emprego";
-            exit;
-        }
+            }
     } else {
         echo "Por favor, preencha todos os campos obrigatórios.";
-        exit;
-    }
-}
+        }exit;
+
 
 }
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['action']) && $_POST['action'] == 'remove') {
