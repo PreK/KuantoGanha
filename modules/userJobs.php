@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['action']) && $_POST['a
 
         if ($jobResult) {
             // Inserir informações salariais após adicionar o emprego com sucesso
-            $salaryResult = insertSalaryInfo($userId, $jobId, $grossAmount, $discountPercentage, $foodAllowance, $taxExemptExtras);
+            $salaryResult = insertSalaryInfo($userId, $jobResult, $grossAmount, $discountPercentage, $foodAllowance, $taxExemptExtras);
 
             if ($salaryResult) {
                 echo "success";
@@ -57,14 +57,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['action']) && $_POST['a
     $removeJobId = $_POST['remove_job_id'];
     if (removeUserJob($removeJobId, $userId)) {
         echo "success";
-        exit;
     } else {
         echo "Erro ao remover a profissão.";
-        exit;
     }
+    exit;
 }
 
-function insertSalaryInfo($userId, $jobId, $grossAmount, $discountPercentage, $foodAllowance, $taxExemptExtras):bool {
+function insertSalaryInfo($userId, $jobResult, $grossAmount, $discountPercentage, $foodAllowance, $taxExemptExtras):bool {
     $pdo = getDbConnection();
 
     $grossAmount = !empty($grossAmount) ? filter_var($grossAmount, FILTER_VALIDATE_FLOAT) : null;
@@ -77,7 +76,7 @@ function insertSalaryInfo($userId, $jobId, $grossAmount, $discountPercentage, $f
 
     if ($stmt = $pdo->prepare($sql)) {
         $stmt->bindParam(':user_id', $userId, PDO::PARAM_INT);
-        $stmt->bindParam(':job_id', $jobId, PDO::PARAM_INT);
+        $stmt->bindParam(':job_id', $jobResult, PDO::PARAM_INT);
         $stmt->bindParam(':gross_amount', $grossAmount);
         $stmt->bindParam(':discount_percentage', $discountPercentage);
         $stmt->bindParam(':food_allowance', $foodAllowance);
@@ -185,7 +184,7 @@ function insertUserJob($userId, $jobId, $locationId, $modalityId, $startDate, $e
 
         // Executar a declaração
         if ($stmt->execute()) {
-            return true; // Sucesso
+            return $pdo->lastInsertId();
         } else {
             return false; // Falha
         }
