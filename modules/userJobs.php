@@ -96,8 +96,9 @@ function removeUserJob($jobId, $userId): bool
     $pdo->beginTransaction();
 
     // Primeiro, remover informações salariais associadas
-    $sql = "DELETE FROM salaries WHERE user_job_id = :job_id";
+    $sql = "DELETE FROM salaries WHERE user_id = :user_id AND job_id = :job_id";
     if ($stmt = $pdo->prepare($sql)) {
+        $stmt->bindParam(':user_id', $userId, PDO::PARAM_INT);
         $stmt->bindParam(':job_id', $jobId, PDO::PARAM_INT);
         if (!$stmt->execute()) {
             $pdo->rollBack();
