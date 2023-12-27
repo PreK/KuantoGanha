@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c549277-1796-45c2-b708-1d03a93f7fae" name="Changes" comment="Remake userJobs.php" />
+    <list default="true" id="7c549277-1796-45c2-b708-1d03a93f7fae" name="Changes" comment="Remake userJobs.php">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ext/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/ext/sidebar.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -132,22 +135,6 @@
       <workItem from="1703155067668" duration="6052000" />
       <workItem from="1703241275152" duration="3760000" />
       <workItem from="1703246628260" duration="4140000" />
-    </task>
-    <task id="LOCAL-00074" summary="Remake ajax.js">
-      <option name="closed" value="true" />
-      <created>1703610906429</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1703610906429</updated>
-    </task>
-    <task id="LOCAL-00075" summary="Remake ajax.js">
-      <option name="closed" value="true" />
-      <created>1703611770270</created>
-      <option name="number" value="00075" />
-      <option name="presentableId" value="LOCAL-00075" />
-      <option name="project" value="LOCAL" />
-      <updated>1703611770270</updated>
     </task>
     <task id="LOCAL-00076" summary="Remake ajax.js">
       <option name="closed" value="true" />
@@ -525,7 +512,23 @@
       <option name="project" value="LOCAL" />
       <updated>1703698306536</updated>
     </task>
-    <option name="localTasksCounter" value="123" />
+    <task id="LOCAL-00123" summary="Remake userJobs.php">
+      <option name="closed" value="true" />
+      <created>1703698484143</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1703698484143</updated>
+    </task>
+    <task id="LOCAL-00124" summary="Remake userJobs.php">
+      <option name="closed" value="true" />
+      <created>1703698594606</created>
+      <option name="number" value="00124" />
+      <option name="presentableId" value="LOCAL-00124" />
+      <option name="project" value="LOCAL" />
+      <updated>1703698594606</updated>
+    </task>
+    <option name="localTasksCounter" value="125" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -31,11 +31,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($result) {
             echo "success";
+            exit;
         } else {
             echo "Erro ao associar emprego";
+            exit;
         }
     } else {
         echo "Por favor, preencha todos os campos obrigatórios.";
+        exit;
     }
 
 }
