@@ -76,6 +76,29 @@ try {
         district VARCHAR(100) NOT NULL
     );
     
+    INSERT INTO locations (district) VALUES
+    ('Aveiro'),
+    ('Beja'),
+    ('Braga'),
+    ('Bragança'),
+    ('Castelo Branco'),
+    ('Coimbra'),
+    ('Évora'),
+    ('Faro'),
+    ('Guarda'),
+    ('Leiria'),
+    ('Lisboa'),
+    ('Portalegre'),
+    ('Porto'),
+    ('Santarém'),
+    ('Setúbal'),
+    ('Viana do Castelo'),
+    ('Vila Real'),
+    ('Viseu'),
+    ('Madeira'),
+    ('Açores');
+    
+    
     -- Work Modalities Table
     CREATE TABLE IF NOT EXISTS work_modalities (
         id SERIAL PRIMARY KEY,

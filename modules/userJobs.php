@@ -14,6 +14,9 @@ if (!$userId) {
 
 // Buscar empregos para o dropdown
 $jobs = getJobs();
+$districts = getDistricts();
+$modalities = getModalities();
+
 
 // Processar o formulário
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -38,6 +41,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 function getJobs() {
     $pdo = getDbConnection();
     $sql = "SELECT id, title FROM jobs";
+    $stmt = $pdo->query($sql);
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
+
+function getDistricts() {
+    $pdo = getDbConnection();
+    $sql = "SELECT id, district FROM locations";
+    $stmt = $pdo->query($sql);
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
+
+function getModalities() {
+    $pdo = getDbConnection();
+    $sql = "SELECT id, description FROM work_modalities";
     $stmt = $pdo->query($sql);
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
@@ -88,12 +105,16 @@ function insertUserJob($userId, $jobId, $locationId, $modalityId, $startDate, $e
     <!-- Supondo que você tenha uma lista de localizações e modalidades -->
     <label for="location_id">Localização:</label>
     <select name="location_id" id="location_id">
-        <!-- Aqui você deve adicionar as opções de localização -->
+        <?php foreach ($districts as $district): ?>
+            <option value="<?php echo $district['id']; ?>"><?php echo htmlspecialchars($district['title']); ?></option>
+        <?php endforeach; ?>
     </select><br/>
 
     <label for="modality_id">Modalidade:</label>
     <select name="modality_id" id="modality_id">
-        <!-- Aqui você deve adicionar as opções de modalidade -->
+        <?php foreach ($modalities as $modality): ?>
+            <option value="<?php echo $modality['id']; ?>"><?php echo htmlspecialchars($modality['title']); ?></option>
+        <?php endforeach; ?>
     </select><br/>
 
     <label for="start_date">Data de Início:</label>
