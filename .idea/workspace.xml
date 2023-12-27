@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c549277-1796-45c2-b708-1d03a93f7fae" name="Changes" comment="userJobs.php">
-      <change beforePath="$PROJECT_DIR$/ext/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/ext/sidebar.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/ajax.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/ajax.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/userJobs.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/userJobs.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,14 +134,6 @@
       <workItem from="1703155067668" duration="6052000" />
       <workItem from="1703241275152" duration="3760000" />
       <workItem from="1703246628260" duration="4140000" />
-    </task>
-    <task id="LOCAL-00068" summary="Creation of CRUD">
-      <option name="closed" value="true" />
-      <created>1703258419840</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1703258419841</updated>
     </task>
     <task id="LOCAL-00069" summary="sidebar jobs update">
       <option name="closed" value="true" />
@@ -529,7 +519,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703695281148</updated>
     </task>
-    <option name="localTasksCounter" value="117" />
+    <task id="LOCAL-00117" summary="userJobs.php">
+      <option name="closed" value="true" />
+      <created>1703696046647</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1703696046647</updated>
+    </task>
+    <option name="localTasksCounter" value="118" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

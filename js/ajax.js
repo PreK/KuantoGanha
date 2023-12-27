@@ -94,6 +94,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (userJobsForm) {
             userJobsForm.addEventListener('submit', function(e) {
                 e.preventDefault();
+                submitUserJobsForm(userJobsForm, 'add');
             }
             );
         }
@@ -118,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function submitJobForm(form, action) {
         var formData = new FormData(form);
-        formData.append('action', action); // Adicione uma ação para distinguir no servidor
+        formData.append('action', action);
 
         fetch('modules/jobs.php', {
             method: 'POST',
@@ -126,7 +127,6 @@ document.addEventListener('DOMContentLoaded', function() {
         })
             .then(response => response.text())
             .then(data => {
-                console.log(data); // Verifique a resposta
                 if(data === 'success') {
                     loadContent("modules/jobs.php", "mainContent");
                 } else {
@@ -148,5 +148,24 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    function submitUserJobsForm(form, action) {
+        var formData = new FormData(form);
+        formData.append('action', action); // Adicione uma ação para distinguir no servidor
+
+        fetch('modules/userJobs.php', {
+            method: 'POST',
+            body: formData
+        })
+            .then(response => response.text())
+            .then(data => {
+                if(data === 'success') {
+                    loadContent("modules/userJobs.php", "mainContent");
+                } else {
+                    alert('Erro: ' + data);
+                }
+            })
+
+    }
 
 });
