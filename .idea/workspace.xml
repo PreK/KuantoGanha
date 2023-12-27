@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c549277-1796-45c2-b708-1d03a93f7fae" name="Changes" comment="userJobs.php" />
+    <list default="true" id="7c549277-1796-45c2-b708-1d03a93f7fae" name="Changes" comment="Remake userJobs.php" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -66,7 +66,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/prekp/OneDrive - Universidade de Aveiro/Projecto/KuantoGanha/modules",
+    "last_opened_file_path": "C:/Users/prekp/OneDrive - Universidade de Aveiro/Projecto/KuantoGanha",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.stylelint": "true",
     "node.js.detected.package.tslint": "true",
@@ -85,8 +85,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\prekp\OneDrive - Universidade de Aveiro\Projecto\KuantoGanha\modules" />
       <recent name="C:\Users\prekp\OneDrive - Universidade de Aveiro\Projecto\KuantoGanha" />
+      <recent name="C:\Users\prekp\OneDrive - Universidade de Aveiro\Projecto\KuantoGanha\modules" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\prekp\OneDrive - Universidade de Aveiro\Projecto\KuantoGanha\js" />
@@ -132,22 +132,6 @@
       <workItem from="1703155067668" duration="6052000" />
       <workItem from="1703241275152" duration="3760000" />
       <workItem from="1703246628260" duration="4140000" />
-    </task>
-    <task id="LOCAL-00070" summary="Remake ajax.js">
-      <option name="closed" value="true" />
-      <created>1703609983758</created>
-      <option name="number" value="00070" />
-      <option name="presentableId" value="LOCAL-00070" />
-      <option name="project" value="LOCAL" />
-      <updated>1703609983758</updated>
-    </task>
-    <task id="LOCAL-00071" summary="Remake ajax.js">
-      <option name="closed" value="true" />
-      <created>1703610400902</created>
-      <option name="number" value="00071" />
-      <option name="presentableId" value="LOCAL-00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1703610400902</updated>
     </task>
     <task id="LOCAL-00072" summary="Remake ajax.js">
       <option name="closed" value="true" />
@@ -525,7 +509,23 @@
       <option name="project" value="LOCAL" />
       <updated>1703696336316</updated>
     </task>
-    <option name="localTasksCounter" value="119" />
+    <task id="LOCAL-00119" summary="add favicon">
+      <option name="closed" value="true" />
+      <created>1703696541516</created>
+      <option name="number" value="00119" />
+      <option name="presentableId" value="LOCAL-00119" />
+      <option name="project" value="LOCAL" />
+      <updated>1703696541516</updated>
+    </task>
+    <task id="LOCAL-00120" summary="Remake userJobs.php">
+      <option name="closed" value="true" />
+      <created>1703697642628</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1703697642628</updated>
+    </task>
+    <option name="localTasksCounter" value="121" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -549,8 +549,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Style css" />
-    <MESSAGE value="revert css" />
     <MESSAGE value="Test Login" />
     <MESSAGE value="Try fix icon login" />
     <MESSAGE value="php menu with login/logout" />
@@ -574,7 +572,9 @@
     <MESSAGE value="fix jobs.php" />
     <MESSAGE value="Creation perfil.php" />
     <MESSAGE value="userJobs.php" />
-    <option name="LAST_COMMIT_MESSAGE" value="userJobs.php" />
+    <MESSAGE value="add favicon" />
+    <MESSAGE value="Remake userJobs.php" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remake userJobs.php" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

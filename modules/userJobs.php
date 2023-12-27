@@ -103,11 +103,6 @@ function insertUserJob($userId, $jobId, $locationId, $modalityId, $startDate, $e
     <div class="form-container">
         <h2>Associar Emprego ao Usuário</h2>
         <p>Selecione as informações do emprego para associar ao seu perfil.</p>
-
-        <?php if ($feedbackMessage): ?>
-            <div class="alert alert-info"><?php echo $feedbackMessage; ?></div>
-        <?php endif; ?>
-
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div class="form-group">
                 <label for="job_id">Emprego:</label>
