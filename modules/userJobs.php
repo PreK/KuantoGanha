@@ -67,10 +67,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['action']) && $_POST['a
 function insertSalaryInfo($userId, $jobId, $grossAmount, $discountPercentage, $foodAllowance, $taxExemptExtras):bool {
     $pdo = getDbConnection();
 
-    $grossAmount = filter_var($grossAmount, FILTER_VALIDATE_FLOAT);
-    $discountPercentage = filter_var($discountPercentage, FILTER_VALIDATE_FLOAT);
-    $foodAllowance = filter_var($foodAllowance, FILTER_VALIDATE_FLOAT);
-    $taxExemptExtras = filter_var($taxExemptExtras, FILTER_VALIDATE_FLOAT);
+    $grossAmount = !empty($grossAmount) ? filter_var($grossAmount, FILTER_VALIDATE_FLOAT) : null;
+    $discountPercentage = !empty($discountPercentage) ? filter_var($discountPercentage, FILTER_VALIDATE_FLOAT) : null;
+    $foodAllowance = !empty($foodAllowance) ? filter_var($foodAllowance, FILTER_VALIDATE_FLOAT) : null;
+    $taxExemptExtras = !empty($taxExemptExtras) ? filter_var($taxExemptExtras, FILTER_VALIDATE_FLOAT) : null;
 
     $sql = "INSERT INTO salaries (user_id, job_id, gross_amount, discount_percentage, food_allowance, tax_exempt_extras) 
             VALUES (:user_id, :job_id, :gross_amount, :discount_percentage, :food_allowance, :tax_exempt_extras)";
