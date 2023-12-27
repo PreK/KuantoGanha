@@ -207,9 +207,6 @@ function insertUserJob($userId, $jobId, $locationId, $modalityId, $startDate, $e
             <tbody>
             <?php
             $userJobs = getUserJobs($userId);
-            echo '<pre>';
-            print_r($userJobs);
-            echo '</pre>';
             foreach ($userJobs as $userJob): ?>
                 <tr>
                     <td><?php echo htmlspecialchars($userJob['title']); ?></td>
