@@ -131,7 +131,7 @@ function getUserJobs($userId): bool|array
             INNER JOIN jobs j ON uj.job_id = j.id
             INNER JOIN locations l ON uj.location_id = l.id
             INNER JOIN work_modalities wm ON uj.modality_id = wm.id
-            LEFT JOIN salaries s ON uj.id = s.user_job_id
+            LEFT JOIN salaries s ON uj.user_id = s.user_id AND uj.job_id = s.job_id
             WHERE uj.user_id = :user_id";
 
     if ($stmt = $pdo->prepare($sql)) {
