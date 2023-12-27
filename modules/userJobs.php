@@ -216,10 +216,10 @@ function insertUserJob($userId, $jobId, $locationId, $modalityId, $startDate, $e
                     <td><?php echo htmlspecialchars($userJob['start_date']); ?></td>
                     <td><?php echo htmlspecialchars($userJob['end_date']); ?></td>
                     <td>
-                        <form class="removeUserJobsForm" method="post">
+                        <form id="removeUserJobsForm" class="removeUserJobsForm" method="post">
                             <input type="hidden" name="action" value="remove">
                             <input type="hidden" name="remove_job_id" value="<?php echo htmlspecialchars($userJob['user_job_id']); ?>">
-                            <input type="submit" value="Remover">
+                            <input type="submit" value="Remover" class="btn btn-danger">
                         </form>
                     </td>
                 </tr>
