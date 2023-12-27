@@ -1,4 +1,7 @@
 <?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
 require_once '../modules/dbconfig.php'; // Inclui o ficheiro de configuração da base de dados
 header('Content-Type: application/json');

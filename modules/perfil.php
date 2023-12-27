@@ -1,5 +1,7 @@
 <?php
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 require_once 'dbconfig.php';
 require_once 'getInfo.php';
 
@@ -7,6 +9,15 @@ require_once 'getInfo.php';
 $userData = getUserData($_SESSION['uid']);
 $academicData = getAcademicData($_SESSION['uid']);
 $jobData = getJobData($_SESSION['uid']);
+echo '<pre>';
+print_r($userData);
+echo '</pre>';
+echo '<pre>';
+print_r($academicData);
+echo '</pre>';
+echo '<pre>';
+print_r($jobData);
+echo '</pre>';
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['updateUserInfo'])) {

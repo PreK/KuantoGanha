@@ -1,5 +1,7 @@
 <?php
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 require_once 'dbconfig.php'; // Certifique-se de que este arquivo contém as configurações do banco de dados
 
 // Verificar se o usuário é administrador

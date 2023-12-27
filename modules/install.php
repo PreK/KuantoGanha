@@ -28,8 +28,7 @@ try {
     -- Jobs Table with Start Date
     CREATE TABLE IF NOT EXISTS jobs (
         id SERIAL PRIMARY KEY,
-        title VARCHAR(255) NOT NULL,
-        start_date DATE
+        title VARCHAR(255) NOT NULL
     );
     
     -- Salaries Table with additional fields

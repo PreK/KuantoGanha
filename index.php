@@ -102,8 +102,9 @@
     <!-- Custom styles for this template -->
     <link href="dashboard.css" rel="stylesheet">
       <?php
-      // Start the session (if not already started)
-      session_start();
+      if (session_status() === PHP_SESSION_NONE) {
+          session_start();
+      }
 
       ?>
   </head>

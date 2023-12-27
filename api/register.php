@@ -1,10 +1,10 @@
 <?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 require_once '../modules/dbconfig.php'; // Inclui o ficheiro de configuração da base de dados
 
 header('Content-Type: application/json'); // Define o cabeçalho da resposta como JSON
-
-ini_set('display_errors', 0); // Não exibir erros na saída
-error_reporting(E_ALL);       // Reportar todos os erros
 
 // Inicializa a resposta como um array
 $response = array("error" => false);

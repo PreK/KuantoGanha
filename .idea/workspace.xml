@@ -4,8 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c549277-1796-45c2-b708-1d03a93f7fae" name="Changes" comment="fix jobs.php">
+    <list default="true" id="7c549277-1796-45c2-b708-1d03a93f7fae" name="Changes" comment="Creation perfil.php">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/addJob.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/addJob.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/deleteJob.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/deleteJob.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/listJobs.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/listJobs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/updateJob.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/updateJob.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/updateProfile.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/updateProfile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ext/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/ext/sidebar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/dbconfig.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/dbconfig.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/getInfo.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/getInfo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/install.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/install.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/jobs.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/jobs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/logout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/perfil.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/perfil.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/register.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,22 +151,6 @@
       <workItem from="1703155067668" duration="6052000" />
       <workItem from="1703241275152" duration="3760000" />
       <workItem from="1703246628260" duration="4140000" />
-    </task>
-    <task id="LOCAL-00056" summary="update dbconfig">
-      <option name="closed" value="true" />
-      <created>1702495019261</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1702495019263</updated>
-    </task>
-    <task id="LOCAL-00057" summary="Create api/register.php">
-      <option name="closed" value="true" />
-      <created>1703157180823</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1703157180824</updated>
     </task>
     <task id="LOCAL-00058" summary="fix $pdo api/register.php">
       <option name="closed" value="true" />
@@ -527,7 +528,23 @@
       <option name="project" value="LOCAL" />
       <updated>1703620052372</updated>
     </task>
-    <option name="localTasksCounter" value="105" />
+    <task id="LOCAL-00105" summary="Creation perfil.php">
+      <option name="closed" value="true" />
+      <created>1703681333321</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1703681333322</updated>
+    </task>
+    <task id="LOCAL-00106" summary="Creation perfil.php">
+      <option name="closed" value="true" />
+      <created>1703681368949</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1703681368949</updated>
+    </task>
+    <option name="localTasksCounter" value="107" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -551,7 +568,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="logout.php" />
     <MESSAGE value="Bootstrap enable" />
     <MESSAGE value="Style css" />
     <MESSAGE value="revert css" />
@@ -576,7 +592,8 @@
     <MESSAGE value="sidebar jobs update" />
     <MESSAGE value="Remake ajax.js" />
     <MESSAGE value="fix jobs.php" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix jobs.php" />
+    <MESSAGE value="Creation perfil.php" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creation perfil.php" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
