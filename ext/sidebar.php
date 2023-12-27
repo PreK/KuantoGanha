@@ -22,6 +22,12 @@ if (session_status() === PHP_SESSION_NONE) {
                         <i class="bi bi-person"></i>Perfil
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link d-flex align-items-center gap-2" href="#" data-target="modules/userJobs.php" id="userJobsLink">
+                        <i class="bi bi-person"></i>Adicionar Profissão
+                    </a>
+                </li>
+
                 <?php if ($_SESSION["username"] === "admin") { ?>
                     <li class="nav-item">
                         <a class="nav-link d-flex align-items-center gap-2" href="#" data-target="modules/jobs.php" id="jobsLink">

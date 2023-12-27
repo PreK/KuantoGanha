@@ -21,6 +21,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     if (url === 'modules/jobs.php') {
                         setupJobsForm();
                     }
+                    if (url === 'modules/userJobs.php') {
+                        setupUserJobsForm();
+                    }
 
                     // Aqui você pode adicionar condições semelhantes para outros formulários se necessário
                 })
@@ -83,6 +86,16 @@ document.addEventListener('DOMContentLoaded', function() {
                     })
                     .catch(error => console.error('Erro ao processar o registro:', error));
             });
+        }
+    }
+
+    function setupUserJobsForm() {
+        var userJobsForm = document.getElementById('userJobsForm');
+        if (userJobsForm) {
+            userJobsForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+            }
+            );
         }
     }
 

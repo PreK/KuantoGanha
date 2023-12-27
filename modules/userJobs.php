@@ -138,7 +138,7 @@ function insertUserJob($userId, $jobId, $locationId, $modalityId, $startDate, $e
 
             <div class="form-group">
                 <label for="start_date">Data de Início:</label>
-                <input type="date" name="start_date" id="start_date" class="form-control">
+                <input type="date" name="start_date" id="start_date" class="form-control" required>
             </div>
 
             <div class="form-group">
