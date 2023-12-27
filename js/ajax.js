@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function submitUserJobsForm(form, action) {
         var formData = new FormData(form);
-        formData.append('action', action); // Adicione uma ação para distinguir no servidor
+        formData.append('action', action); // Adiciona uma ação para distinguir no servidor
 
         fetch('modules/userJobs.php', {
             method: 'POST',
@@ -159,13 +159,30 @@ document.addEventListener('DOMContentLoaded', function() {
         })
             .then(response => response.text())
             .then(data => {
-                if(data === 'success') {
-                    loadContent("modules/userJobs.php", "mainContent");
-                } else {
-                    alert('Erro: ' + data);
+                // Trata a resposta do servidor
+                try {
+                    // Tenta analisar a resposta como JSON
+                    var jsonResponse = JSON.parse(data);
+
+                    // Verifica se a resposta é um sucesso ou contém uma mensagem de erro
+                    if (jsonResponse.success) {
+                        loadContent("modules/userJobs.php", "mainContent");
+                    } else if (jsonResponse.error) {
+                        alert('Erro: ' + jsonResponse.error);
+                    } else {
+                        // Trata outros casos
+                        alert('Resposta inesperada do servidor');
+                    }
+                } catch (e) {
+                    // A resposta não é JSON, mostra a resposta bruta (útil para depuração)
+                    alert('Erro ao processar a resposta do servidor: ' + data);
                 }
             })
-
+            .catch(error => {
+                // Trata erros de rede ou de conexão
+                console.error('Erro ao enviar o formulário:', error);
+                alert('Erro ao enviar o formulário. Verifique sua conexão.');
+            });
     }
 
 });

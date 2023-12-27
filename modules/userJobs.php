@@ -30,12 +30,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $result = insertUserJob($userId, $jobId, $locationId, $modalityId, $startDate, $endDate);
 
         if ($result) {
-            $feedbackMessage = "Emprego associado com sucesso.";
+            json_encode("success");
         } else {
-            $feedbackMessage = "Erro ao associar emprego.";
+            json_encode("Erro ao associar emprego");
         }
     } else {
-        $feedbackMessage = "Por favor, preencha todos os campos obrigatórios.";
+        json_encode("Por favor, preencha todos os campos obrigatórios.");
     }
 
 }
