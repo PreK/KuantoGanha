@@ -298,10 +298,12 @@ function insertUserJob($userId, $jobId, $locationId, $modalityId, $startDate, $e
                     <td><?php echo htmlspecialchars($userJob['title']); ?></td>
                     <td><?php echo htmlspecialchars($userJob['district']); ?></td>
                     <td><?php echo htmlspecialchars($userJob['description']); ?></td>
-                    <td><?php echo htmlspecialchars($userJob['gross_amount']); ?></td>
-                    <td><?php echo htmlspecialchars($userJob['discount_percentage']); ?></td>
+                    <td><?php echo htmlspecialchars($userJob['gross_amount'] ?? 'N/A'); ?></td>
+                    <td><?php echo htmlspecialchars($userJob['discount_percentage'] ?? 'N/A'); ?></td>
+                    <td><?php echo htmlspecialchars($userJob['food_allowance'] ?? 'N/A'); ?></td>
+                    <td><?php echo htmlspecialchars($userJob['tax_exempt_extras'] ?? 'N/A'); ?></td>
                     <td><?php echo htmlspecialchars($userJob['start_date']); ?></td>
-                    <td><?php echo htmlspecialchars($userJob['end_date']); ?></td>
+                    <td><?php echo htmlspecialchars($userJob['end_date']?? 'N/A'); ?></td>
                     <td>
                         <form id="removeUserJobsForm" class="removeUserJobsForm" method="post">
                             <input type="hidden" name="action" value="remove">
