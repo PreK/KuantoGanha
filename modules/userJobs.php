@@ -17,15 +17,6 @@ $jobs = getJobs();
 $districts = getDistricts();
 $modalities = getModalities();
 
-echo '<pre>';
-print_r($jobs);
-echo '</pre>';
-echo '<pre>';
-print_r($districts);
-echo '</pre>';
-echo '<pre>';
-print_r($modalities);
-echo '</pre>';
 // Processar o formulário
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Recolha e validação dos dados do formulário
@@ -114,14 +105,14 @@ function insertUserJob($userId, $jobId, $locationId, $modalityId, $startDate, $e
     <label for="location_id">Localização:</label>
     <select name="location_id" id="location_id">
         <?php foreach ($districts as $district): ?>
-            <option value="<?php echo $district['id']; ?>"><?php echo htmlspecialchars($district['title']); ?></option>
+            <option value="<?php echo $district['id']; ?>"><?php echo htmlspecialchars($district['district']); ?></option>
         <?php endforeach; ?>
     </select><br/>
 
     <label for="modality_id">Modalidade:</label>
     <select name="modality_id" id="modality_id">
         <?php foreach ($modalities as $modality): ?>
-            <option value="<?php echo $modality['id']; ?>"><?php echo htmlspecialchars($modality['title']); ?></option>
+            <option value="<?php echo $modality['id']; ?>"><?php echo htmlspecialchars($modality['description']); ?></option>
         <?php endforeach; ?>
     </select><br/>
 

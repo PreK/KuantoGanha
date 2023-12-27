@@ -105,6 +105,15 @@ try {
         description VARCHAR(50) NOT NULL -- e.g., 'Remote', 'On-site', 'Hybrid'
     );
     
+    INSERT INTO work_modalities (description) VALUES
+    ('Presencial'),
+    ('Remoto'),
+    ('Híbrido'),
+    ('Flexível'),
+    ('Conta própria'),
+    ('Freelancer'),
+    ('Estágio');
+    
     -- Relationship between Users and Jobs
     CREATE TABLE IF NOT EXISTS user_jobs (
         id SERIAL PRIMARY KEY,
