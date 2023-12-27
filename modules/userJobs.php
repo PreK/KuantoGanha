@@ -92,36 +92,32 @@ function removeUserJob($jobId, $userId): bool
 {
     $pdo = getDbConnection();
 
-    // Iniciar transação
-    $pdo->beginTransaction();
+    try {
+        $pdo->beginTransaction();
 
-    // Primeiro, remover informações salariais associadas
-    $sql = "DELETE FROM salaries WHERE user_id = :user_id AND job_id = :job_id";
-    if ($stmt = $pdo->prepare($sql)) {
+        // Remover informações salariais
+        $sql = "DELETE FROM salaries WHERE user_id = :user_id AND job_id = :job_id";
+        $stmt = $pdo->prepare($sql);
         $stmt->bindParam(':user_id', $userId, PDO::PARAM_INT);
         $stmt->bindParam(':job_id', $jobId, PDO::PARAM_INT);
-        if (!$stmt->execute()) {
-            $pdo->rollBack();
-            return false;
-        }
-    }
+        $stmt->execute();
 
-    // Em seguida, remover a profissão
-    $sql = "DELETE FROM user_jobs WHERE job_id = :job_id AND user_id = :user_id";
-    if ($stmt = $pdo->prepare($sql)) {
+        // Remover a profissão
+        $sql = "DELETE FROM user_jobs WHERE id = :job_id AND user_id = :user_id";
+        $stmt = $pdo->prepare($sql);
         $stmt->bindParam(':job_id', $jobId, PDO::PARAM_INT);
         $stmt->bindParam(':user_id', $userId, PDO::PARAM_INT);
-        if ($stmt->execute()) {
-            $pdo->commit();
-            return true;
-        } else {
-            $pdo->rollBack();
-            return false;
-        }
-    }
+        $stmt->execute();
 
-    $pdo->rollBack();
-    return false;
+        $pdo->commit();
+        return true;
+    } catch (PDOException $e) {
+        // Em caso de erro, desfazer a transação
+        $pdo->rollBack();
+        // Log do erro
+        error_log("Falha ao remover profissão: " . $e->getMessage());
+        return false;
+    }
 }
 function getUserJobs($userId): bool|array
 {
