@@ -49,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                             // Store data in session variables
                             $_SESSION["loggedin"] = true;
-                           // $_SESSION["id"] = $id;
+                            $_SESSION["uid"] = $row["uid"];
                             $_SESSION["username"] = $username;
 
                             // For ajax know if login was successful
