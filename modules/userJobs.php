@@ -66,12 +66,12 @@ function removeUserJob($jobId, $userId): bool
 function getUserJobs($userId): bool|array
 {
     $pdo = getDbConnection();
-    $sql = "SELECT uj.id, j.title, l.district, wm.description, uj.start_date, uj.end_date 
-            FROM user_jobs uj
-            JOIN jobs j ON uj.job_id = j.id
-            JOIN locations l ON uj.location_id = l.id
-            JOIN work_modalities wm ON uj.modality_id = wm.id
-            WHERE uj.user_id = :user_id";
+    $sql = "SELECT uj.id as user_job_id, j.title, l.district, wm.description, uj.start_date, uj.end_date 
+        FROM user_jobs uj
+        INNER JOIN jobs j ON uj.job_id = j.id
+        INNER JOIN locations l ON uj.location_id = l.id
+        INNER JOIN work_modalities wm ON uj.modality_id = wm.id
+        WHERE uj.user_id = :user_id";
 
     if ($stmt = $pdo->prepare($sql)) {
         $stmt->bindParam(':user_id', $userId, PDO::PARAM_INT);
@@ -207,6 +207,9 @@ function insertUserJob($userId, $jobId, $locationId, $modalityId, $startDate, $e
             <tbody>
             <?php
             $userJobs = getUserJobs($userId);
+            echo '<pre>';
+            print_r($userJobs);
+            echo '</pre>';
             foreach ($userJobs as $userJob): ?>
                 <tr>
                     <td><?php echo htmlspecialchars($userJob['title']); ?></td>
