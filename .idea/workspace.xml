@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c549277-1796-45c2-b708-1d03a93f7fae" name="Changes" comment="Creation perfil.php">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/install.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/install.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/userJobs.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/userJobs.php" afterDir="false" />
-    </list>
+    <list default="true" id="7c549277-1796-45c2-b708-1d03a93f7fae" name="Changes" comment="userJobs.php" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -136,14 +132,6 @@
       <workItem from="1703155067668" duration="6052000" />
       <workItem from="1703241275152" duration="3760000" />
       <workItem from="1703246628260" duration="4140000" />
-    </task>
-    <task id="LOCAL-00065" summary="debug api/register.php">
-      <option name="closed" value="true" />
-      <created>1703242550548</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1703242550548</updated>
     </task>
     <task id="LOCAL-00066" summary="debug api/register.php">
       <option name="closed" value="true" />
@@ -529,7 +517,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703692817530</updated>
     </task>
-    <option name="localTasksCounter" value="114" />
+    <task id="LOCAL-00114" summary="userJobs.php">
+      <option name="closed" value="true" />
+      <created>1703693985561</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1703693985561</updated>
+    </task>
+    <option name="localTasksCounter" value="115" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -553,7 +549,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Bootstrap enable" />
     <MESSAGE value="Style css" />
     <MESSAGE value="revert css" />
     <MESSAGE value="Test Login" />
@@ -578,7 +573,8 @@
     <MESSAGE value="Remake ajax.js" />
     <MESSAGE value="fix jobs.php" />
     <MESSAGE value="Creation perfil.php" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creation perfil.php" />
+    <MESSAGE value="userJobs.php" />
+    <option name="LAST_COMMIT_MESSAGE" value="userJobs.php" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -26,13 +26,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $startDate = $_POST['start_date'];
     $endDate = $_POST['end_date'];
 
-    $result = insertUserJob($userId, $_POST['job_id'], $_POST['location_id'],
-        $_POST['modality_id'], $_POST['start_date'], $_POST['end_date']);
+    if ($jobId && $locationId && $modalityId && $startDate) {
+        $result = insertUserJob($userId, $jobId, $locationId, $modalityId, $startDate, $endDate);
 
-    if ($result) {
-        echo "Emprego associado com sucesso.";
+        if ($result) {
+            $feedbackMessage = "Emprego associado com sucesso.";
+        } else {
+            $feedbackMessage = "Erro ao associar emprego.";
+        }
     } else {
-        echo "Erro ao associar emprego.";
+        $feedbackMessage = "Por favor, preencha todos os campos obrigatórios.";
     }
 
 }
@@ -89,41 +92,61 @@ function insertUserJob($userId, $jobId, $locationId, $modalityId, $startDate, $e
 <html>
 <head>
     <title>Associar Emprego ao Usuário</title>
-    <!-- Seus estilos e scripts aqui -->
+    <!-- Inclua aqui seus estilos CSS e quaisquer outros scripts necessários -->
 </head>
 <body>
-<h2>Associar Emprego ao Usuário</h2>
-<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-    <label for="job_id">Emprego:</label>
-    <select name="job_id" id="job_id">
-        <?php foreach ($jobs as $job): ?>
-            <option value="<?php echo $job['id']; ?>"><?php echo htmlspecialchars($job['title']); ?></option>
-        <?php endforeach; ?>
-    </select><br/>
+<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+    <div class="form-container">
+        <h2>Associar Emprego ao Usuário</h2>
+        <p>Selecione as informações do emprego para associar ao seu perfil.</p>
 
-    <!-- Supondo que você tenha uma lista de localizações e modalidades -->
-    <label for="location_id">Localização:</label>
-    <select name="location_id" id="location_id">
-        <?php foreach ($districts as $district): ?>
-            <option value="<?php echo $district['id']; ?>"><?php echo htmlspecialchars($district['district']); ?></option>
-        <?php endforeach; ?>
-    </select><br/>
+        <?php if ($feedbackMessage): ?>
+            <div class="alert alert-info"><?php echo $feedbackMessage; ?></div>
+        <?php endif; ?>
 
-    <label for="modality_id">Modalidade:</label>
-    <select name="modality_id" id="modality_id">
-        <?php foreach ($modalities as $modality): ?>
-            <option value="<?php echo $modality['id']; ?>"><?php echo htmlspecialchars($modality['description']); ?></option>
-        <?php endforeach; ?>
-    </select><br/>
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+            <div class="form-group">
+                <label for="job_id">Emprego:</label>
+                <select name="job_id" id="job_id" class="form-control">
+                    <?php foreach ($jobs as $job): ?>
+                        <option value="<?php echo $job['id']; ?>"><?php echo htmlspecialchars($job['title']); ?></option>
+                    <?php endforeach; ?>
+                </select>
+            </div>
 
-    <label for="start_date">Data de Início:</label>
-    <input type="date" name="start_date" id="start_date"><br/>
+            <div class="form-group">
+                <label for="location_id">Localização:</label>
+                <select name="location_id" id="location_id" class="form-control">
+                    <?php foreach ($districts as $district): ?>
+                        <option value="<?php echo $district['id']; ?>"><?php echo htmlspecialchars($district['district']); ?></option>
+                    <?php endforeach; ?>
+                </select>
+            </div>
 
-    <label for="end_date">Data de Término (opcional):</label>
-    <input type="date" name="end_date" id="end_date"><br/>
+            <div class="form-group">
+                <label for="modality_id">Modalidade:</label>
+                <select name="modality_id" id="modality_id" class="form-control">
+                    <?php foreach ($modalities as $modality): ?>
+                        <option value="<?php echo $modality['id']; ?>"><?php echo htmlspecialchars($modality['description']); ?></option>
+                    <?php endforeach; ?>
+                </select>
+            </div>
 
-    <input type="submit" value="Associar Emprego">
-</form>
+            <div class="form-group">
+                <label for="start_date">Data de Início:</label>
+                <input type="date" name="start_date" id="start_date" class="form-control">
+            </div>
 
+            <div class="form-group">
+                <label for="end_date">Data de Término (opcional):</label>
+                <input type="date" name="end_date" id="end_date" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary" value="Associar Emprego">
+            </div>
+        </form>
+    </div>
+</main>
 </body>
 </html>
