@@ -91,24 +91,48 @@ function insertSalaryInfo($userId, $jobId, $grossAmount, $discountPercentage, $f
 function removeUserJob($jobId, $userId): bool
 {
     $pdo = getDbConnection();
-    $sql = "DELETE FROM user_jobs WHERE id = :job_id AND user_id = :user_id";
 
+    // Iniciar transação
+    $pdo->beginTransaction();
+
+    // Primeiro, remover informações salariais associadas
+    $sql = "DELETE FROM salaries WHERE user_job_id = :job_id";
+    if ($stmt = $pdo->prepare($sql)) {
+        $stmt->bindParam(':job_id', $jobId, PDO::PARAM_INT);
+        if (!$stmt->execute()) {
+            $pdo->rollBack();
+            return false;
+        }
+    }
+
+    // Em seguida, remover a profissão
+    $sql = "DELETE FROM user_jobs WHERE id = :job_id AND user_id = :user_id";
     if ($stmt = $pdo->prepare($sql)) {
         $stmt->bindParam(':job_id', $jobId, PDO::PARAM_INT);
         $stmt->bindParam(':user_id', $userId, PDO::PARAM_INT);
-        return $stmt->execute();
+        if ($stmt->execute()) {
+            $pdo->commit();
+            return true;
+        } else {
+            $pdo->rollBack();
+            return false;
+        }
     }
+
+    $pdo->rollBack();
     return false;
 }
 function getUserJobs($userId): bool|array
 {
     $pdo = getDbConnection();
-    $sql = "SELECT uj.id as user_job_id, j.title, l.district, wm.description, uj.start_date, uj.end_date 
-        FROM user_jobs uj
-        INNER JOIN jobs j ON uj.job_id = j.id
-        INNER JOIN locations l ON uj.location_id = l.id
-        INNER JOIN work_modalities wm ON uj.modality_id = wm.id
-        WHERE uj.user_id = :user_id";
+    $sql = "SELECT uj.id as user_job_id, j.title, l.district, wm.description, uj.start_date, uj.end_date,
+                   s.gross_amount, s.discount_percentage, s.food_allowance, s.tax_exempt_extras
+            FROM user_jobs uj
+            INNER JOIN jobs j ON uj.job_id = j.id
+            INNER JOIN locations l ON uj.location_id = l.id
+            INNER JOIN work_modalities wm ON uj.modality_id = wm.id
+            LEFT JOIN salaries s ON uj.id = s.user_job_id
+            WHERE uj.user_id = :user_id";
 
     if ($stmt = $pdo->prepare($sql)) {
         $stmt->bindParam(':user_id', $userId, PDO::PARAM_INT);
@@ -258,6 +282,8 @@ function insertUserJob($userId, $jobId, $locationId, $modalityId, $startDate, $e
                 <th>Emprego</th>
                 <th>Localização</th>
                 <th>Modalidade</th>
+                <th>Montante Bruto</th>
+                <th>Percentagem de Desconto</th>
                 <th>Data de Início</th>
                 <th>Data de Término</th>
                 <th>Ações</th>
@@ -271,6 +297,8 @@ function insertUserJob($userId, $jobId, $locationId, $modalityId, $startDate, $e
                     <td><?php echo htmlspecialchars($userJob['title']); ?></td>
                     <td><?php echo htmlspecialchars($userJob['district']); ?></td>
                     <td><?php echo htmlspecialchars($userJob['description']); ?></td>
+                    <td><?php echo htmlspecialchars($userJob['gross_amount']); ?></td>
+                    <td><?php echo htmlspecialchars($userJob['discount_percentage']); ?></td>
                     <td><?php echo htmlspecialchars($userJob['start_date']); ?></td>
                     <td><?php echo htmlspecialchars($userJob['end_date']); ?></td>
                     <td>
