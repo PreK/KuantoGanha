@@ -2,10 +2,6 @@
 session_start();
 require_once 'dbconfig.php'; // Certifique-se de que este arquivo contém as configurações do banco de dados
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
 // Verificar se o usuário é administrador
 if (!isset($_SESSION['loggedin']) || $_SESSION['username'] !== 'admin') {
     header('Location: login.php');
