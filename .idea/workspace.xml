@@ -6,23 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7c549277-1796-45c2-b708-1d03a93f7fae" name="Changes" comment="Creation perfil.php">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/addJob.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/addJob.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/deleteJob.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/deleteJob.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/listJobs.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/listJobs.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/register.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/updateJob.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/updateJob.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/updateProfile.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/updateProfile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ext/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/ext/sidebar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/dbconfig.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/dbconfig.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/getInfo.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/getInfo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/install.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/install.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/jobs.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/jobs.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/logout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/perfil.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/perfil.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/register.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,22 +135,6 @@
       <workItem from="1703155067668" duration="6052000" />
       <workItem from="1703241275152" duration="3760000" />
       <workItem from="1703246628260" duration="4140000" />
-    </task>
-    <task id="LOCAL-00058" summary="fix $pdo api/register.php">
-      <option name="closed" value="true" />
-      <created>1703160893982</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1703160893982</updated>
-    </task>
-    <task id="LOCAL-00059" summary="fix $pdo api/register.php">
-      <option name="closed" value="true" />
-      <created>1703161334653</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1703161334654</updated>
     </task>
     <task id="LOCAL-00060" summary="fix $pdo api/register.php">
       <option name="closed" value="true" />
@@ -544,7 +512,23 @@
       <option name="project" value="LOCAL" />
       <updated>1703681368949</updated>
     </task>
-    <option name="localTasksCounter" value="107" />
+    <task id="LOCAL-00107" summary="Creation perfil.php">
+      <option name="closed" value="true" />
+      <created>1703686553694</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1703686553694</updated>
+    </task>
+    <task id="LOCAL-00108" summary="Creation perfil.php">
+      <option name="closed" value="true" />
+      <created>1703686676146</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1703686676146</updated>
+    </task>
+    <option name="localTasksCounter" value="109" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

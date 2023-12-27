@@ -3,7 +3,7 @@
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
-require_once 'dbconfig.php'; // Substitua pelo seu arquivo de configuração de banco de dados
+require_once 'dbconfig.php';
 
 
 function getUserData($userId) {
