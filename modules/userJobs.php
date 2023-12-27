@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $locationId = $_POST['location_id'];
     $modalityId = $_POST['modality_id'];
     $startDate = $_POST['start_date'];
-    $endDate = $_POST['end_date'];
+    $endDate = !empty($_POST['end_date']) ? $_POST['end_date'] : null;
 
     if ($jobId && $locationId && $modalityId && $startDate) {
         $result = insertUserJob($userId, $jobId, $locationId, $modalityId, $startDate, $endDate);
@@ -74,7 +74,11 @@ function insertUserJob($userId, $jobId, $locationId, $modalityId, $startDate, $e
         $stmt->bindParam(':location_id', $locationId, PDO::PARAM_INT);
         $stmt->bindParam(':modality_id', $modalityId, PDO::PARAM_INT);
         $stmt->bindParam(':start_date', $startDate);
-        $stmt->bindParam(':end_date', $endDate);
+        if ($endDate !== null) {
+            $stmt->bindParam(':end_date', $endDate);
+        } else {
+            $stmt->bindValue(':end_date', null, PDO::PARAM_NULL);
+        }
 
         // Executar a declaração
         if ($stmt->execute()) {
