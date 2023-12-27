@@ -40,36 +40,16 @@ try {
         discount_percentage DECIMAL(5,2), -- Assuming a value between 0 and 100.
         food_allowance DECIMAL(10,2),
         tax_exempt_extras DECIMAL(10,2),
-        created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-        updated_at TIMESTAMP WITH TIME ZONE
     );
     
-    -- Salary History Table
-    CREATE TABLE IF NOT EXISTS salary_history (
-        id SERIAL PRIMARY KEY,
-        user_id INTEGER REFERENCES users(uid),
-        job_id INTEGER REFERENCES jobs(id),
-        gross_amount DECIMAL(10,2) NOT NULL,
-        discount_percentage DECIMAL(5,2),
-        food_allowance DECIMAL(10,2),
-        tax_exempt_extras DECIMAL(10,2),
-        start_date TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-        end_date TIMESTAMP WITH TIME ZONE -- NULL means it is the current salary.
-    );
-    
+  
     -- Benefits Table
     CREATE TABLE IF NOT EXISTS benefits (
         id SERIAL PRIMARY KEY,
         description TEXT NOT NULL
     );
     
-    -- Associative Table Salary-Benefits
-    CREATE TABLE IF NOT EXISTS salary_benefits (
-        salary_id INTEGER REFERENCES salaries(id),
-        benefit_id INTEGER REFERENCES benefits(id),
-        PRIMARY KEY (salary_id, benefit_id)
-    );
-    
+   
     -- Locations Table
     CREATE TABLE IF NOT EXISTS locations (
         id SERIAL PRIMARY KEY,

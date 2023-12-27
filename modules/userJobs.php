@@ -19,19 +19,33 @@ $modalities = getModalities();
 
 // Processar o formulário
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['action']) && $_POST['action'] == 'add') {
-    // Recolha e validação dos dados do formulário
+    // Recolha e validação dos dados do formulário de emprego
     $jobId = $_POST['job_id'];
     $locationId = $_POST['location_id'];
     $modalityId = $_POST['modality_id'];
     $startDate = $_POST['start_date'];
     $endDate = !empty($_POST['end_date']) ? $_POST['end_date'] : null;
 
-    if ($jobId && $locationId && $modalityId && $startDate) {
-        $result = insertUserJob($userId, $jobId, $locationId, $modalityId, $startDate, $endDate);
+    // Recolha e validação dos dados salariais
+    $grossAmount = $_POST['gross_amount'] ?? null;
+    $discountPercentage = $_POST['discount_percentage'] ?? null;
+    $foodAllowance = $_POST['food_allowance'] ?? null;
+    $taxExemptExtras = $_POST['tax_exempt_extras'] ?? null;
 
-        if ($result) {
-            echo "success";
-            exit;
+    if ($jobId && $locationId && $modalityId && $startDate) {
+        $jobResult = insertUserJob($userId, $jobId, $locationId, $modalityId, $startDate, $endDate);
+
+        if ($jobResult) {
+            // Inserir informações salariais após adicionar o emprego com sucesso
+            $salaryResult = insertSalaryInfo($userId, $jobId, $grossAmount, $discountPercentage, $foodAllowance, $taxExemptExtras);
+
+            if ($salaryResult) {
+                echo "success";
+                exit;
+            } else {
+                echo "Erro ao inserir informações salariais";
+                exit;
+            }
         } else {
             echo "Erro ao associar emprego";
             exit;
@@ -40,6 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['action']) && $_POST['a
         echo "Por favor, preencha todos os campos obrigatórios.";
         exit;
     }
+}
 
 }
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['action']) && $_POST['action'] == 'remove') {
@@ -51,6 +66,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['action']) && $_POST['a
         echo "Erro ao remover a profissão.";
         exit;
     }
+}
+
+function insertSalaryInfo($userId, $jobId, $grossAmount, $discountPercentage, $foodAllowance, $taxExemptExtras):bool {
+    $pdo = getDbConnection();
+    // Substitua 'salaries' pelo nome real da sua tabela e ajuste as colunas conforme necessário
+    $sql = "INSERT INTO salaries (user_id, job_id, gross_amount, discount_percentage, food_allowance, tax_exempt_extras) 
+            VALUES (:user_id, :job_id, :gross_amount, :discount_percentage, :food_allowance, :tax_exempt_extras)";
+
+    if ($stmt = $pdo->prepare($sql)) {
+        $stmt->bindParam(':user_id', $userId, PDO::PARAM_INT);
+        $stmt->bindParam(':job_id', $jobId, PDO::PARAM_INT);
+        $stmt->bindParam(':gross_amount', $grossAmount);
+        $stmt->bindParam(':discount_percentage', $discountPercentage);
+        $stmt->bindParam(':food_allowance', $foodAllowance);
+        $stmt->bindParam(':tax_exempt_extras', $taxExemptExtras);
+
+        return $stmt->execute();
+    }
+    return false;
 }
 
 function removeUserJob($jobId, $userId): bool
@@ -178,6 +212,27 @@ function insertUserJob($userId, $jobId, $locationId, $modalityId, $startDate, $e
                     <?php endforeach; ?>
                 </select>
             </div>
+
+            <div class="form-group">
+                <label for="gross_amount">Vencimento Bruto:</label>
+                <input type="number" name="gross_amount" id="gross_amount" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="discount_percentage">Percentagem de Desconto IRS:</label>
+                <input type="number" name="discount_percentage" id="discount_percentage" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="food_allowance">Subsídio de Alimentação:</label>
+                <input type="number" name="food_allowance" id="food_allowance" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="tax_exempt_extras">Extras Isentos de Imposto:</label>
+                <input type="number" name="tax_exempt_extras" id="tax_exempt_extras" class="form-control">
+            </div>
+
 
             <div class="form-group">
                 <label for="start_date">Data de Início:</label>
