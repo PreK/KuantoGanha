@@ -211,22 +211,22 @@ function insertUserJob($userId, $jobId, $locationId, $modalityId, $startDate, $e
 
             <div class="form-group">
                 <label for="gross_amount">Vencimento Bruto:</label>
-                <input type="number" name="gross_amount" id="gross_amount" class="form-control" required>
+                <input type="number" placeholder="0.00" name="gross_amount" id="gross_amount" class="form-control" required>
             </div>
 
             <div class="form-group">
                 <label for="discount_percentage">Percentagem de Desconto IRS:</label>
-                <input type="number" name="discount_percentage" id="discount_percentage" class="form-control">
+                <input type="number" placeholder="0.00" name="discount_percentage" id="discount_percentage" class="form-control" required>
             </div>
 
             <div class="form-group">
                 <label for="food_allowance">Subsídio de Alimentação:</label>
-                <input type="number" name="food_allowance" id="food_allowance" class="form-control">
+                <input type="number" placeholder="0.00" name="food_allowance" id="food_allowance" class="form-control" required>
             </div>
 
             <div class="form-group">
                 <label for="tax_exempt_extras">Extras Isentos de Imposto:</label>
-                <input type="number" name="tax_exempt_extras" id="tax_exempt_extras" class="form-control">
+                <input type="number" placeholder="0.00" name="tax_exempt_extras" id="tax_exempt_extras" class="form-control">
             </div>
 
 
