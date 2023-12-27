@@ -285,6 +285,8 @@ function insertUserJob($userId, $jobId, $locationId, $modalityId, $startDate, $e
                 <th>Modalidade</th>
                 <th>Montante Bruto</th>
                 <th>Percentagem de Desconto</th>
+                <th>Subsídio de Alimentação</th>
+                <th>Extras Isentos de Imposto</th>
                 <th>Data de Início</th>
                 <th>Data de Término</th>
                 <th>Ações</th>
