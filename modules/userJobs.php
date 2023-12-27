@@ -215,7 +215,10 @@ function insertUserJob($userId, $jobId, $locationId, $modalityId, $startDate, $e
                     <td><?php echo htmlspecialchars($userJob['start_date']); ?></td>
                     <td><?php echo htmlspecialchars($userJob['end_date']); ?></td>
                     <td>
-                        <button onclick="removeUserJob(<?php echo $userJob['id']; ?>)" class="btn btn-danger">Remover</button>
+                        <form method="post">
+                            <input type="hidden" name="remove_job_id" value="<?php echo $userJob['user_job_id']; ?>">
+                            <input type="submit" value="Remover">
+                        </form>
                     </td>
                 </tr>
             <?php endforeach; ?>
