@@ -94,9 +94,24 @@ document.addEventListener('DOMContentLoaded', function() {
         if (userJobsForm) {
             userJobsForm.addEventListener('submit', function(e) {
                 e.preventDefault();
-                submitUserJobsForm(userJobsForm, 'add');
-            }
-            );
+                var formData = new FormData(userJobsForm);
+
+                fetch('modules/userJobs.php', {
+                    method: 'POST',
+                    body: formData
+                })
+                    .then(response => response.text())
+                    .then(data => {
+                        console.log(data); // Verifique o que está sendo retornado
+                        if(data === 'success') {
+                            alert("Profissão adicionada com sucesso!");
+                            loadContent("modules/userJobs.php", "mainContent");
+                        } else {
+                            alert("Erro ao processar a profissão: " + data);
+                        }
+                    })
+                    .catch(error => console.error('Erro ao processar a profissão:', error));
+            });
         }
     }
 
@@ -117,24 +132,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    function submitJobForm(form, action) {
-        var formData = new FormData(form);
-        formData.append('action', action);
-
-        fetch('modules/jobs.php', {
-            method: 'POST',
-            body: formData
-        })
-            .then(response => response.text())
-            .then(data => {
-                if(data === 'success') {
-                    loadContent("modules/jobs.php", "mainContent");
-                } else {
-                    alert('Erro: ' + data);
-                }
-            })
-            .catch(error => console.error('Erro:', error));
-    }
 
     // Adiciona ouvintes de eventos para os links da barra lateral
     document.querySelectorAll('.nav-link').forEach(link => {
