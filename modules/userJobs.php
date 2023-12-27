@@ -42,29 +42,71 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
 }
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['remove_job_id'])) {
+    $removeJobId = $_POST['remove_job_id'];
+    if (removeUserJob($removeJobId, $userId)) {
+        echo "Profissão removida com sucesso.";
+    } else {
+        echo "Erro ao remover a profissão.";
+    }
+}
 
-function getJobs() {
+function removeUserJob($jobId, $userId): bool
+{
+    $pdo = getDbConnection();
+    $sql = "DELETE FROM user_jobs WHERE id = :job_id AND user_id = :user_id";
+
+    if ($stmt = $pdo->prepare($sql)) {
+        $stmt->bindParam(':job_id', $jobId, PDO::PARAM_INT);
+        $stmt->bindParam(':user_id', $userId, PDO::PARAM_INT);
+        return $stmt->execute();
+    }
+    return false;
+}
+function getUserJobs($userId): bool|array
+{
+    $pdo = getDbConnection();
+    $sql = "SELECT uj.id, j.title, l.district, wm.description, uj.start_date, uj.end_date 
+            FROM user_jobs uj
+            JOIN jobs j ON uj.job_id = j.id
+            JOIN locations l ON uj.location_id = l.id
+            JOIN work_modalities wm ON uj.modality_id = wm.id
+            WHERE uj.user_id = :user_id";
+
+    if ($stmt = $pdo->prepare($sql)) {
+        $stmt->bindParam(':user_id', $userId, PDO::PARAM_INT);
+        if ($stmt->execute()) {
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        }
+    }
+    return [];
+}
+function getJobs(): bool|array
+{
     $pdo = getDbConnection();
     $sql = "SELECT id, title FROM jobs";
     $stmt = $pdo->query($sql);
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
-function getDistricts() {
+function getDistricts(): bool|array
+{
     $pdo = getDbConnection();
     $sql = "SELECT id, district FROM locations";
     $stmt = $pdo->query($sql);
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
-function getModalities() {
+function getModalities(): bool|array
+{
     $pdo = getDbConnection();
     $sql = "SELECT id, description FROM work_modalities";
     $stmt = $pdo->query($sql);
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
-function insertUserJob($userId, $jobId, $locationId, $modalityId, $startDate, $endDate) {
+function insertUserJob($userId, $jobId, $locationId, $modalityId, $startDate, $endDate): bool
+{
     $pdo = getDbConnection();
 
     $sql = "INSERT INTO user_jobs (user_id, job_id, location_id, modality_id, start_date, end_date) 
@@ -98,13 +140,13 @@ function insertUserJob($userId, $jobId, $locationId, $modalityId, $startDate, $e
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Associar Emprego ao Usuário</title>
-    <!-- Inclua aqui seus estilos CSS e quaisquer outros scripts necessários -->
+    <title>Associar Emprego ao Utilizador</title>
+
 </head>
 <body>
 <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
     <div class="form-container">
-        <h2>Associar Emprego ao Usuário</h2>
+        <h2>Associar Emprego ao Utilizador</h2>
         <p>Selecione as informações do emprego para associar ao seu perfil.</p>
         <form class="userJobsForm" id="userJobsForm" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div class="form-group">
@@ -148,6 +190,37 @@ function insertUserJob($userId, $jobId, $locationId, $modalityId, $startDate, $e
                 <input type="submit" class="btn btn-primary" value="Associar Emprego">
             </div>
         </form>
+    </div>
+    <div class="user-jobs-container">
+        <h3>Profissões Associadas</h3>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Emprego</th>
+                <th>Localização</th>
+                <th>Modalidade</th>
+                <th>Data de Início</th>
+                <th>Data de Término</th>
+                <th>Ações</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php
+            $userJobs = getUserJobs($userId);
+            foreach ($userJobs as $userJob): ?>
+                <tr>
+                    <td><?php echo htmlspecialchars($userJob['title']); ?></td>
+                    <td><?php echo htmlspecialchars($userJob['district']); ?></td>
+                    <td><?php echo htmlspecialchars($userJob['description']); ?></td>
+                    <td><?php echo htmlspecialchars($userJob['start_date']); ?></td>
+                    <td><?php echo htmlspecialchars($userJob['end_date']); ?></td>
+                    <td>
+                        <button onclick="removeUserJob(<?php echo $userJob['id']; ?>)" class="btn btn-danger">Remover</button>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+            </tbody>
+        </table>
     </div>
 </main>
 </body>
