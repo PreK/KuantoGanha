@@ -11,6 +11,17 @@ if (!$userId) {
     exit;
 }
 
+function getUserAcademicData($userId) {
+    $pdo = getDbConnection();
+    $sql = "SELECT * FROM academic_data WHERE user_id = :userId";
+    $stmt = $pdo->prepare($sql);
+    $stmt->bindParam(':userId', $userId, PDO::PARAM_INT);
+    $stmt->execute();
+    return $stmt->fetch(PDO::FETCH_ASSOC);
+}
+
+$academicData = getUserAcademicData($userId);
+
 // Processamento para Alteração de Senha
 if ($_SERVER["REQUEST_METHOD"] == "POST" && $_POST['action'] == 'changePassword') {
     $currentPassword = $_POST['currentPassword'];
@@ -105,7 +116,6 @@ function manageUserAcademicData($userId, $academicDegree, $fieldOfStudy, $instit
 <html>
 <head>
     <title>Perfil do Utilizador</title>
-    <!-- Incluir CSS e JavaScript se necessário -->
 </head>
 <body>
 <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
@@ -127,27 +137,31 @@ function manageUserAcademicData($userId, $academicDegree, $fieldOfStudy, $instit
             <button type="submit">Alterar Senha</button>
         </form>
 
-        <!-- Formulário para Dados Acadêmicos -->
+        <!-- Formulário para Dados Académicos -->
         <form id="academicDataForm" method="post">
             <h3>Dados Acadêmicos</h3>
             <div class="form-group">
                 <label for="academic_degree">Grau Acadêmico</label>
-                <input type="text" name="academic_degree" id="academic_degree" required>
+                <input type="text" name="academic_degree" id="academic_degree"
+                       value="<?php echo htmlspecialchars($academicData['academic_degree'] ?? ''); ?>" required>
             </div>
             <div class="form-group">
                 <label for="field_of_study">Campo de Estudo</label>
-                <input type="text" name="field_of_study" id="field_of_study" required>
+                <input type="text" name="field_of_study" id="field_of_study"
+                       value="<?php echo htmlspecialchars($academicData['field_of_study'] ?? ''); ?>" required>
             </div>
             <div class="form-group">
                 <label for="educational_institution">Instituição Educacional</label>
-                <input type="text" name="educational_institution" id="educational_institution" required>
+                <input type="text" name="educational_institution" id="educational_institution"
+                       value="<?php echo htmlspecialchars($academicData['educational_institution'] ?? ''); ?>" required>
             </div>
             <div class="form-group">
                 <label for="year_of_completion">Ano de Conclusão</label>
-                <input type="text" name="year_of_completion" id="year_of_completion" required>
+                <input type="date" name="year_of_completion" id="year_of_completion"
+                       value="<?php echo htmlspecialchars($academicData['year_of_completion'] ?? ''); ?>" required>
             </div>
             <input type="hidden" name="action" value="manageAcademicData">
-            <button type="submit">Salvar Dados Acadêmicos</button>
+            <button type="submit">Salvar</button>
         </form>
     </div>
 </main>
