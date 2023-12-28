@@ -18,7 +18,7 @@ if (session_status() === PHP_SESSION_NONE) {
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link d-flex align-items-center gap-2" href="#" data-target="modules/profile.php" id="profileLink">
+                    <a class="nav-link d-flex align-items-center gap-2" href="#" data-target="modules/perfil.php" id="profileLink">
                         <i class="bi bi-person"></i>Perfil
                     </a>
                 </li>

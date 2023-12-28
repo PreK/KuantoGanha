@@ -24,6 +24,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     if (url === 'modules/userJobs.php') {
                         setupUserJobsForm();
                     }
+                    if (url === 'modules/perfil.php') {
+                        setupChangePasswordForm();
+                        setupAcademicDataForm();
+                    }
 
                     // Aqui você pode adicionar condições semelhantes para outros formulários se necessário
                 })
@@ -164,7 +168,49 @@ document.addEventListener('DOMContentLoaded', function() {
             })
             .catch(error => console.error('Erro:', error));
     }
+    function setupChangePasswordForm() {
+        const changePasswordForm = document.getElementById('changePasswordForm');
+        if (changePasswordForm) {
+            changePasswordForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const formData = new FormData(changePasswordForm);
+                formData.append('action', 'changePassword');
 
+                fetch('perfil.php', {
+                    method: 'POST',
+                    body: formData
+                })
+                    .then(response => response.text())
+                    .then(data => {
+                        alert(data); // Exibe a mensagem de retorno
+                        loadContent('perfil.php', 'mainContent'); // Recarrega o conteúdo do perfil
+                    })
+                    .catch(error => console.error('Erro:', error));
+            });
+        }
+    }
+
+    function setupAcademicDataForm() {
+        const academicDataForm = document.getElementById('academicDataForm');
+        if (academicDataForm) {
+            academicDataForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const formData = new FormData(academicDataForm);
+                formData.append('action', 'manageAcademicData');
+
+                fetch('perfil.php', {
+                    method: 'POST',
+                    body: formData
+                })
+                    .then(response => response.text())
+                    .then(data => {
+                        alert(data); // Exibe a mensagem de retorno
+                        loadContent('perfil.php', 'mainContent'); // Recarrega o conteúdo do perfil
+                    })
+                    .catch(error => console.error('Erro:', error));
+            });
+        }
+    }
     // Adiciona ouvintes de eventos para os links da barra lateral
     document.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', function(e) {
@@ -177,7 +223,4 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-
-
-
 });
