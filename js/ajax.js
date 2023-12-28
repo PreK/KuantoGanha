@@ -176,7 +176,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const formData = new FormData(changePasswordForm);
                 formData.append('action', 'changePassword');
 
-                fetch('perfil.php', {
+                fetch('modules/perfil.php', {
                     method: 'POST',
                     body: formData
                 })
@@ -184,7 +184,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     .then(data => {
                         alert(data); // Exibe a mensagem de retorno
                         if(data === 'success') {
-                        loadContent('perfil.php', 'mainContent'); // Recarrega o conteúdo do perfil
+                        loadContent('modules/perfil.php', 'mainContent'); // Recarrega o conteúdo do perfil
                         }
                     })
                     .catch(error => console.error('Erro:', error));
@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const formData = new FormData(academicDataForm);
                 formData.append('action', 'manageAcademicData');
 
-                fetch('perfil.php', {
+                fetch('modules/perfil.php', {
                     method: 'POST',
                     body: formData
                 })
@@ -208,7 +208,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     .then(data => {
                         alert(data); // Exibe a mensagem de retorno
                         if(data === 'success') {
-                        loadContent('perfil.php', 'mainContent'); // Recarrega o conteúdo do perfil
+                        loadContent('modules/perfil.php', 'mainContent'); // Recarrega o conteúdo do perfil
                         }
                     })
                     .catch(error => console.error('Erro:', error));
