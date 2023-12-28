@@ -23,6 +23,11 @@ if (isset($_GET['requestType'])) {
 }
 
 function getTopProfessionsData($pdo, $district) {
+
+    if (empty($district)) {
+        $district = 'Aveiro';
+    }
+    try {
     $sql = "SELECT j.title, AVG(s.gross_amount) as averageSalary
             FROM jobs j
             JOIN salaries s ON j.id = s.job_id
@@ -37,9 +42,15 @@ function getTopProfessionsData($pdo, $district) {
     $stmt->bindParam(':district', $district);
     $stmt->execute();
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    } catch (PDOException $e) {
+        error_log("Erro ao obter dados: " . $e->getMessage());
+        exit;
+    }
 }
 
 function getRecentProfessionsData($pdo) {
+
+    try{
     $sql = "SELECT j.title, l.district, wm.description, uj.start_date, uj.end_date
             FROM user_jobs uj
             JOIN jobs j ON uj.job_id = j.id
@@ -51,5 +62,9 @@ function getRecentProfessionsData($pdo) {
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    } catch (PDOException $e) {
+        error_log("Erro ao obter dados: " . $e->getMessage());
+        exit;
+    }
 }
 ?>
