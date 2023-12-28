@@ -22,20 +22,21 @@ if (isset($_GET['requestType'])) {
     }
 }
 
-function getTopProfessionsData($pdo, $district) {
+function getTopProfessionsData($pdo, $districtId) {
     try {
+        // Query ajustada para filtrar por ID de distrito
         $sql = "SELECT j.title, AVG(s.gross_amount) as averageSalary
                 FROM jobs j
                 JOIN user_jobs uj ON j.id = uj.job_id
                 JOIN salaries s ON uj.id = s.user_job_id
                 JOIN locations l ON uj.location_id = l.id
-                WHERE (:district = '' OR l.district = :district)
+                WHERE (:districtId = 'all' OR l.id = :districtId)
                 GROUP BY j.title
                 ORDER BY averageSalary DESC
                 LIMIT 5";
 
         $stmt = $pdo->prepare($sql);
-        $stmt->bindParam(':district', $district);
+        $stmt->bindParam(':districtId', $districtId);
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     } catch (PDOException $e) {
