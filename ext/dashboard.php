@@ -2,9 +2,6 @@
 <html>
 <head>
     <title>Dashboard</title>
-    <!-- Substitua com o caminho correto para suas bibliotecas -->
-    <link rel="stylesheet" href="path/to/bootstrap.css">
-    <script src="path/to/chart.min.js"></script>
 </head>
 <body>
 <main class="container">
