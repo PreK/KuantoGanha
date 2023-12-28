@@ -133,14 +133,6 @@
       <workItem from="1703241275152" duration="3760000" />
       <workItem from="1703246628260" duration="4140000" />
     </task>
-    <task id="LOCAL-00117" summary="userJobs.php">
-      <option name="closed" value="true" />
-      <created>1703696046647</created>
-      <option name="number" value="00117" />
-      <option name="presentableId" value="LOCAL-00117" />
-      <option name="project" value="LOCAL" />
-      <updated>1703696046647</updated>
-    </task>
     <task id="LOCAL-00118" summary="userJobs.php">
       <option name="closed" value="true" />
       <created>1703696336316</created>
@@ -525,7 +517,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703768471079</updated>
     </task>
-    <option name="localTasksCounter" value="166" />
+    <task id="LOCAL-00166" summary="Remake perfil.php">
+      <option name="closed" value="true" />
+      <created>1703769068116</created>
+      <option name="number" value="00166" />
+      <option name="presentableId" value="LOCAL-00166" />
+      <option name="project" value="LOCAL" />
+      <updated>1703769068116</updated>
+    </task>
+    <option name="localTasksCounter" value="167" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

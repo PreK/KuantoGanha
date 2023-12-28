@@ -52,16 +52,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     })
                 })
                     .then(response => response.json())
-                    .then(data => console.log(data))
                     .then(data => {
-                        if ('success' in data && data.success) {
+                        if (data.success) {
                             location.reload();
-                            alert("Login efetuado com sucesso!");
-                        } else if ('baduserpass' in data && data.baduserpass) {
-                            alert("Utilizador ou senha inválidos");
-                        } else if ('nouser' in data && data.nouser) {
-                            alert("Utilizador não encontrado");
                         }
+                        alert(data.message);
                     })
                     .catch(error => console.error('Erro ao processar o login:', error));
             });
