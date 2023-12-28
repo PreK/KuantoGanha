@@ -2,90 +2,106 @@
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
-require_once 'dbconfig.php';
-require_once 'getInfo.php';
+require_once 'dbconfig.php'; // Conexão com o banco de dados
 
+// Verificar se o usuário está logado
+$userId = $_SESSION['uid'] ?? null;
+if (!$userId) {
+    echo "Utilizador não está logado.";
+    exit;
+}
 
-$userData = getUserData($_SESSION['uid']);
-$academicData = getAcademicData($_SESSION['uid']);
-$jobData = getJobData($_SESSION['uid']);
-echo '<pre>';
-print_r($userData);
-echo '</pre>';
+// Processamento para Alteração de Senha
+if ($_SERVER["REQUEST_METHOD"] == "POST" && $_POST['action'] == 'changePassword') {
+    $currentPassword = $_POST['currentPassword'];
+    $newPassword = $_POST['newPassword'];
 
-
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['updateUserInfo'])) {
-    // Inicialização das variáveis com dados do formulário
-    $username = trim($_POST['username']);
-    $email = trim($_POST['email']);
-    $userId = $_SESSION['uid']; // ou outro identificador de usuário apropriado
-
-    $pdo = getDbConnection();
-
-    // Validação básica (deve ser expandida conforme necessário)
-    if (empty($username) || empty($email)) {
-        // Adicione um erro se os campos estiverem vazios
-        $error = "Por favor, preencha todos os campos.";
+    // Função para verificar a senha atual e atualizar para a nova senha
+    // Supondo que esta função retorne verdadeiro se a senha for alterada com sucesso
+    $passwordChanged = updateUserPassword($userId, $currentPassword, $newPassword);
+    if ($passwordChanged) {
+        echo "Senha alterada com sucesso!";
     } else {
-        // Processamento da atualização no banco de dados
-        $sql = "UPDATE users SET username = :username, email = :email WHERE uid = :uid";
-
-        if ($stmt = $pdo->prepare($sql)) {
-            // Vincular parâmetros
-            $stmt->bindParam(":username", $username, PDO::PARAM_STR);
-            $stmt->bindParam(":email", $email, PDO::PARAM_STR);
-            $stmt->bindParam(":uid", $userId, PDO::PARAM_INT);
-
-            // Executar a declaração
-            if ($stmt->execute()) {
-                $success = "Informações atualizadas com sucesso.";
-            } else {
-                $error = "Erro ao atualizar as informações.";
-            }
-        }
+        echo "Erro ao alterar a senha.";
     }
 }
 
+// Processamento para Gerenciamento de Dados Acadêmicos
+if ($_SERVER["REQUEST_METHOD"] == "POST" && $_POST['action'] == 'manageAcademicData') {
+    $academicDegree = $_POST['academic_degree'];
+    $fieldOfStudy = $_POST['field_of_study'];
+    $institution = $_POST['educational_institution'];
+    $yearOfCompletion = $_POST['year_of_completion'];
+
+    // Função para inserir ou atualizar dados acadêmicos
+    // Supondo que esta função retorne verdadeiro se os dados forem salvos com sucesso
+    $dataSaved = manageUserAcademicData($userId, $academicDegree, $fieldOfStudy, $institution, $yearOfCompletion);
+    if ($dataSaved) {
+        echo "Dados acadêmicos salvos com sucesso!";
+    } else {
+        echo "Erro ao salvar os dados acadêmicos.";
+    }
+}
+
+// Funções para Alteração de Senha e Gerenciamento de Dados Acadêmicos
+function updateUserPassword($userId, $currentPassword, $newPassword) {
+    // Implemente esta função
+}
+
+function manageUserAcademicData($userId, $academicDegree, $fieldOfStudy, $institution, $yearOfCompletion) {
+    // Implemente esta função
+}
 ?>
 
 <!DOCTYPE html>
-<html lang="pt">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Perfil do Usuário</title>
-    <!-- Adicione aqui os links para o CSS -->
+    <title>Perfil do Utilizador</title>
+    <!-- Incluir CSS e JavaScript se necessário -->
 </head>
 <body>
-<div class="user-profile">
-    <h2>Perfil de <?php echo htmlspecialchars($userData['username']); ?></h2>
+<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+    <div class="form-container">
+        <h2>Perfil do Utilizador</h2>
 
-    <!-- Formulário para editar informações do usuário -->
-    <form method="post">
-        <!-- Campos para editar informações do usuário -->
-        <label>Nome de Usuário:</label>
-        <input type="text" name="username" value="<?php echo htmlspecialchars($userData['username']); ?>">
-        <label>Email:</label>
-        <input type="email" name="email" value="<?php echo htmlspecialchars($userData['email']); ?>">
-        <input type="submit" name="updateUserInfo" value="Salvar Alterações">
-    </form>
+        <!-- Formulário de Alteração de Senha -->
+        <form id="changePasswordForm" method="post">
+            <h3>Alterar Senha</h3>
+            <div class="form-group">
+                <label for="currentPassword">Senha Atual</label>
+                <input type="password" name="currentPassword" id="currentPassword" required>
+            </div>
+            <div class="form-group">
+                <label for="newPassword">Nova Senha</label>
+                <input type="password" name="newPassword" id="newPassword" required>
+            </div>
+            <input type="hidden" name="action" value="changePassword">
+            <button type="submit">Alterar Senha</button>
+        </form>
 
-    <!-- Seção de Dados Acadêmicos -->
-    <div class="academic-data">
-        <h3>Dados Acadêmicos</h3>
-        <!-- Listar os dados acadêmicos -->
-        <?php foreach ($academicData as $data) { ?>
-            <p><?php echo htmlspecialchars($data['academic_degree']); ?> em <?php echo htmlspecialchars($data['field_of_study']); ?></p>
-        <?php } ?>
+        <!-- Formulário para Dados Acadêmicos -->
+        <form id="academicDataForm" method="post">
+            <h3>Dados Acadêmicos</h3>
+            <div class="form-group">
+                <label for="academic_degree">Grau Acadêmico</label>
+                <input type="text" name="academic_degree" id="academic_degree" required>
+            </div>
+            <div class="form-group">
+                <label for="field_of_study">Campo de Estudo</label>
+                <input type="text" name="field_of_study" id="field_of_study" required>
+            </div>
+            <div class="form-group">
+                <label for="educational_institution">Instituição Educacional</label>
+                <input type="text" name="educational_institution" id="educational_institution" required>
+            </div>
+            <div class="form-group">
+                <label for="year_of_completion">Ano de Conclusão</label>
+                <input type="text" name="year_of_completion" id="year_of_completion" required>
+            </div>
+            <input type="hidden" name="action" value="manageAcademicData">
+            <button type="submit">Salvar Dados Acadêmicos</button>
+        </form>
     </div>
-
-    <!-- Seção de Empregos e Salários -->
-    <div class="job-data">
-        <h3>Empregos e Salários</h3>
-        <!-- Listar os empregos e salários -->
-        <?php foreach ($jobData as $job) { ?>
-            <p><?php echo htmlspecialchars($job['title']); ?> - <?php echo htmlspecialchars($job['gross_amount']); ?></p>
-        <?php } ?>
-    </div>
-</div>
+</main>
 </body>
 </html>
