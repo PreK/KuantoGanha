@@ -4,7 +4,7 @@ if (session_status() === PHP_SESSION_NONE) {
 }
 
 require_once 'dbconfig.php'; // Include database configuration file
-
+header('Content-Type: application/json');
 // Initialize variables for username and password
 $username = $password = "";
 $username_err = $password_err = $login_err = "";
@@ -58,11 +58,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         } else {
                             // Display an error message if password is not valid
                             echo json_encode(["baduserpass" => true]);
+                            exit;
                         }
                     }
                 } else {
                     // Display an error message if username doesn't exist
                     echo json_encode(["nouser" => true]);
+                    exit;
                 }
             }
             // Close statement
