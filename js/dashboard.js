@@ -67,8 +67,9 @@
     }
   });
   function updateChart(data) {
-    myChart.data.labels = data.map(item => item.profession);
-    myChart.data.datasets[0].data = data.map(item => item.averageSalary);
+    console.log("Atualizando gráfico com:", data); // Adicione esta linha
+    myChart.data.labels = data.labels;
+    myChart.data.datasets[0].data = data.values;
     myChart.update();
   }
 
