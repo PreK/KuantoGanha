@@ -24,25 +24,32 @@ if (isset($_GET['requestType'])) {
 
 function getTopProfessionsData($pdo, $district) {
     try {
-        $sql = "SELECT j.title, AVG(s.gross_amount) as averageSalary
-                FROM jobs j
-                JOIN user_jobs uj ON j.id = uj.job_id
-                JOIN salaries s ON uj.id = s.user_job_id
-                JOIN locations l ON uj.location_id = l.id
-                WHERE (:district = 'all' OR l.district = :district)
-                GROUP BY j.title
-                ORDER BY averageSalary DESC
-                LIMIT 5";
+        // Modifique a consulta SQL para lidar com o caso "all"
+        $sql = $district === 'all' ?
+            "SELECT j.title, AVG(s.gross_amount) as averageSalary
+             FROM jobs j
+             JOIN user_jobs uj ON j.id = uj.job_id
+             JOIN salaries s ON uj.id = s.user_job_id
+             GROUP BY j.title
+             ORDER BY averageSalary DESC
+             LIMIT 5" :
+            "SELECT j.title, AVG(s.gross_amount) as averageSalary
+             FROM jobs j
+             JOIN user_jobs uj ON j.id = uj.job_id
+             JOIN salaries s ON uj.id = s.user_job_id
+             JOIN locations l ON uj.location_id = l.id
+             WHERE l.district = :district
+             GROUP BY j.title
+             ORDER BY averageSalary DESC
+             LIMIT 5";
 
         $stmt = $pdo->prepare($sql);
 
-        // Cria uma variável para o filtro
-        $districtFilter = $district;
-        if ($district === 'all') {
-            $districtFilter = '%';
+        // Apenas ligar o parâmetro se não for "all"
+        if ($district !== 'all') {
+            $stmt->bindParam(':district', $district);
         }
 
-        $stmt->bindParam(':district', $districtFilter);
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     } catch (PDOException $e) {
