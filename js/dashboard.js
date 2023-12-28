@@ -4,7 +4,7 @@
   'use strict';
 // Carregar dados para o gráfico e a tabela
   document.addEventListener('DOMContentLoaded', function() {
-    fetchChartData();
+    fetchChartData("all");
     fetchTableData();
 
     const districtFilter = document.getElementById('districtFilter');
