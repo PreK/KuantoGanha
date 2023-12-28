@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['action']) && $_POST['a
 
         if ($jobResult) {
             // Inserir informações salariais após adicionar o emprego com sucesso
-            $salaryResult = insertSalaryInfo($userId, $jobResult, $grossAmount, $discountPercentage, $foodAllowance, $taxExemptExtras);
+            $salaryResult = insertSalaryInfo($jobResult, $grossAmount, $discountPercentage, $foodAllowance, $taxExemptExtras);
 
             if ($salaryResult) {
                 echo "success";
@@ -63,7 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['action']) && $_POST['a
     exit;
 }
 
-function insertSalaryInfo($userId, $jobResult, $grossAmount, $discountPercentage, $foodAllowance, $taxExemptExtras):bool {
+function insertSalaryInfo($jobResult, $grossAmount, $discountPercentage, $foodAllowance, $taxExemptExtras):bool {
     $pdo = getDbConnection();
 
     $grossAmount = !empty($grossAmount) ? filter_var($grossAmount, FILTER_VALIDATE_FLOAT) : null;
@@ -71,12 +71,11 @@ function insertSalaryInfo($userId, $jobResult, $grossAmount, $discountPercentage
     $foodAllowance = !empty($foodAllowance) ? filter_var($foodAllowance, FILTER_VALIDATE_FLOAT) : null;
     $taxExemptExtras = !empty($taxExemptExtras) ? filter_var($taxExemptExtras, FILTER_VALIDATE_FLOAT) : null;
 
-    $sql = "INSERT INTO salaries (user_id, job_id, gross_amount, discount_percentage, food_allowance, tax_exempt_extras) 
-            VALUES (:user_id, :job_id, :gross_amount, :discount_percentage, :food_allowance, :tax_exempt_extras)";
+    $sql = "INSERT INTO salaries (user_job_id, gross_amount, discount_percentage, food_allowance, tax_exempt_extras) 
+            VALUES ( :user_job_id, :gross_amount, :discount_percentage, :food_allowance, :tax_exempt_extras)";
 
     if ($stmt = $pdo->prepare($sql)) {
-        $stmt->bindParam(':user_id', $userId, PDO::PARAM_INT);
-        $stmt->bindParam(':job_id', $jobResult, PDO::PARAM_INT);
+        $stmt->bindParam(':user_job_id', $jobResult, PDO::PARAM_INT);
         $stmt->bindParam(':gross_amount', $grossAmount);
         $stmt->bindParam(':discount_percentage', $discountPercentage);
         $stmt->bindParam(':food_allowance', $foodAllowance);

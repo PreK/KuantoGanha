@@ -34,8 +34,7 @@ try {
     -- Salaries Table with additional fields
     CREATE TABLE IF NOT EXISTS salaries (
         id SERIAL PRIMARY KEY,
-        user_id INTEGER REFERENCES users(uid),
-        job_id INTEGER REFERENCES jobs(id),
+        user_job_id INTEGER REFERENCES users_jobs(uid),
         gross_amount DECIMAL(10,2) NOT NULL,
         discount_percentage DECIMAL(5,2), -- Assuming a value between 0 and 100.
         food_allowance DECIMAL(10,2),
