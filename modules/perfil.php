@@ -118,51 +118,55 @@ function manageUserAcademicData($userId, $academicDegree, $fieldOfStudy, $instit
     <title>Perfil do Utilizador</title>
 </head>
 <body>
-<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-    <div class="form-container">
-        <h2>Perfil do Utilizador</h2>
+<main class="container">
+    <div class="row">
+        <div class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+            <div class="form-container">
+                <h2>Perfil do Utilizador</h2>
 
-        <!-- Formulário de Alteração de Senha -->
-        <form id="changePasswordForm" method="post">
-            <h3>Alterar Senha</h3>
-            <div class="form-group">
-                <label for="currentPassword">Senha Atual</label>
-                <input type="password" name="currentPassword" id="currentPassword" required>
-            </div>
-            <div class="form-group">
-                <label for="newPassword">Nova Senha</label>
-                <input type="password" name="newPassword" id="newPassword" required>
-            </div>
-            <input type="hidden" name="action" value="changePassword">
-            <button type="submit">Alterar Senha</button>
-        </form>
+                <!-- Formulário de Alteração de Senha -->
+                <form id="changePasswordForm" method="post" class="mb-4">
+                    <h3>Alterar Senha</h3>
+                    <div class="form-group mb-3">
+                        <label for="currentPassword" class="form-label">Senha Atual</label>
+                        <input type="password" name="currentPassword" id="currentPassword" class="form-control" required>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="newPassword" class="form-label">Nova Senha</label>
+                        <input type="password" name="newPassword" id="newPassword" class="form-control" required>
+                    </div>
+                    <input type="hidden" name="action" value="changePassword">
+                    <button type="submit" class="btn btn-primary">Alterar Senha</button>
+                </form>
 
-        <!-- Formulário para Dados Académicos -->
-        <form id="academicDataForm" method="post">
-            <h3>Dados Acadêmicos</h3>
-            <div class="form-group">
-                <label for="academic_degree">Grau Acadêmico</label>
-                <input type="text" name="academic_degree" id="academic_degree"
-                       value="<?php echo htmlspecialchars($academicData['academic_degree'] ?? ''); ?>" required>
+                <!-- Formulário para Dados Acadêmicos -->
+                <form id="academicDataForm" method="post" class="mb-4">
+                    <h3>Dados Académicos</h3>
+                    <div class="form-group mb-3">
+                        <label for="academic_degree" class="form-label">Grau Académico</label>
+                        <input type="text" name="academic_degree" id="academic_degree"
+                               class="form-control" value="<?php echo htmlspecialchars($academicData['academic_degree'] ?? ''); ?>" required>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="field_of_study" class="form-label">Área de Estudo</label>
+                        <input type="text" name="field_of_study" id="field_of_study"
+                               class="form-control" value="<?php echo htmlspecialchars($academicData['field_of_study'] ?? ''); ?>" required>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="educational_institution" class="form-label">Instituição</label>
+                        <input type="text" name="educational_institution" id="educational_institution"
+                               class="form-control" value="<?php echo htmlspecialchars($academicData['educational_institution'] ?? ''); ?>" required>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="year_of_completion" class="form-label">Ano de Conclusão</label>
+                        <input type="date" name="year_of_completion" id="year_of_completion"
+                               class="form-control" value="<?php echo htmlspecialchars($academicData['year_of_completion'] ?? ''); ?>" required>
+                    </div>
+                    <input type="hidden" name="action" value="manageAcademicData">
+                    <button type="submit" class="btn btn-primary">Salvar</button>
+                </form>
             </div>
-            <div class="form-group">
-                <label for="field_of_study">Campo de Estudo</label>
-                <input type="text" name="field_of_study" id="field_of_study"
-                       value="<?php echo htmlspecialchars($academicData['field_of_study'] ?? ''); ?>" required>
-            </div>
-            <div class="form-group">
-                <label for="educational_institution">Instituição Educacional</label>
-                <input type="text" name="educational_institution" id="educational_institution"
-                       value="<?php echo htmlspecialchars($academicData['educational_institution'] ?? ''); ?>" required>
-            </div>
-            <div class="form-group">
-                <label for="year_of_completion">Ano de Conclusão</label>
-                <input type="date" name="year_of_completion" id="year_of_completion"
-                       value="<?php echo htmlspecialchars($academicData['year_of_completion'] ?? ''); ?>" required>
-            </div>
-            <input type="hidden" name="action" value="manageAcademicData">
-            <button type="submit">Salvar</button>
-        </form>
+        </div>
     </div>
 </main>
 </body>
