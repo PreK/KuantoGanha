@@ -2,9 +2,8 @@
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
-require_once 'dbconfig.php'; // Certifique-se de que este arquivo contém as configurações do banco de dados
+require_once 'dbconfig.php';
 
-// Verificar se o usuário é administrador
 if (!isset($_SESSION['loggedin']) || $_SESSION['username'] !== 'admin') {
     header('Location: login.php');
     exit;
@@ -13,7 +12,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['username'] !== 'admin') {
 $pdo = getDbConnection();
 $job_err = "";
 
-// Processamento de dados do formulário quando enviado via AJAX
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST['action'])) {
         if ($_POST['action'] === 'add') {
@@ -47,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 }
             }
         }
-        exit; // Finaliza a execução após a requisição AJAX
+        exit;
     }
 }
 ?>
@@ -57,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <title>Gestão de Profissões</title>
-    <!-- Incluir aqui os links para o Bootstrap e outros estilos, se necessário -->
+
 </head>
 <body>
 <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
@@ -99,7 +98,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </table>
     </div>
 </main>
-
-<!-- Incluir aqui os scripts do Bootstrap e JavaScript, se necessário -->
 </body>
 </html>
