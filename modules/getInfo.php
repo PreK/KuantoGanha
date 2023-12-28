@@ -29,18 +29,20 @@ function getTopProfessionsData($pdo, $district) {
                 JOIN user_jobs uj ON j.id = uj.job_id
                 JOIN salaries s ON uj.id = s.user_job_id
                 JOIN locations l ON uj.location_id = l.id
-                WHERE (:district = '' OR l.district = :district)
+                WHERE (:district = 'all' OR l.district = :district)
                 GROUP BY j.title
                 ORDER BY averageSalary DESC
                 LIMIT 5";
 
         $stmt = $pdo->prepare($sql);
+
+        // Cria uma variável para o filtro
+        $districtFilter = $district;
         if ($district === 'all') {
-            $stmt->bindParam(':district', '%');
-        }else {
-            $stmt->bindParam(':district', $district);
+            $districtFilter = '%';
         }
 
+        $stmt->bindParam(':district', $districtFilter);
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     } catch (PDOException $e) {
