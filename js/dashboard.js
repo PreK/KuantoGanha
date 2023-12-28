@@ -16,7 +16,7 @@
   });
 
   // Função para buscar dados do gráfico via AJAX
-  function fetchChartData(district = '') {
+  function fetchChartData(district) {
     fetch('modules/getInfo.php?requestType=chart&district=' + district)
         .then(response => response.json())
         .then(data => updateChart(data))
@@ -32,12 +32,6 @@
         .catch(error => console.error('Erro ao buscar dados da tabela:', error));
   }
 
-  // Função para atualizar o gráfico com novos dados
-  function updateChart(data) {
-    myChart.data.labels = data.labels;
-    myChart.data.datasets[0].data = data.values;
-    myChart.update();
-  }
 
   // Criação inicial do gráfico
   const ctx = document.getElementById('salaryChart');
