@@ -26,8 +26,8 @@ function getTopProfessionsData($pdo, $district) {
     try {
         $sql = "SELECT j.title, AVG(s.gross_amount) as averageSalary
                 FROM jobs j
-                JOIN salaries s ON j.id = s.job_id
-                JOIN user_jobs uj ON s.user_job_id = uj.id
+                JOIN user_jobs uj ON j.id = uj.job_id
+                JOIN salaries s ON uj.id = s.user_job_id
                 JOIN locations l ON uj.location_id = l.id
                 WHERE (:district = '' OR l.district = :district)
                 GROUP BY j.title

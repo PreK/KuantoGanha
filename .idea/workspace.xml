@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c549277-1796-45c2-b708-1d03a93f7fae" name="Changes" comment="Remake dasboard.php">
-      <change beforePath="$PROJECT_DIR$/modules/getInfo.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/getInfo.php" afterDir="false" />
-    </list>
+    <list default="true" id="7c549277-1796-45c2-b708-1d03a93f7fae" name="Changes" comment="Remake dasboard.php" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -134,14 +132,6 @@
       <workItem from="1703155067668" duration="6052000" />
       <workItem from="1703241275152" duration="3760000" />
       <workItem from="1703246628260" duration="4140000" />
-    </task>
-    <task id="LOCAL-00133" summary="Remake userJobs.php">
-      <option name="closed" value="true" />
-      <created>1703702046613</created>
-      <option name="number" value="00133" />
-      <option name="presentableId" value="LOCAL-00133" />
-      <option name="project" value="LOCAL" />
-      <updated>1703702046613</updated>
     </task>
     <task id="LOCAL-00134" summary="Remake userJobs.php">
       <option name="closed" value="true" />
@@ -527,7 +517,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703774574552</updated>
     </task>
-    <option name="localTasksCounter" value="182" />
+    <task id="LOCAL-00182" summary="Remake dasboard.php">
+      <option name="closed" value="true" />
+      <created>1703774855015</created>
+      <option name="number" value="00182" />
+      <option name="presentableId" value="LOCAL-00182" />
+      <option name="project" value="LOCAL" />
+      <updated>1703774855016</updated>
+    </task>
+    <option name="localTasksCounter" value="183" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
