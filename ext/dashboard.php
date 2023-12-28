@@ -19,6 +19,8 @@
             <div>
                 <label for="districtFilter">Filtrar por Distrito:</label>
                 <select id="districtFilter" class="form-control">
+                    <option value="">Todos os Distritos</option>
+                    <option value="1">Aveiro</option>
                     <!-- Opções de distrito serão preenchidas via JavaScript -->
                 </select>
             </div>
