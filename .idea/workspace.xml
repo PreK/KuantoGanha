@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c549277-1796-45c2-b708-1d03a93f7fae" name="Changes" comment="Remake perfil.php">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ext/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/ext/dashboard.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/getInfo.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/getInfo.php" afterDir="false" />
-    </list>
+    <list default="true" id="7c549277-1796-45c2-b708-1d03a93f7fae" name="Changes" comment="Remake dasboard.php" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -138,30 +132,6 @@
       <workItem from="1703155067668" duration="6052000" />
       <workItem from="1703241275152" duration="3760000" />
       <workItem from="1703246628260" duration="4140000" />
-    </task>
-    <task id="LOCAL-00124" summary="Remake userJobs.php">
-      <option name="closed" value="true" />
-      <created>1703698594606</created>
-      <option name="number" value="00124" />
-      <option name="presentableId" value="LOCAL-00124" />
-      <option name="project" value="LOCAL" />
-      <updated>1703698594606</updated>
-    </task>
-    <task id="LOCAL-00125" summary="Remake userJobs.php">
-      <option name="closed" value="true" />
-      <created>1703699175962</created>
-      <option name="number" value="00125" />
-      <option name="presentableId" value="LOCAL-00125" />
-      <option name="project" value="LOCAL" />
-      <updated>1703699175962</updated>
-    </task>
-    <task id="LOCAL-00126" summary="Remake userJobs.php">
-      <option name="closed" value="true" />
-      <created>1703700082013</created>
-      <option name="number" value="00126" />
-      <option name="presentableId" value="LOCAL-00126" />
-      <option name="project" value="LOCAL" />
-      <updated>1703700082013</updated>
     </task>
     <task id="LOCAL-00127" summary="Remake userJobs.php">
       <option name="closed" value="true" />
@@ -531,7 +501,31 @@
       <option name="project" value="LOCAL" />
       <updated>1703769877885</updated>
     </task>
-    <option name="localTasksCounter" value="173" />
+    <task id="LOCAL-00173" summary="Remake dasboard.php">
+      <option name="closed" value="true" />
+      <created>1703773030311</created>
+      <option name="number" value="00173" />
+      <option name="presentableId" value="LOCAL-00173" />
+      <option name="project" value="LOCAL" />
+      <updated>1703773030311</updated>
+    </task>
+    <task id="LOCAL-00174" summary="Remake dasboard.php">
+      <option name="closed" value="true" />
+      <created>1703773245127</created>
+      <option name="number" value="00174" />
+      <option name="presentableId" value="LOCAL-00174" />
+      <option name="project" value="LOCAL" />
+      <updated>1703773245127</updated>
+    </task>
+    <task id="LOCAL-00175" summary="Remake dasboard.php">
+      <option name="closed" value="true" />
+      <created>1703773527666</created>
+      <option name="number" value="00175" />
+      <option name="presentableId" value="LOCAL-00175" />
+      <option name="project" value="LOCAL" />
+      <updated>1703773527666</updated>
+    </task>
+    <option name="localTasksCounter" value="176" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -555,7 +549,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Try fix icon login" />
     <MESSAGE value="php menu with login/logout" />
     <MESSAGE value="Ajax for login/register" />
     <MESSAGE value="fix modules path" />
@@ -580,7 +573,8 @@
     <MESSAGE value="add favicon" />
     <MESSAGE value="Remake userJobs.php" />
     <MESSAGE value="Remake perfil.php" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remake perfil.php" />
+    <MESSAGE value="Remake dasboard.php" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remake dasboard.php" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

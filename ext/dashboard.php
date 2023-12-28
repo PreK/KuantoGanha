@@ -1,12 +1,6 @@
 <?php
 
 require_once '../modules/userJobs.php';
-$userId = $_SESSION['uid'] ?? null;
-if (!$userId) {
-
-    echo "Utilizador não está logado.";
-    exit;
-}
 
 $districts = getDistricts();
 
