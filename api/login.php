@@ -3,7 +3,7 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-require_once '../modules/dbconfig.php'; // Inclui o ficheiro de configuração da base de dados
+require_once $_SERVER['DOCUMENT_ROOT'] . '/config/dbconfig.php';
 header('Content-Type: application/json');
 
 $pdo = getDbConnection();

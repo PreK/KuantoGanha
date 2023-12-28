@@ -1,6 +1,6 @@
 <?php
 
-require_once 'dbconfig.php'; // Conexão com o banco de dados
+require_once $_SERVER['DOCUMENT_ROOT'] . '/config/dbconfig.php';
 
 function getJobs(): bool|array
 {

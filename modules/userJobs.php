@@ -2,7 +2,7 @@
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
-require_once 'dbconfig.php'; // Conexão com o banco de dados
+require_once $_SERVER['DOCUMENT_ROOT'] . '/config/dbconfig.php';
 require_once 'commonFunctions.php';
 
 // Verificar se o usuário está logado

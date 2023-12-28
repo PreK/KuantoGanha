@@ -5,7 +5,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c549277-1796-45c2-b708-1d03a93f7fae" name="Changes" comment="Remake dasboard.php">
+      <change beforePath="$PROJECT_DIR$/api/addJob.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/addJob.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/deleteJob.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/deleteJob.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/listJobs.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/listJobs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/updateJob.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/updateJob.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/updateProfile.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/updateProfile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/css/sidebar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/css/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/dashboard.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/dbconfig.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/images/large.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/images/medium.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/images/small.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/images/vscode.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/info.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/install.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/js/scripts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/login.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/logout.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/modules/chart.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/modules/perfil.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/modules/sidebar.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/register.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/welcome.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/commonFunctions.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/commonFunctions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/dbconfig.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/dbconfig.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/getInfo.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/getInfo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/install.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/install.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/jobs.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/jobs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/perfil.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/perfil.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/userJobs.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/userJobs.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,11 +128,11 @@
       <recent name="C:\Users\prekp\OneDrive - Universidade de Aveiro\Projecto\KuantoGanha\modules" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\prekp\OneDrive - Universidade de Aveiro\Projecto\KuantoGanha\config" />
       <recent name="C:\Users\prekp\OneDrive - Universidade de Aveiro\Projecto\KuantoGanha\js" />
       <recent name="C:\Users\prekp\OneDrive - Universidade de Aveiro\Projecto\KuantoGanha\backup\js" />
       <recent name="C:\Users\prekp\OneDrive - Universidade de Aveiro\Projecto\KuantoGanha" />
       <recent name="C:\Users\prekp\OneDrive - Universidade de Aveiro\Projecto\KuantoGanha\backup" />
-      <recent name="\\wsl$\Ubuntu-22.04\var\www\html\api" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -134,14 +171,6 @@
       <workItem from="1703155067668" duration="6052000" />
       <workItem from="1703241275152" duration="3760000" />
       <workItem from="1703246628260" duration="4140000" />
-    </task>
-    <task id="LOCAL-00162" summary="Remake perfil.php">
-      <option name="closed" value="true" />
-      <created>1703767345097</created>
-      <option name="number" value="00162" />
-      <option name="presentableId" value="LOCAL-00162" />
-      <option name="project" value="LOCAL" />
-      <updated>1703767345097</updated>
     </task>
     <task id="LOCAL-00163" summary="Remake perfil.php">
       <option name="closed" value="true" />
@@ -527,7 +556,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703781001208</updated>
     </task>
-    <option name="localTasksCounter" value="211" />
+    <task id="LOCAL-00211" summary="Remake dasboard.php">
+      <option name="closed" value="true" />
+      <created>1703781225131</created>
+      <option name="number" value="00211" />
+      <option name="presentableId" value="LOCAL-00211" />
+      <option name="project" value="LOCAL" />
+      <updated>1703781225131</updated>
+    </task>
+    <option name="localTasksCounter" value="212" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

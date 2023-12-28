@@ -2,7 +2,7 @@
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
-require_once '../modules/dbconfig.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/config/dbconfig.php';
 
 header('Content-Type: application/json');
 

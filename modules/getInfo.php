@@ -3,7 +3,7 @@
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
-require_once 'dbconfig.php'; // Substitua pelo caminho correto do seu arquivo de configuração do banco de dados
+require_once $_SERVER['DOCUMENT_ROOT'] . '/config/dbconfig.php';
 
 header('Content-Type: application/json');
 

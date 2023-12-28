@@ -2,9 +2,9 @@
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
-require_once 'dbconfig.php'; // Conexão com o banco de dados
+require_once $_SERVER['DOCUMENT_ROOT'] . '/config/dbconfig.php';
 
-// Verificar se o usuário está logado
+// Verificar se o utilizador está logado
 $userId = $_SESSION['uid'] ?? null;
 if (!$userId) {
     echo "Utilizador não está logado.";
@@ -22,7 +22,7 @@ function getUserAcademicData($userId) {
 
 $academicData = getUserAcademicData($userId);
 
-// Processamento para Alteração de Senha
+// Alteração de Senha
 if ($_SERVER["REQUEST_METHOD"] == "POST" && $_POST['action'] == 'changePassword') {
     $currentPassword = $_POST['currentPassword'];
     $newPassword = $_POST['newPassword'];
@@ -35,6 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && $_POST['action'] == 'changePassword'
     } else {
         echo "Erro ao alterar a senha.";
     }
+    exit;
 }
 
 // Processamento para Gerenciamento de Dados Acadêmicos
@@ -52,6 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && $_POST['action'] == 'manageAcademicD
     } else {
         echo "Erro ao salvar os dados acadêmicos.";
     }
+    exit;
 }
 
 // Funções para Alteração de Senha e Gerenciamento de Dados Acadêmicos
