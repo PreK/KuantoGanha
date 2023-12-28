@@ -5,7 +5,7 @@ require_once 'dbconfig.php'; // Conexão com o banco de dados
 function getJobs(): bool|array
 {
     $pdo = getDbConnection();
-    $sql = "SELECT id, title FROM jobs";
+    $sql = "SELECT id, title FROM jobs ORDER BY title";
     $stmt = $pdo->query($sql);
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
