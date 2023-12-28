@@ -52,7 +52,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     })
                 })
                     .then(response => response.json())
-                    .then(data => console.log(data))
                     .then(data => {
                         if(data.success) {
                             location.reload();
