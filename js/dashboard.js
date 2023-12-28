@@ -17,14 +17,14 @@
 
   // Função para buscar dados do gráfico via AJAX
   function fetchChartData(district = '') {
-    fetch('getInfo.php?requestType=chart&district=' + district)
+    fetch('modules/getInfo.php?requestType=chart&district=' + district)
         .then(response => response.json())
         .then(data => updateChart(data))
         .catch(error => console.error('Erro ao buscar dados do gráfico:', error));
   }
 
   function fetchTableData() {
-    fetch('getInfo.php?requestType=table')
+    fetch('modules/getInfo.php?requestType=table')
         .then(response => response.json())
         .then(data => {
           updateTable(data);
