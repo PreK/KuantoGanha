@@ -45,27 +45,7 @@
 
 
   // Criação inicial do gráfico
-  const ctx = document.getElementById('salaryChart');
-  const myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: [],
-      datasets: [{
-        label: 'Salário Médio',
-        data: [],
-        backgroundColor: 'rgba(0, 123, 255, 0.5)',
-        borderColor: '#007bff',
-        borderWidth: 1
-      }]
-    },
-    options: {
-      scales: {
-        y: {
-          beginAtZero: true
-        }
-      }
-    }
-  });
+
   function updateChart(data) {
     const labels = data.map(item => item.title);
     const values = data.map(item => parseFloat(item.averagesalary));
@@ -88,5 +68,26 @@
       tableBody.innerHTML += row;
     });
   }
+  const ctx = document.getElementById('salaryChart');
+  const myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: [],
+      datasets: [{
+        label: 'Salário Médio',
+        data: [],
+        backgroundColor: 'rgba(0, 123, 255, 0.5)',
+        borderColor: '#007bff',
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
 })();
 
