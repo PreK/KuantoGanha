@@ -45,11 +45,59 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && $_POST['action'] == 'manageAcademicD
 
 // Funções para Alteração de Senha e Gerenciamento de Dados Acadêmicos
 function updateUserPassword($userId, $currentPassword, $newPassword) {
-    // Implemente esta função
+    $pdo = getDbConnection();
+
+    // Primeiro, verificar se a senha atual está correta
+    $sql = "SELECT password FROM users WHERE uid = :userId";
+    $stmt = $pdo->prepare($sql);
+    $stmt->bindParam(':userId', $userId, PDO::PARAM_INT);
+    $stmt->execute();
+    $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    if ($user && password_verify($currentPassword, $user['password'])) {
+        // A senha atual está correta, então atualize para a nova senha
+        $newPasswordHash = password_hash($newPassword, PASSWORD_DEFAULT);
+        $updateSql = "UPDATE users SET password = :newPassword WHERE uid = :userId";
+        $updateStmt = $pdo->prepare($updateSql);
+        $updateStmt->bindParam(':newPassword', $newPasswordHash);
+        $updateStmt->bindParam(':userId', $userId, PDO::PARAM_INT);
+
+        return $updateStmt->execute();
+    } else {
+        // Senha atual incorreta
+        return false;
+    }
 }
 
 function manageUserAcademicData($userId, $academicDegree, $fieldOfStudy, $institution, $yearOfCompletion) {
-    // Implemente esta função
+    $pdo = getDbConnection();
+
+    // Verificar se já existem dados acadêmicos para o usuário
+    $checkSql = "SELECT * FROM academic_data WHERE user_id = :userId";
+    $checkStmt = $pdo->prepare($checkSql);
+    $checkStmt->bindParam(':userId', $userId, PDO::PARAM_INT);
+    $checkStmt->execute();
+    $exists = $checkStmt->fetch(PDO::FETCH_ASSOC);
+
+    if ($exists) {
+        // Atualizar dados acadêmicos existentes
+        $updateSql = "UPDATE academic_data SET academic_degree = :academicDegree, field_of_study = :fieldOfStudy, 
+                      educational_institution = :institution, year_of_completion = :yearOfCompletion 
+                      WHERE user_id = :userId";
+    } else {
+        // Inserir novos dados acadêmicos
+        $updateSql = "INSERT INTO academic_data (user_id, academic_degree, field_of_study, educational_institution, year_of_completion) 
+                      VALUES (:userId, :academicDegree, :fieldOfStudy, :institution, :yearOfCompletion)";
+    }
+
+    $updateStmt = $pdo->prepare($updateSql);
+    $updateStmt->bindParam(':userId', $userId, PDO::PARAM_INT);
+    $updateStmt->bindParam(':academicDegree', $academicDegree);
+    $updateStmt->bindParam(':fieldOfStudy', $fieldOfStudy);
+    $updateStmt->bindParam(':institution', $institution);
+    $updateStmt->bindParam(':yearOfCompletion', $yearOfCompletion);
+
+    return $updateStmt->execute();
 }
 ?>
 
