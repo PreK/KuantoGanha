@@ -86,7 +86,7 @@ function insertSalaryInfo($jobResult, $grossAmount, $discountPercentage, $foodAl
     return false;
 }
 
-function removeUserJob($jobId, $userId): bool
+function removeUserJob($userJobId): bool
 {
     $pdo = getDbConnection();
 
