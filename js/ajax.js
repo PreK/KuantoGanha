@@ -183,7 +183,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     .then(response => response.text())
                     .then(data => {
                         alert(data); // Exibe a mensagem de retorno
+                        if(data === 'success') {
                         loadContent('perfil.php', 'mainContent'); // Recarrega o conteúdo do perfil
+                        }
                     })
                     .catch(error => console.error('Erro:', error));
             });
@@ -205,7 +207,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     .then(response => response.text())
                     .then(data => {
                         alert(data); // Exibe a mensagem de retorno
+                        if(data === 'success') {
                         loadContent('perfil.php', 'mainContent'); // Recarrega o conteúdo do perfil
+                        }
                     })
                     .catch(error => console.error('Erro:', error));
             });
