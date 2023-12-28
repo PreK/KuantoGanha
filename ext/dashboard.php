@@ -1,10 +1,3 @@
-<?php
-
-require_once '../modules/userJobs.php';
-
-$districts = getDistricts();
-
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,9 +19,7 @@ $districts = getDistricts();
             <div>
                 <label for="districtFilter">Filtrar por Distrito:</label>
                 <select id="districtFilter" class="form-control">
-                    <?php foreach ($districts as $district): ?>
-                        <option value="<?php echo $district['id']; ?>"><?php echo htmlspecialchars($district['district']); ?></option>
-                    <?php endforeach; ?>
+                    <!-- Opções de distrito serão preenchidas via JavaScript -->
                 </select>
             </div>
 
