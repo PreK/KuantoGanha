@@ -7,7 +7,7 @@ require_once 'dbconfig.php'; // Conexão com o banco de dados
 // Verificar se o usuário está logado
 $userId = $_SESSION['uid'] ?? null;
 if (!$userId) {
-    // Redirecionar para a página de login ou mostrar uma mensagem de erro
+
     echo "Utilizador não está logado.";
     exit;
 }

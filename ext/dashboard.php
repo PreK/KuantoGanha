@@ -1,3 +1,16 @@
+<?php
+
+require_once '../modules/userJobs.php';
+$userId = $_SESSION['uid'] ?? null;
+if (!$userId) {
+
+    echo "Utilizador não está logado.";
+    exit;
+}
+
+$districts = getDistricts();
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,7 +32,9 @@
             <div>
                 <label for="districtFilter">Filtrar por Distrito:</label>
                 <select id="districtFilter" class="form-control">
-                    <!-- Opções de distrito serão preenchidas via JavaScript -->
+                    <?php foreach ($districts as $district): ?>
+                        <option value="<?php echo $district['id']; ?>"><?php echo htmlspecialchars($district['district']); ?></option>
+                    <?php endforeach; ?>
                 </select>
             </div>
 
