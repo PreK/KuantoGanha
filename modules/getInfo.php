@@ -23,9 +23,6 @@ if (isset($_GET['requestType'])) {
 }
 
 function getTopProfessionsData($pdo, $district) {
-    if ($district === 'all') {
-        $district = '%';
-    }
     try {
         $sql = "SELECT j.title, AVG(s.gross_amount) as averageSalary
                 FROM jobs j
@@ -38,7 +35,12 @@ function getTopProfessionsData($pdo, $district) {
                 LIMIT 5";
 
         $stmt = $pdo->prepare($sql);
-        $stmt->bindParam(':district', $district);
+        if ($district === 'all') {
+            $stmt->bindParam(':district', '%');
+        }else {
+            $stmt->bindParam(':district', $district);
+        }
+
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     } catch (PDOException $e) {
