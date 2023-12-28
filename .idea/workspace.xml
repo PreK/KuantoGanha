@@ -133,22 +133,6 @@
       <workItem from="1703241275152" duration="3760000" />
       <workItem from="1703246628260" duration="4140000" />
     </task>
-    <task id="LOCAL-00143" summary="Remake userJobs.php">
-      <option name="closed" value="true" />
-      <created>1703706393777</created>
-      <option name="number" value="00143" />
-      <option name="presentableId" value="LOCAL-00143" />
-      <option name="project" value="LOCAL" />
-      <updated>1703706393777</updated>
-    </task>
-    <task id="LOCAL-00144" summary="Remake userJobs.php">
-      <option name="closed" value="true" />
-      <created>1703706546904</created>
-      <option name="number" value="00144" />
-      <option name="presentableId" value="LOCAL-00144" />
-      <option name="project" value="LOCAL" />
-      <updated>1703706546904</updated>
-    </task>
     <task id="LOCAL-00145" summary="Remake userJobs.php">
       <option name="closed" value="true" />
       <created>1703706953271</created>
@@ -525,7 +509,23 @@
       <option name="project" value="LOCAL" />
       <updated>1703776184324</updated>
     </task>
-    <option name="localTasksCounter" value="192" />
+    <task id="LOCAL-00192" summary="Remake dasboard.php">
+      <option name="closed" value="true" />
+      <created>1703776410635</created>
+      <option name="number" value="00192" />
+      <option name="presentableId" value="LOCAL-00192" />
+      <option name="project" value="LOCAL" />
+      <updated>1703776410635</updated>
+    </task>
+    <task id="LOCAL-00193" summary="Remake dasboard.php">
+      <option name="closed" value="true" />
+      <created>1703776512564</created>
+      <option name="number" value="00193" />
+      <option name="presentableId" value="LOCAL-00193" />
+      <option name="project" value="LOCAL" />
+      <updated>1703776512564</updated>
+    </task>
+    <option name="localTasksCounter" value="194" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
