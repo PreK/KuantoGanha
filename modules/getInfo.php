@@ -23,48 +23,43 @@ if (isset($_GET['requestType'])) {
 }
 
 function getTopProfessionsData($pdo, $district) {
-
-    if (empty($district)) {
-        $district = 'Aveiro';
-    }
     try {
-    $sql = "SELECT j.title, AVG(s.gross_amount) as averageSalary
-            FROM jobs j
-            JOIN salaries s ON j.id = s.job_id
-            JOIN user_jobs uj ON s.user_job_id = uj.id
-            JOIN locations l ON uj.location_id = l.id
-            WHERE (:district = '' OR l.district = :district)
-            GROUP BY j.title
-            ORDER BY averageSalary DESC
-            LIMIT 5";
+        $sql = "SELECT j.title, AVG(s.gross_amount) as averageSalary
+                FROM jobs j
+                JOIN salaries s ON j.id = s.job_id
+                JOIN user_jobs uj ON s.user_job_id = uj.id
+                JOIN locations l ON uj.location_id = l.id
+                WHERE (:district = '' OR l.district = :district)
+                GROUP BY j.title
+                ORDER BY averageSalary DESC
+                LIMIT 5";
 
-    $stmt = $pdo->prepare($sql);
-    $stmt->bindParam(':district', $district);
-    $stmt->execute();
-    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindParam(':district', $district);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     } catch (PDOException $e) {
         error_log("Erro ao obter dados: " . $e->getMessage());
-        exit;
+        return ["error" => "Erro ao obter dados do gráfico"];
     }
 }
 
 function getRecentProfessionsData($pdo) {
+    try {
+        $sql = "SELECT j.title, l.district, wm.description, uj.start_date, uj.end_date
+                FROM user_jobs uj
+                JOIN jobs j ON uj.job_id = j.id
+                JOIN locations l ON uj.location_id = l.id
+                JOIN work_modalities wm ON uj.modality_id = wm.id
+                ORDER BY uj.start_date DESC
+                LIMIT 20";
 
-    try{
-    $sql = "SELECT j.title, l.district, wm.description, uj.start_date, uj.end_date
-            FROM user_jobs uj
-            JOIN jobs j ON uj.job_id = j.id
-            JOIN locations l ON uj.location_id = l.id
-            JOIN work_modalities wm ON uj.modality_id = wm.id
-            ORDER BY uj.start_date DESC
-            LIMIT 20";
-
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute();
-    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     } catch (PDOException $e) {
         error_log("Erro ao obter dados: " . $e->getMessage());
-        exit;
+        return ["error" => "Erro ao obter dados da tabela"];
     }
 }
 ?>
