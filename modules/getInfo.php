@@ -23,6 +23,9 @@ if (isset($_GET['requestType'])) {
 }
 
 function getTopProfessionsData($pdo, $district) {
+    if ($district === '') {
+        $district = '%';
+    }
     try {
         $sql = "SELECT j.title, AVG(s.gross_amount) as averageSalary
                 FROM jobs j
