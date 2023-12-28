@@ -26,10 +26,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $password = trim($_POST["password"]);
     }
 
-    $response = [
-        'success' => false,
-        'message' => 'Erro desconhecido.'
-    ];
     // Validate credentials
     if (empty($username_err) && empty($password_err)) {
         $pdo = getDbConnection();
@@ -56,22 +52,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             $_SESSION["uid"] = $row["uid"];
                             $_SESSION["username"] = $username;
 
-                            $response['success'] = true;
-                            $response['message'] = 'Login efetuado com sucesso!';
                             // For ajax know if login was successful
-
+                            echo json_encode(["success" => true]);
                         } else {
                             // Display an error message if password is not valid
-                            $response['message'] = 'Utilizador ou senha inválidos.';
+                            echo json_encode(["message" => "Utilizador ou password inválidos."]);
                         }
+                        exit;
                     }
                 } else {
                     // Display an error message if username doesn't exist
-                    $response['message'] = 'Utilizador não encontrado.';
+                    echo json_encode(["message" => "Utilizador não está registado."]);
+                    exit;
                 }
-
             }
-            echo json_encode($response);
             // Close statement
             unset($stmt);
         }
