@@ -37,7 +37,7 @@
                             <th>Data de Início</th>
                         </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="lastJobsList">
                         <!-- Os dados da tabela serão preenchidos via JavaScript -->
                         </tbody>
                     </table>
