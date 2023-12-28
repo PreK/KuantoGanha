@@ -1,6 +1,6 @@
 <?php
 
-require_once '../modules/commonFunctions.php';
+require_once '/modules/commonFunctions.php';
 
 $districts = getDistricts();
 ?>
