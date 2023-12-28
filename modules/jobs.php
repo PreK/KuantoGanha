@@ -81,9 +81,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <th>Apagar</th>
             </tr>
             <?php
-            $pdo = getDbConnection();
-            $sql = "SELECT * FROM jobs";
-            foreach ($pdo->query($sql) as $row) {
+            require_once 'commonFunctions.php';
+            $job = getJobs();
+            foreach ($job as $row) {
                 echo "<tr>";
                 echo "<td>" . htmlspecialchars($row['title']) . "</td>";
                 echo "<td>
