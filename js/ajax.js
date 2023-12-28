@@ -53,12 +53,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 })
                     .then(response => response.json())
                     .then(data => {
-                        console.log(data); // Verifique o que está sendo retornado
-                        if(data.success) {
+                        if (data.success) {
                             location.reload();
-                            alert("Login efetuado com sucesso!")
-                        } else {
-                            alert("Erro ao processar o login!" + data);
+                            alert("Login efetuado com sucesso!");
+                        } else if (data.baduserpass) {
+                            alert("Utilizador ou senha inválidos");
+                        } else if (data.nouser) {
+                            alert("Utilizador não encontrado");
                         }
                     })
                     .catch(error => console.error('Erro ao processar o login:', error));

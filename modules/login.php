@@ -57,17 +57,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             exit;
                         } else {
                             // Display an error message if password is not valid
-                            $login_err = "Invalid username or password.";
+                            echo json_encode(["baduserpass" => true]);
                         }
                     }
                 } else {
                     // Display an error message if username doesn't exist
-                    $login_err = "Invalid username or password.";
+                    echo json_encode(["nouser" => true]);
                 }
-            } else {
-                echo "Oops! Something went wrong. Please try again later.";
             }
-
             // Close statement
             unset($stmt);
         }
