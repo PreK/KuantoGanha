@@ -3,49 +3,53 @@
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
-require_once 'dbconfig.php';
+require_once 'dbconfig.php'; // Substitua pelo caminho correto do seu arquivo de configuração do banco de dados
 
+header('Content-Type: application/json');
 
-function getUserData($userId) {
-    $pdo = getDbConnection();
-    $sql = "SELECT * FROM users WHERE uid = :uid";
-    if ($stmt = $pdo->prepare($sql)) {
-        $stmt->bindParam(":uid", $userId, PDO::PARAM_INT);
+$pdo = getDbConnection();
 
-        if ($stmt->execute()) {
-            return $stmt->fetch(PDO::FETCH_ASSOC);
-        }
+if (isset($_GET['requestType'])) {
+    switch ($_GET['requestType']) {
+        case 'chart':
+            echo json_encode(getTopProfessionsData($pdo, $_GET['district'] ?? ''));
+            break;
+        case 'table':
+            echo json_encode(getRecentProfessionsData($pdo));
+            break;
+        default:
+            echo json_encode(["error" => "Tipo de solicitação inválido"]);
     }
-    return null;
 }
 
-function getAcademicData($userId) {
-    $pdo = getDbConnection();
-    $sql = "SELECT * FROM academic_data WHERE user_id = :user_id";
-    if ($stmt = $pdo->prepare($sql)) {
-        $stmt->bindParam(":user_id", $userId, PDO::PARAM_INT);
+function getTopProfessionsData($pdo, $district) {
+    $sql = "SELECT j.title, AVG(s.gross_amount) as averageSalary
+            FROM jobs j
+            JOIN salaries s ON j.id = s.job_id
+            JOIN user_jobs uj ON s.user_job_id = uj.id
+            JOIN locations l ON uj.location_id = l.id
+            WHERE (:district = '' OR l.district = :district)
+            GROUP BY j.title
+            ORDER BY averageSalary DESC
+            LIMIT 5";
 
-        if ($stmt->execute()) {
-            return $stmt->fetchAll(PDO::FETCH_ASSOC);
-        }
-    }
-    return [];
+    $stmt = $pdo->prepare($sql);
+    $stmt->bindParam(':district', $district);
+    $stmt->execute();
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
-function getJobData($userId) {
-    $pdo = getDbConnection();
-    $sql = "SELECT j.title, s.gross_amount FROM jobs j
-            JOIN user_jobs uj ON j.id = uj.job_id
-            JOIN salaries s ON uj.user_id = s.user_id
-            WHERE uj.user_id = :user_id";
-    if ($stmt = $pdo->prepare($sql)) {
-        $stmt->bindParam(":user_id", $userId, PDO::PARAM_INT);
+function getRecentProfessionsData($pdo) {
+    $sql = "SELECT j.title, l.district, wm.description, uj.start_date, uj.end_date
+            FROM user_jobs uj
+            JOIN jobs j ON uj.job_id = j.id
+            JOIN locations l ON uj.location_id = l.id
+            JOIN work_modalities wm ON uj.modality_id = wm.id
+            ORDER BY uj.start_date DESC
+            LIMIT 20";
 
-        if ($stmt->execute()) {
-            return $stmt->fetchAll(PDO::FETCH_ASSOC);
-        }
-    }
-    return [];
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute();
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
-
 ?>
