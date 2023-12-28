@@ -1,3 +1,9 @@
+<?php
+
+require_once '../modules/commonFunctions.php';
+
+$districts = getDistricts();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,7 +26,11 @@
                 <label for="districtFilter">Filtrar por Distrito:</label>
                 <select id="districtFilter" class="form-control">
                     <option value="all" selected>Todos os Distritos</option>
-                    <option value="Aveiro">Aveiro</option>
+                    <?php foreach ($districts as $district): ?>
+                        <option value="<?php echo htmlspecialchars($district['district']); ?>">
+                            <?php echo htmlspecialchars($district['district']); ?>
+                        </option>
+                    <?php endforeach; ?>
 
                 </select>
             </div>
