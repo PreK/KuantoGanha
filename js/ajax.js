@@ -54,13 +54,14 @@ document.addEventListener('DOMContentLoaded', function() {
                     .then(response => response.json())
                     .then(data => {
                         if(data.success) {
-                            location.reload();
+
                             alert("Login efetuado com sucesso!")
                         }else {
                             alert("Erro ao processar o login: " + data.message);
                         }
                     })
                     .catch(error => console.error('Erro ao processar o login:', error));
+                location.reload();
             });
         }
     }
