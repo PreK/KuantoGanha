@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c549277-1796-45c2-b708-1d03a93f7fae" name="Changes" comment="Remake dasboard.php" />
+    <list default="true" id="7c549277-1796-45c2-b708-1d03a93f7fae" name="Changes" comment="Remake dasboard.php">
+      <change beforePath="$PROJECT_DIR$/modules/getInfo.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/getInfo.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -132,22 +134,6 @@
       <workItem from="1703155067668" duration="6052000" />
       <workItem from="1703241275152" duration="3760000" />
       <workItem from="1703246628260" duration="4140000" />
-    </task>
-    <task id="LOCAL-00136" summary="Remake userJobs.php">
-      <option name="closed" value="true" />
-      <created>1703704647788</created>
-      <option name="number" value="00136" />
-      <option name="presentableId" value="LOCAL-00136" />
-      <option name="project" value="LOCAL" />
-      <updated>1703704647788</updated>
-    </task>
-    <task id="LOCAL-00137" summary="Remake userJobs.php">
-      <option name="closed" value="true" />
-      <created>1703704732368</created>
-      <option name="number" value="00137" />
-      <option name="presentableId" value="LOCAL-00137" />
-      <option name="project" value="LOCAL" />
-      <updated>1703704732368</updated>
     </task>
     <task id="LOCAL-00138" summary="Remake userJobs.php">
       <option name="closed" value="true" />
@@ -525,7 +511,23 @@
       <option name="project" value="LOCAL" />
       <updated>1703775351324</updated>
     </task>
-    <option name="localTasksCounter" value="185" />
+    <task id="LOCAL-00185" summary="Remake dasboard.php">
+      <option name="closed" value="true" />
+      <created>1703775472181</created>
+      <option name="number" value="00185" />
+      <option name="presentableId" value="LOCAL-00185" />
+      <option name="project" value="LOCAL" />
+      <updated>1703775472181</updated>
+    </task>
+    <task id="LOCAL-00186" summary="Remake dasboard.php">
+      <option name="closed" value="true" />
+      <created>1703775620949</created>
+      <option name="number" value="00186" />
+      <option name="presentableId" value="LOCAL-00186" />
+      <option name="project" value="LOCAL" />
+      <updated>1703775620949</updated>
+    </task>
+    <option name="localTasksCounter" value="187" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
