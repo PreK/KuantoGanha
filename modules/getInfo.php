@@ -23,7 +23,7 @@ if (isset($_GET['requestType'])) {
 }
 
 function getTopProfessionsData($pdo, $district) {
-    if ($district === '') {
+    if ($district === 'all') {
         $district = '%';
     }
     try {
