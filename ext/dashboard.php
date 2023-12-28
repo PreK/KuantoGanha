@@ -4,6 +4,7 @@ require_once '../modules/commonFunctions.php';
 
 $districts = getDistricts();
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
