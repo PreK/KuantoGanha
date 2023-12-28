@@ -51,17 +51,15 @@ document.addEventListener('DOMContentLoaded', function() {
                         'Accept': 'application/json'
                     })
                 })
-                    .then(response => {
-                        if (!response.ok) {
-                            throw new Error('Resposta de rede nok.');
-                        }
-                        return response.json();
-                    })
+                    .then(response => response.json())
+                    .then(data => console.log(data))
                     .then(data => {
-                        if (data.success) {
+                        if(data.success) {
                             location.reload();
+                            alert("Login efetuado com sucesso!")
+                        }else {
+                            alert("Erro ao processar o login: " + data.message);
                         }
-                        alert(data.message);
                     })
                     .catch(error => console.error('Erro ao processar o login:', error));
             });
