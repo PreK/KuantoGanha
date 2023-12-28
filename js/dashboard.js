@@ -47,6 +47,7 @@
   // Criação inicial do gráfico
 
   function updateChart(data) {
+    console.log(data);
     const labels = data.map(item => item.title);
     const values = data.map(item => parseFloat(item.averagesalary));
     myChart.data.labels = data.labels;
