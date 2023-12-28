@@ -76,7 +76,7 @@
     data: {
       labels: [],
       datasets: [{
-        label: 'Salário Médio',
+        label: 'Salário Base Médio (Bruto)',
         data: [],
         backgroundColor: 'rgba(0, 123, 255, 0.5)',
         borderColor: '#007bff',
