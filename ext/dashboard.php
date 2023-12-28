@@ -21,7 +21,7 @@
                 <select id="districtFilter" class="form-control">
                     <option value="all" selected>Todos os Distritos</option>
                     <option value="Aveiro">Aveiro</option>
-                    <!-- Opções de distrito serão preenchidas via JavaScript -->
+
                 </select>
             </div>
 
@@ -37,7 +37,7 @@
                             <th>Data de Início</th>
                         </tr>
                         </thead>
-                        <tbody id="lastJobsList">
+                        <tbody>
                         <!-- Os dados da tabela serão preenchidos via JavaScript -->
                         </tbody>
                     </table>

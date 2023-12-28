@@ -73,9 +73,8 @@
   }
 
   function updateTable(data) {
-    const tableBody = document.querySelector("#lastJobsList tbody");
-    tableBody.innerHTML = ""; // Limpa a tabela antes de adicionar novos dados
-
+    const tableBody = document.getElementById('latestJobsTable').getElementsByTagName('tbody')[0];
+    tableBody.innerHTML = '';
     data.forEach(item => {
       const row = `<tr>
                         <td>${item.title}</td>
