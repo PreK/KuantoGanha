@@ -94,25 +94,21 @@ function removeUserJob($jobId, $userId): bool
         $pdo->beginTransaction();
 
         // Remover informações salariais
-        $sql = "DELETE FROM salaries WHERE user_id = :user_id AND job_id = :job_id";
+        $sql = "DELETE FROM salaries WHERE user_job_id = :user_job_id";
         $stmt = $pdo->prepare($sql);
-        $stmt->bindParam(':user_id', $userId, PDO::PARAM_INT);
-        $stmt->bindParam(':job_id', $jobId, PDO::PARAM_INT);
+        $stmt->bindParam(':user_job_id', $userJobId, PDO::PARAM_INT);
         $stmt->execute();
 
         // Remover a profissão
-        $sql = "DELETE FROM user_jobs WHERE id = :job_id AND user_id = :user_id";
+        $sql = "DELETE FROM user_jobs WHERE id = :user_job_id";
         $stmt = $pdo->prepare($sql);
-        $stmt->bindParam(':job_id', $jobId, PDO::PARAM_INT);
-        $stmt->bindParam(':user_id', $userId, PDO::PARAM_INT);
+        $stmt->bindParam(':user_job_id', $userJobId, PDO::PARAM_INT);
         $stmt->execute();
 
         $pdo->commit();
         return true;
     } catch (PDOException $e) {
-        // Em caso de erro, desfazer a transação
         $pdo->rollBack();
-        // Log do erro
         error_log("Falha ao remover profissão: " . $e->getMessage());
         return false;
     }
@@ -126,7 +122,7 @@ function getUserJobs($userId): bool|array
             INNER JOIN jobs j ON uj.job_id = j.id
             INNER JOIN locations l ON uj.location_id = l.id
             INNER JOIN work_modalities wm ON uj.modality_id = wm.id
-            LEFT JOIN salaries s ON uj.user_id = s.user_id AND uj.job_id = s.job_id
+            LEFT JOIN salaries s ON uj.id = s.user_job_id
             WHERE uj.user_id = :user_id";
 
     if ($stmt = $pdo->prepare($sql)) {
