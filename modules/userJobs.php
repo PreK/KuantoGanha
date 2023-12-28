@@ -162,7 +162,7 @@ function getModalities(): bool|array
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
-function insertUserJob($userId, $jobId, $locationId, $modalityId, $startDate, $endDate): bool
+function insertUserJob($userId, $jobId, $locationId, $modalityId, $startDate, $endDate): bool|string
 {
     $pdo = getDbConnection();
 
