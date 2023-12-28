@@ -54,12 +54,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     .then(response => response.json())
                     .then(data => console.log(data))
                     .then(data => {
-                        if (data.success) {
+                        if ('success' in data && data.success) {
                             location.reload();
                             alert("Login efetuado com sucesso!");
-                        } else if (data.baduserpass) {
+                        } else if ('baduserpass' in data && data.baduserpass) {
                             alert("Utilizador ou senha inválidos");
-                        } else if (data.nouser) {
+                        } else if ('nouser' in data && data.nouser) {
                             alert("Utilizador não encontrado");
                         }
                     })
