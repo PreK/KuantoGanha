@@ -50,8 +50,9 @@
     console.log(data);
     const labels = data.map(item => item.title);
     const values = data.map(item => parseFloat(item.averagesalary));
-    myChart.data.labels = data.labels;
-    myChart.data.datasets[0].data = data.values;
+
+    myChart.data.labels = labels;
+    myChart.data.datasets[0].data = values;
     myChart.update();
   }
 
