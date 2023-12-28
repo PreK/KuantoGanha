@@ -4,22 +4,29 @@
   'use strict';
 // Carregar dados para o gráfico e a tabela
   document.addEventListener('DOMContentLoaded', function() {
-    fetchChartData("all");
+    fetchChartData();
     fetchTableData();
 
     const districtFilter = document.getElementById('districtFilter');
     if (districtFilter) {
       districtFilter.addEventListener('change', function() {
-        fetchChartData(this.value);
+        fetchChartData();
       });
     }
   });
 
   // Função para buscar dados do gráfico via AJAX
-  function fetchChartData(district) {
+  function fetchChartData() {
+    const district = document.getElementById('districtFilter').value;
     fetch('modules/getInfo.php?requestType=chart&district=' + district)
         .then(response => response.json())
-        .then(data => updateChart(data))
+        .then(data => {
+          if (data.error) {
+            console.error('Erro ao buscar dados do gráfico:', data.error);
+          } else {
+            updateChart(data);
+          }
+        })
         .catch(error => console.error('Erro ao buscar dados do gráfico:', error));
   }
 
@@ -27,7 +34,11 @@
     fetch('modules/getInfo.php?requestType=table')
         .then(response => response.json())
         .then(data => {
-          updateTable(data);
+          if (data.error) {
+            console.error('Erro ao buscar dados da tabela:', data.error);
+          } else {
+            updateTable(data);
+          }
         })
         .catch(error => console.error('Erro ao buscar dados da tabela:', error));
   }
@@ -62,13 +73,18 @@
   }
 
   function updateTable(data) {
-    const tableBody = document.getElementById('latestJobsTable').getElementsByTagName('tbody')[0];
-    tableBody.innerHTML = '';
+    const tableBody = document.querySelector("#myTable tbody");
+    tableBody.innerHTML = ""; // Limpa a tabela antes de adicionar novos dados
+
     data.forEach(item => {
-      let row = tableBody.insertRow();
-      row.insertCell(0).innerText = item.profession;
-      row.insertCell(1).innerText = item.location;
-      row.insertCell(2).innerText = item.startDate;
+      const row = `<tr>
+                        <td>${item.title}</td>
+                        <td>${item.district}</td>
+                        <td>${item.description}</td>
+                        <td>${item.start_date}</td>
+                        <td>${item.end_date ?? 'N/A'}</td>
+                    </tr>`;
+      tableBody.innerHTML += row;
     });
   }
 })();
