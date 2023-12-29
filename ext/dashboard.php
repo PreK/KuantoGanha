@@ -45,7 +45,9 @@ $districts = getDistricts();
                         <tr>
                             <th>Profissão</th>
                             <th>Localização</th>
+                            <th>Modalidade</th>
                             <th>Data de Início</th>
+                            <th>Data de Fim</th>
                         </tr>
                         </thead>
                         <tbody>

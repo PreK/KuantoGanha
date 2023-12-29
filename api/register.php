@@ -14,7 +14,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Recebe os dados em formato JSON
     $data = json_decode(file_get_contents("php://input"), true);
     if (!is_array($data)) {
-        // Trate o erro apropriadamente
         $response["error"] = true;
         $response["message"] = "Invalid input format";
         echo json_encode($response);

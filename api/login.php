@@ -12,28 +12,28 @@ $response = [
     "message" => ""
 ];
 
-// Decode JSON from the request body
+// descodificar o JSON para um array
 $inputJSON = file_get_contents('php://input');
-$input = json_decode($inputJSON, TRUE); // convert JSON into array
+$input = json_decode($inputJSON, TRUE);
 
 $username = isset($input['username']) ? htmlspecialchars($input['username'], ENT_QUOTES, 'UTF-8') : '';
 $password = isset($input['password']) ? htmlspecialchars($input['password'], ENT_QUOTES, 'UTF-8') : '';
 
 
-// Validate username
+// validar o utilizador
 if (empty($username)) {
     $response["message"] = 'Por favor, inserir utilizador.';
     echo json_encode($response);
     exit();
 }
 
-// Prepare SQL statement
+// preparar o sql
 $sql = "SELECT * FROM users WHERE username = :USERNAME LIMIT 1";
 $stmt = $pdo->prepare($sql);
 $stmt->bindValue(":USERNAME", $username, PDO::PARAM_STR);
 $stmt->execute();
 
-// Check if user exists and password is correct
+    // Testar se o utilizador existe e verificar se a password é correcta
 if ($stmt->rowCount() != 1) {
     $response["message"] = 'Utilizador não encontrado.';
 } else {
@@ -43,7 +43,6 @@ if ($stmt->rowCount() != 1) {
     } else {
         $response["success"] = true;
         $response["message"] = "Login bem-sucedido";
-        // You can add any additional data you want to return here, like user ID
     }
 }
 

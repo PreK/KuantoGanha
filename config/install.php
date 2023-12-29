@@ -5,7 +5,7 @@ try {
     $pdo = getDbConnection();
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    // SQL to create all tables
+
     $createTablesSql = "
     -- Users Table
     CREATE TABLE IF NOT EXISTS users (
@@ -107,9 +107,9 @@ try {
 
     $pdo->exec($createTablesSql);
 
-    // Create an initial admin user
+
     $username = 'admin';
-    $password = password_hash('admin', PASSWORD_DEFAULT); // Change this in production!
+    $password = password_hash('admin', PASSWORD_DEFAULT);
     $email = 'admin@kuantoganha.pt';
 
     $insertAdminSql = "INSERT INTO users (username, password, email) VALUES (:username, :password, :email) ON CONFLICT DO NOTHING;";
